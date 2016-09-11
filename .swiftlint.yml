@@ -1,0 +1,16 @@
+line_length:
+  warning: 120
+  error: 150
+disabled_rules:
+  - variable_name
+  - force_cast
+  - force_try
+  - function_body_length
+  - variable_name_min_length
+included:
+  - iYomu
+  - iYomuTests
+excluded: # paths to ignore during linting. overridden by `included`.
+  - Carthage
+  - Pods
+  - R.generated.swift
