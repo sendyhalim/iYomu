@@ -5,7 +5,7 @@ components_plist = "Supporting Files/Components.plist"
 temporary_dir = /tmp/iYomu.dst
 
 bootstrap:
-	carthage bootstrap $(platform) --no-use-binaries
+	carthage bootstrap $(platform)
 
 update:
 	carthage update $(platform)
