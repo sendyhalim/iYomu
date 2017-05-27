@@ -2,14 +2,15 @@ line_length:
   warning: 120
   error: 150
 disabled_rules:
-  - variable_name
+  - identifier_name
   - force_cast
   - force_try
   - function_body_length
-  - variable_name_min_length
+  - syntactic_sugar
+  - shorthand_operator
 included:
-  - iYomu
-  - iYomuTests
+  - Yomu
+  - YomuTests
 excluded: # paths to ignore during linting. overridden by `included`.
   - Carthage
   - Pods

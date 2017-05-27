@@ -1,15 +1,14 @@
 //
 //  ViewController.swift
-//  iYomu
+//  Yomu
 //
-//  Created by Sendy Halim on 5/26/17.
+//  Created by Sendy Halim on 5/28/17.
 //  Copyright © 2017 Sendy Halim. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
