@@ -417,6 +417,146 @@
 			<key>shellScript</key>
 			<string>swiftlint</string>
 		</dict>
+		<key>79B3FC671EDC91D4008323C0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79B3FC6E1EDC960F008323C0</string>
+				<string>79B3FC701EDC9638008323C0</string>
+				<string>79B3FC6A1EDC93EB008323C0</string>
+				<string>79B3FC6C1EDC95AF008323C0</string>
+				<string>79B3FC721EDC9651008323C0</string>
+				<string>79B3FC681EDC93C1008323C0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Models</string>
+			<key>path</key>
+			<string>Models</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79B3FC681EDC93C1008323C0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SearchedManga.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79B3FC691EDC93C1008323C0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79B3FC681EDC93C1008323C0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79B3FC6A1EDC93EB008323C0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ImageUrl.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79B3FC6B1EDC93EB008323C0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79B3FC6A1EDC93EB008323C0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79B3FC6C1EDC95AF008323C0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Manga.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79B3FC6D1EDC95AF008323C0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79B3FC6C1EDC95AF008323C0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79B3FC6E1EDC960F008323C0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Chapter.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79B3FC6F1EDC960F008323C0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79B3FC6E1EDC960F008323C0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79B3FC701EDC9638008323C0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChapterPage.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79B3FC711EDC9638008323C0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79B3FC701EDC9638008323C0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79B3FC721EDC9651008323C0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MangaRealm.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79B3FC731EDC9651008323C0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79B3FC721EDC9651008323C0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>79C6F53E1ED9FCFA00B95629</key>
 		<dict>
 			<key>children</key>
@@ -516,8 +656,14 @@
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
+				<string>79B3FC731EDC9651008323C0</string>
 				<string>79C6F54D1ED9FCFA00B95629</string>
 				<string>79C6F54B1ED9FCFA00B95629</string>
+				<string>79B3FC6D1EDC95AF008323C0</string>
+				<string>79B3FC6F1EDC960F008323C0</string>
+				<string>79B3FC691EDC93C1008323C0</string>
+				<string>79B3FC711EDC9638008323C0</string>
+				<string>79B3FC6B1EDC93EB008323C0</string>
 			</array>
 			<key>isa</key>
 			<string>PBXSourcesBuildPhase</string>
@@ -624,6 +770,7 @@
 		<dict>
 			<key>children</key>
 			<array>
+				<string>79B3FC671EDC91D4008323C0</string>
 				<string>79C6F54A1ED9FCFA00B95629</string>
 				<string>79C6F5511ED9FCFA00B95629</string>
 				<string>79C6F5561ED9FCFA00B95629</string>
