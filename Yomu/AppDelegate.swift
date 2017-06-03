@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   ) -> Bool {
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.backgroundColor = UIColor.white
-    window?.rootViewController = ViewController(nibName: nil, bundle: nil)
+    window?.rootViewController = YomuNavigationController(nibName: nil, bundle: nil)
     window?.makeKeyAndVisible()
 
     return true
