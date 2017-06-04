@@ -457,6 +457,7 @@
 		<dict>
 			<key>children</key>
 			<array>
+				<string>799521601EE472F40059CC34</string>
 				<string>79234C031EE3298C000D6734</string>
 				<string>7995215E1EE472970059CC34</string>
 			</array>
@@ -612,6 +613,17 @@
 			<string>7995215E1EE472970059CC34</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>799521601EE472F40059CC34</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>RxMoyaResponse.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>79B3FC671EDC91D4008323C0</key>
 		<dict>
