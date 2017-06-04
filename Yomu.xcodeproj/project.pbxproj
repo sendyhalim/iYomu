@@ -458,6 +458,7 @@
 			<key>children</key>
 			<array>
 				<string>79234C031EE3298C000D6734</string>
+				<string>7995215E1EE472970059CC34</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -589,6 +590,26 @@
 		<dict>
 			<key>fileRef</key>
 			<string>796F98F21EE2FD9B00FAF40C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7995215E1EE472970059CC34</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>URL.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7995215F1EE472970059CC34</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7995215E1EE472970059CC34</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -840,6 +861,7 @@
 				<string>79B3FC711EDC9638008323C0</string>
 				<string>79B3FC6B1EDC93EB008323C0</string>
 				<string>79234C011EE32945000D6734</string>
+				<string>7995215F1EE472970059CC34</string>
 			</array>
 			<key>isa</key>
 			<string>PBXSourcesBuildPhase</string>
