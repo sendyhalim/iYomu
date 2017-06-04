@@ -2,7 +2,7 @@
 //  RxMoyaResponse.swift
 //  Yomu
 //
-//  Created by Sendy Halim on 6/4/17.
+//  Created by Sendy Halim on 6/5/17.
 //  Copyright © 2017 Sendy Halim. All rights reserved.
 //
 
