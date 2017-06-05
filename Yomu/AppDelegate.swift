@@ -22,6 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.rootViewController = YomuNavigationController(nibName: nil, bundle: nil)
     window?.makeKeyAndVisible()
 
+    YomuNavigationController.instance()?.pushViewController(
+      SearchMangaViewController(nibName: nil, bundle: nil),
+      animated: true
+    )
+
     return true
   }
 

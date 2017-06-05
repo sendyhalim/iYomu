@@ -532,6 +532,7 @@
 		<dict>
 			<key>children</key>
 			<array>
+				<string>799685BC1EE59F75000776FD</string>
 				<string>796F98F21EE2FD9B00FAF40C</string>
 			</array>
 			<key>isa</key>
@@ -565,6 +566,7 @@
 		<dict>
 			<key>children</key>
 			<array>
+				<string>799685BB1EE59F75000776FD</string>
 				<string>796F98EF1EE2FBD200FAF40C</string>
 			</array>
 			<key>isa</key>
@@ -623,8 +625,6 @@
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>ViewModels</string>
 			<key>path</key>
 			<string>ViewModels</string>
 			<key>sourceTree</key>
@@ -687,6 +687,48 @@
 		<dict>
 			<key>fileRef</key>
 			<string>799521661EE4751D0059CC34</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>799685BB1EE59F75000776FD</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SearchMangaViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>799685BC1EE59F75000776FD</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>SearchMangaViewController.xib</string>
+			<key>path</key>
+			<string>SearchMangaViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>799685BD1EE59F75000776FD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>799685BB1EE59F75000776FD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>799685BE1EE59F75000776FD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>799685BC1EE59F75000776FD</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -930,6 +972,7 @@
 				<string>799521631EE473500059CC34</string>
 				<string>796F98F01EE2FBD200FAF40C</string>
 				<string>799521671EE4751D0059CC34</string>
+				<string>799685BD1EE59F75000776FD</string>
 				<string>79B3FC731EDC9651008323C0</string>
 				<string>79234C041EE3298C000D6734</string>
 				<string>79C6F54B1ED9FCFA00B95629</string>
@@ -986,6 +1029,7 @@
 				<string>79C6F5551ED9FCFA00B95629</string>
 				<string>79C6F5521ED9FCFA00B95629</string>
 				<string>796F98F31EE2FD9B00FAF40C</string>
+				<string>799685BE1EE59F75000776FD</string>
 			</array>
 			<key>isa</key>
 			<string>PBXResourcesBuildPhase</string>
