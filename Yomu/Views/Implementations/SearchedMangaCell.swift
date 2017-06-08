@@ -11,8 +11,9 @@ import Kingfisher
 import RxSwift
 
 class SearchedMangaCell: UITableViewCell {
-  @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var previewImage: UIImageView!
+  @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet weak var categoriesLabel: UILabel!
 
   var viewModel: SearchedMangaViewModel!
   var disposeBag = DisposeBag()
@@ -32,6 +33,11 @@ class SearchedMangaCell: UITableViewCell {
       .drive(onNext: { [weak self] in
         self?.previewImage.kf.setImage(with: $0)
       })
+      .addDisposableTo(disposeBag)
+
+    viewModel
+      .categories
+      .drive(categoriesLabel.rx.text)
       .addDisposableTo(disposeBag)
   }
 }

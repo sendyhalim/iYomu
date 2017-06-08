@@ -12,6 +12,7 @@ import RxSwift
 struct SearchedMangaViewModel {
   // MARK: Output
   let previewUrl: Driver<URL>
+  let categories: Driver<String>
   let title: Driver<String>
   let apiId: Driver<String>
 
@@ -32,5 +33,9 @@ struct SearchedMangaViewModel {
     apiId = self.manga
       .asDriver()
       .map { $0.apiId }
+
+    categories = self.manga
+      .asDriver()
+      .map { $0.categories.joined(separator: ", ") }
   }
 }
