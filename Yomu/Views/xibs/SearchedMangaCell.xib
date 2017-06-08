@@ -20,24 +20,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymX-K6-rGI">
-                        <rect key="frame" x="121" y="30" width="42" height="21"/>
+                        <rect key="frame" x="64" y="29.5" width="301" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cyd-HF-Qjn">
-                        <rect key="frame" x="8" y="0.0" width="80" height="80"/>
+                        <rect key="frame" x="16" y="9.5" width="40" height="60"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="80" id="T18-dz-pyg"/>
-                            <constraint firstAttribute="width" constant="80" id="aBo-QE-u5i"/>
+                            <constraint firstAttribute="height" constant="60" id="T18-dz-pyg"/>
+                            <constraint firstAttribute="width" constant="40" id="aBo-QE-u5i"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="cyd-HF-Qjn" firstAttribute="centerY" secondItem="DPE-KA-WIF" secondAttribute="centerY" id="5yC-0O-MaB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ymX-K6-rGI" secondAttribute="trailing" id="Wrx-Ep-jQ6"/>
                     <constraint firstItem="ymX-K6-rGI" firstAttribute="centerY" secondItem="DPE-KA-WIF" secondAttribute="centerY" id="Z8V-wy-m4d"/>
-                    <constraint firstItem="cyd-HF-Qjn" firstAttribute="leading" secondItem="DPE-KA-WIF" secondAttribute="leadingMargin" id="kJ5-iD-9Ym"/>
-                    <constraint firstItem="ymX-K6-rGI" firstAttribute="leading" secondItem="cyd-HF-Qjn" secondAttribute="trailing" constant="33" id="lh3-EU-8JN"/>
+                    <constraint firstItem="cyd-HF-Qjn" firstAttribute="leading" secondItem="DPE-KA-WIF" secondAttribute="leadingMargin" constant="8" id="kJ5-iD-9Ym"/>
+                    <constraint firstItem="ymX-K6-rGI" firstAttribute="leading" secondItem="cyd-HF-Qjn" secondAttribute="trailing" constant="8" symbolic="YES" id="lh3-EU-8JN"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

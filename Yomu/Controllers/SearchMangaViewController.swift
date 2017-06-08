@@ -19,10 +19,10 @@ class SearchMangaViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-   tableView.register(
-     UINib(nibName: searchedMangaCellIdentifier, bundle: nil),
-     forCellReuseIdentifier: searchedMangaCellIdentifier
-   )
+    tableView.register(
+      UINib(nibName: searchedMangaCellIdentifier, bundle: nil),
+      forCellReuseIdentifier: searchedMangaCellIdentifier
+    )
 
     // Register bindings
     searchField
@@ -61,5 +61,9 @@ class SearchMangaViewController: UITableViewController {
      cell.setup(viewModel: viewModel[indexPath.row])
 
     return cell
+  }
+
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 80
   }
 }
