@@ -10,6 +10,78 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
+		<key>7919319A1EE87DBA00607A11</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>SearchedMangaCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7919319B1EE87DBA00607A11</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7919319A1EE87DBA00607A11</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7919319C1EE87DE000607A11</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>799685BC1EE59F75000776FD</string>
+				<string>7919319A1EE87DBA00607A11</string>
+				<string>796F98F21EE2FD9B00FAF40C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>xibs</string>
+			<key>path</key>
+			<string>xibs</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7919319D1EE87DEB00607A11</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7919319E1EE87E2600607A11</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Implementations</string>
+			<key>path</key>
+			<string>Implementations</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7919319E1EE87E2600607A11</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SearchedMangaCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7919319F1EE87E2600607A11</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7919319E1EE87E2600607A11</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>79211D5E1ED9FD970049B6E2</key>
 		<dict>
 			<key>children</key>
@@ -532,8 +604,8 @@
 		<dict>
 			<key>children</key>
 			<array>
-				<string>799685BC1EE59F75000776FD</string>
-				<string>796F98F21EE2FD9B00FAF40C</string>
+				<string>7919319D1EE87DEB00607A11</string>
+				<string>7919319C1EE87DE000607A11</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -711,8 +783,6 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>file.xib</string>
-			<key>name</key>
-			<string>SearchMangaViewController.xib</string>
 			<key>path</key>
 			<string>SearchMangaViewController.xib</string>
 			<key>sourceTree</key>
@@ -972,6 +1042,7 @@
 				<string>799521631EE473500059CC34</string>
 				<string>796F98F01EE2FBD200FAF40C</string>
 				<string>799521671EE4751D0059CC34</string>
+				<string>7919319F1EE87E2600607A11</string>
 				<string>799685BD1EE59F75000776FD</string>
 				<string>79B3FC731EDC9651008323C0</string>
 				<string>79234C041EE3298C000D6734</string>
@@ -1028,6 +1099,7 @@
 			<array>
 				<string>79C6F5551ED9FCFA00B95629</string>
 				<string>79C6F5521ED9FCFA00B95629</string>
+				<string>7919319B1EE87DBA00607A11</string>
 				<string>796F98F31EE2FD9B00FAF40C</string>
 				<string>799685BE1EE59F75000776FD</string>
 			</array>

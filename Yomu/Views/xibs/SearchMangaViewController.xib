@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchMangaViewController" customModule="Yomu" customModuleProvider="target">
             <connections>
+                <outlet property="searchField" destination="5jj-6U-dIE" id="o0t-Iq-5Ef"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

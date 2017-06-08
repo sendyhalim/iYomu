@@ -7,38 +7,58 @@
 //
 
 import UIKit
+import RxSwift
 
 class SearchMangaViewController: UITableViewController {
-  let mockData = [
-    "one",
-    "two",
-    "three"
-  ]
+  @IBOutlet weak var searchField: UISearchBar!
+
+  let searchedMangaCellIdentifier = "SearchedMangaCell"
+  let viewModel = SearchedMangaCollectionViewModel()
+  let disposeBag = DisposeBag()
 
   override func viewDidLoad() {
     super.viewDidLoad()
-  }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+   tableView.register(
+     UINib(nibName: searchedMangaCellIdentifier, bundle: nil),
+     forCellReuseIdentifier: searchedMangaCellIdentifier
+   )
+
+    // Register bindings
+    searchField
+      .rx.text.orEmpty
+      .throttle(1.0, scheduler: MainScheduler.instance)
+      .subscribe(onNext: { [weak self] in
+        guard let `self` = self else {
+          return
+        }
+
+        self.viewModel.search(term: $0).addDisposableTo(self.disposeBag)
+      })
+      .addDisposableTo(disposeBag)
+
+    viewModel
+      .reload
+      .drive(onNext: tableView.reloadData)
+      .addDisposableTo(disposeBag)
   }
 
   // MARK: - Table view data source
   override func numberOfSections(in tableView: UITableView) -> Int {
-    // #warning Incomplete implementation, return the number of sections
     return 1
   }
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // #warning Incomplete implementation, return the number of rows
-    return mockData.count
+    return viewModel.count
   }
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = UITableViewCell()
+    let cell = tableView.dequeueReusableCell(
+      withIdentifier: searchedMangaCellIdentifier,
+      for: indexPath
+    ) as! SearchedMangaCell
 
-    cell.textLabel?.text = mockData[indexPath.row]
+     cell.setup(viewModel: viewModel[indexPath.row])
 
     return cell
   }
