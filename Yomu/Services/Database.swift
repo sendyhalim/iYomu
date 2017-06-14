@@ -13,7 +13,7 @@ struct Database {
   static fileprivate var realm: Realm!
 
   static func connection() -> Realm {
-    guard let _ = realm else {
+    guard realm != nil else {
       realm = try! Realm()
 
       return realm

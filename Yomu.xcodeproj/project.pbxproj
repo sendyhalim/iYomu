@@ -18,8 +18,6 @@
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Services</string>
 			<key>path</key>
 			<string>Services</string>
 			<key>sourceTree</key>
@@ -42,6 +40,26 @@
 		<dict>
 			<key>fileRef</key>
 			<string>790593E21EF0672900F7419E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7918EA9C1EF1AEC5004F3366</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>MangaCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7918EA9D1EF1AEC5004F3366</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7918EA9C1EF1AEC5004F3366</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -69,6 +87,8 @@
 		<dict>
 			<key>children</key>
 			<array>
+				<string>7918EA9C1EF1AEC5004F3366</string>
+				<string>79258B8F1EF1644C00202035</string>
 				<string>799685BC1EE59F75000776FD</string>
 				<string>7919319A1EE87DBA00607A11</string>
 				<string>796F98F21EE2FD9B00FAF40C</string>
@@ -84,6 +104,7 @@
 		<dict>
 			<key>children</key>
 			<array>
+				<string>79258B921EF1652200202035</string>
 				<string>7919319E1EE87E2600607A11</string>
 			</array>
 			<key>isa</key>
@@ -611,6 +632,66 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>79258B8E1EF1644C00202035</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MangaCollectionViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79258B8F1EF1644C00202035</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>MangaCollectionViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79258B901EF1644C00202035</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79258B8E1EF1644C00202035</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79258B911EF1644C00202035</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79258B8F1EF1644C00202035</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79258B921EF1652200202035</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MangaCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79258B941EF1652200202035</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79258B921EF1652200202035</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>796C3D221EE29F2D0029BBB2</key>
 		<dict>
 			<key>isa</key>
@@ -669,6 +750,7 @@
 		<dict>
 			<key>children</key>
 			<array>
+				<string>79258B8E1EF1644C00202035</string>
 				<string>799685BB1EE59F75000776FD</string>
 				<string>796F98EF1EE2FBD200FAF40C</string>
 			</array>
@@ -1076,6 +1158,7 @@
 				<string>7919319F1EE87E2600607A11</string>
 				<string>799685BD1EE59F75000776FD</string>
 				<string>79B3FC731EDC9651008323C0</string>
+				<string>79258B941EF1652200202035</string>
 				<string>790593E31EF0672900F7419E</string>
 				<string>79234C041EE3298C000D6734</string>
 				<string>79C6F54B1ED9FCFA00B95629</string>
@@ -1086,6 +1169,7 @@
 				<string>79B3FC711EDC9638008323C0</string>
 				<string>799521651EE4737E0059CC34</string>
 				<string>79B3FC6B1EDC93EB008323C0</string>
+				<string>79258B901EF1644C00202035</string>
 				<string>79234C011EE32945000D6734</string>
 				<string>7995215F1EE472970059CC34</string>
 			</array>
@@ -1132,6 +1216,8 @@
 				<string>79C6F5551ED9FCFA00B95629</string>
 				<string>79C6F5521ED9FCFA00B95629</string>
 				<string>7919319B1EE87DBA00607A11</string>
+				<string>7918EA9D1EF1AEC5004F3366</string>
+				<string>79258B911EF1644C00202035</string>
 				<string>796F98F31EE2FD9B00FAF40C</string>
 				<string>799685BE1EE59F75000776FD</string>
 			</array>

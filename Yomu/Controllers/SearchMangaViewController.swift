@@ -58,7 +58,7 @@ class SearchMangaViewController: UITableViewController {
       for: indexPath
     ) as! SearchedMangaCell
 
-     cell.setup(viewModel: viewModel[indexPath.row])
+    cell.setup(viewModel: viewModel[indexPath.row])
 
     return cell
   }
