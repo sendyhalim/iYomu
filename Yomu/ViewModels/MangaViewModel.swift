@@ -10,6 +10,14 @@ import RxCocoa
 import RxSwift
 
 struct MangaViewModel {
+  var manga: Manga {
+    return _manga.value
+  }
+
+  var id: String {
+    return _manga.value.id!
+  }
+
   // MARK: Output
   let previewUrl: Driver<URL>
   let title: Driver<String>
@@ -35,4 +43,20 @@ struct MangaViewModel {
         $0.categories.joined(separator: ", ")
     }
   }
+
+  func update(position: Int) {
+    _manga.value.position = position
+  }
+}
+
+extension MangaViewModel: Hashable {
+  var hashValue: Int {
+    return _manga.value.id!.hashValue
+  }
+}
+
+extension MangaViewModel: Equatable { }
+
+func == (lhs: MangaViewModel, rhs: MangaViewModel) -> Bool {
+  return lhs._manga.value.id == rhs._manga.value.id
 }

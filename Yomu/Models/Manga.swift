@@ -70,15 +70,3 @@ extension Manga: Decodable {
       <*> json <|| "categories"
   }
 }
-
-extension Manga: Hashable {
-  var hashValue: Int {
-    return id!.hashValue
-  }
-}
-
-extension Manga: Equatable { }
-
-func == (lhs: Manga, rhs: Manga) -> Bool {
-  return lhs.id == rhs.id
-}
