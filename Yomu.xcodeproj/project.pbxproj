@@ -805,6 +805,7 @@
 		<dict>
 			<key>children</key>
 			<array>
+				<string>79D525621EF307CC00431DDE</string>
 				<string>799521641EE4737E0059CC34</string>
 				<string>799521621EE473500059CC34</string>
 			</array>
@@ -1172,6 +1173,7 @@
 				<string>79258B901EF1644C00202035</string>
 				<string>79234C011EE32945000D6734</string>
 				<string>7995215F1EE472970059CC34</string>
+				<string>79D525631EF307CC00431DDE</string>
 			</array>
 			<key>isa</key>
 			<string>PBXSourcesBuildPhase</string>
@@ -1828,6 +1830,26 @@
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
 			<string>Release</string>
+		</dict>
+		<key>79D525621EF307CC00431DDE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MangaViewModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79D525631EF307CC00431DDE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79D525621EF307CC00431DDE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
