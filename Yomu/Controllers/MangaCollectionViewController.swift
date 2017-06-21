@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class MangaCollectionViewController: UITableViewController {
   let mockData = [
@@ -15,6 +16,7 @@ class MangaCollectionViewController: UITableViewController {
   ]
 
   let mangaCellIdentifier = "MangaCell"
+  let disposeBag = DisposeBag()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -23,6 +25,23 @@ class MangaCollectionViewController: UITableViewController {
       UINib(nibName: mangaCellIdentifier, bundle: nil),
       forCellReuseIdentifier: mangaCellIdentifier
     )
+
+    let rightBarItem = UIBarButtonItem(
+      title: "Add Manga 📘",
+      style: .plain,
+      target: nil,
+      action: nil
+    )
+
+    navigationItem.rightBarButtonItem = rightBarItem
+
+    navigationItem
+      .rightBarButtonItem?
+      .rx.tap
+      .subscribe(onNext: {
+        YomuNavigationController.instance()?.navigateToSearchMangaView()
+      })
+      .addDisposableTo(disposeBag)
   }
 
   override func didReceiveMemoryWarning() {

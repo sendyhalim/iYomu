@@ -29,4 +29,9 @@ class YomuNavigationController: UINavigationController {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
+
+  func navigateToSearchMangaView() {
+    let searchMangaVC = SearchMangaViewController(nibName: nil, bundle: nil)
+    pushViewController(searchMangaVC, animated: true)
+  }
 }
