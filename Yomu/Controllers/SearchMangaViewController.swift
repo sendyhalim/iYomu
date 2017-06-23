@@ -24,16 +24,24 @@ class SearchMangaViewController: UITableViewController {
       forCellReuseIdentifier: searchedMangaCellIdentifier
     )
 
+    viewModel
+      .fetching
+      .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
+      .addDisposableTo(disposeBag)
+
     // Register bindings
     searchField
       .rx.text.orEmpty
+      .filter { $0.characters.count > 2 } // At least 3 characters
       .throttle(1.0, scheduler: MainScheduler.instance)
       .subscribe(onNext: { [weak self] in
         guard let `self` = self else {
           return
         }
 
-        self.viewModel.search(term: $0).addDisposableTo(self.disposeBag)
+        self.viewModel
+          .search(term: $0)
+          .addDisposableTo(self.disposeBag)
       })
       .addDisposableTo(disposeBag)
 
