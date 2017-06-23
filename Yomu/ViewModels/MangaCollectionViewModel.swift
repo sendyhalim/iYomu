@@ -22,13 +22,12 @@ struct SelectedIndex {
 struct MangaCollectionViewModel {
   // MARK: Public
   var count: Int {
-    return mangaViewModels.value.count
+    return _mangas.value.count
   }
 
   // MARK: Output
   let fetching: Driver<Bool>
   let reload: Driver<Void>
-  let mangas: Driver<List<MangaViewModel>>
 
   // MARK: Private
   fileprivate let _selectedIndex = Variable(SelectedIndex(previousIndex: -1, index: -1))
@@ -46,19 +45,13 @@ struct MangaCollectionViewModel {
 
   fileprivate let deletedManga = PublishSubject<MangaViewModel>()
   fileprivate let addedManga = PublishSubject<MangaViewModel>()
-  fileprivate let mangaViewModels = Variable(List<MangaViewModel>())
   fileprivate let disposeBag = DisposeBag()
 
   init() {
     fetching = _fetching.asDriver()
-    mangas = mangaViewModels.asDriver()
-    reload = Observable
-      .of(
-        _mangas.asObservable().map { _ in () },
-        mangaViewModels.asObservable().map { _ in () }
-      )
-      .merge()
-      .asDriver(onErrorJustReturn: ())
+    reload = _mangas
+      .asDriver()
+      .map { _ in () }
 
     deletedManga
       .map { manga in
@@ -76,7 +69,7 @@ struct MangaCollectionViewModel {
   }
 
   subscript(index: Int) -> MangaViewModel {
-    return mangaViewModels.value[UInt(index)]
+    return _mangas.value[index]
   }
 
   func fetch(id: String) -> Disposable {

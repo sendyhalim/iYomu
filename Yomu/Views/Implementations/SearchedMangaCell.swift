@@ -36,7 +36,7 @@ class SearchedMangaCell: UITableViewCell {
       .addDisposableTo(disposeBag)
 
     viewModel
-      .categories
+      .categoriesString
       .drive(categoriesLabel.rx.text)
       .addDisposableTo(disposeBag)
   }

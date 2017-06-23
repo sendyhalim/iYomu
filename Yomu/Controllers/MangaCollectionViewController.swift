@@ -10,11 +10,6 @@ import UIKit
 import RxSwift
 
 class MangaCollectionViewController: UITableViewController {
-  let mockData = [
-    "test",
-    "yo"
-  ]
-
   let mangaCellIdentifier = "MangaCell"
   let viewModel = MangaCollectionViewModel()
   let disposeBag = DisposeBag()
@@ -35,6 +30,11 @@ class MangaCollectionViewController: UITableViewController {
     )
 
     navigationItem.rightBarButtonItem = rightBarItem
+
+    viewModel
+      .reload
+      .drive(onNext: tableView.reloadData)
+      .addDisposableTo(disposeBag)
 
     viewModel
       .fetching
@@ -74,7 +74,7 @@ class MangaCollectionViewController: UITableViewController {
   }
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return mockData.count
+    return viewModel.count
   }
 
   override func tableView(
@@ -86,7 +86,7 @@ class MangaCollectionViewController: UITableViewController {
       for: indexPath
     ) as! MangaCell
 
-    cell.titleLabel.text = mockData[indexPath.row]
+    cell.setup(viewModel: viewModel[indexPath.row])
 
     return cell
   }
