@@ -14,6 +14,7 @@ class SearchMangaViewController: UITableViewController {
 
   let searchedMangaCellIdentifier = "SearchedMangaCell"
   let viewModel = SearchedMangaCollectionViewModel()
+  let newManga = PublishSubject<SearchedMangaViewModel>()
   let disposeBag = DisposeBag()
 
   override func viewDidLoad() {
@@ -73,5 +74,11 @@ class SearchMangaViewController: UITableViewController {
 
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 80
+  }
+
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let searchedManga = viewModel[indexPath.row]
+
+    newManga.on(.next(searchedManga))
   }
 }

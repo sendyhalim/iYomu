@@ -7,6 +7,15 @@
 //
 
 import UIKit
+import RxSwift
+
+enum NavigationTarget {
+  case searchManga
+}
+
+enum NavigationData {
+  case searchManga(String)
+}
 
 /// Custom UINavigationController for easier customization in the future
 class YomuNavigationController: UINavigationController {
@@ -30,8 +39,17 @@ class YomuNavigationController: UINavigationController {
     super.didReceiveMemoryWarning()
   }
 
-  func navigateToSearchMangaView() {
-    let searchMangaVC = SearchMangaViewController(nibName: nil, bundle: nil)
-    pushViewController(searchMangaVC, animated: true)
+  func navigate(to: NavigationTarget) -> Observable<NavigationData> {
+    switch to {
+    case .searchManga:
+      let searchMangaVC = SearchMangaViewController(nibName: nil, bundle: nil)
+      pushViewController(searchMangaVC, animated: true)
+
+      return searchMangaVC
+        .newManga
+        .asObservable()
+        .flatMap { $0.apiId.asObservable() }
+        .map { .searchManga($0) }
+    }
   }
 }

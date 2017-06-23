@@ -16,6 +16,7 @@ class MangaCollectionViewController: UITableViewController {
   ]
 
   let mangaCellIdentifier = "MangaCell"
+  let viewModel = MangaCollectionViewModel()
   let disposeBag = DisposeBag()
 
   override func viewDidLoad() {
@@ -35,11 +36,31 @@ class MangaCollectionViewController: UITableViewController {
 
     navigationItem.rightBarButtonItem = rightBarItem
 
+    viewModel
+      .fetching
+      .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
+      .addDisposableTo(disposeBag)
+
     navigationItem
       .rightBarButtonItem?
       .rx.tap
-      .subscribe(onNext: {
-        YomuNavigationController.instance()?.navigateToSearchMangaView()
+      .flatMap {
+        YomuNavigationController
+          .instance()!
+          .navigate(to: .searchManga)
+      }
+      .subscribe(onNext: { [weak self] navigationData in
+        guard let `self` = self else {
+          return
+        }
+
+        if case .searchManga(let id) = navigationData {
+          self.viewModel
+            .fetch(id: id)
+            .addDisposableTo(self.disposeBag)
+        }
+
+        YomuNavigationController.instance()?.popViewController(animated: true)
       })
       .addDisposableTo(disposeBag)
   }
