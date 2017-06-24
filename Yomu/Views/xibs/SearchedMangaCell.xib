@@ -27,25 +27,36 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6G-rl-9TR">
-                        <rect key="frame" x="64" y="45" width="301" height="15"/>
+                        <rect key="frame" x="64" y="45" width="273" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymX-K6-rGI">
-                        <rect key="frame" x="64" y="19.5" width="301" height="17"/>
+                        <rect key="frame" x="64" y="19.5" width="273" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHz-6a-Lr3">
+                        <rect key="frame" x="345" y="28.5" width="20" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="8BR-va-dhI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="A6G-rl-9TR" secondAttribute="trailing" id="1CJ-dP-eEK"/>
                     <constraint firstItem="cyd-HF-Qjn" firstAttribute="centerY" secondItem="DPE-KA-WIF" secondAttribute="centerY" id="5yC-0O-MaB"/>
                     <constraint firstItem="ymX-K6-rGI" firstAttribute="top" secondItem="cyd-HF-Qjn" secondAttribute="top" constant="10" id="606-08-4me"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="ymX-K6-rGI" secondAttribute="trailing" id="Wrx-Ep-jQ6"/>
+                    <constraint firstItem="mHz-6a-Lr3" firstAttribute="leading" secondItem="ymX-K6-rGI" secondAttribute="trailing" constant="8" symbolic="YES" id="9Gd-Lt-JBb"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="mHz-6a-Lr3" secondAttribute="trailing" id="AkM-5h-ugU"/>
+                    <constraint firstItem="mHz-6a-Lr3" firstAttribute="leading" secondItem="A6G-rl-9TR" secondAttribute="trailing" constant="8" symbolic="YES" id="chn-qm-b9a"/>
                     <constraint firstItem="A6G-rl-9TR" firstAttribute="bottom" secondItem="cyd-HF-Qjn" secondAttribute="bottom" constant="-10" id="jsa-2U-rwp"/>
                     <constraint firstItem="cyd-HF-Qjn" firstAttribute="leading" secondItem="DPE-KA-WIF" secondAttribute="leadingMargin" constant="8" id="kJ5-iD-9Ym"/>
+                    <constraint firstItem="mHz-6a-Lr3" firstAttribute="centerY" secondItem="DPE-KA-WIF" secondAttribute="centerY" id="kbh-1N-Rsn"/>
                     <constraint firstItem="ymX-K6-rGI" firstAttribute="leading" secondItem="cyd-HF-Qjn" secondAttribute="trailing" constant="8" symbolic="YES" id="lh3-EU-8JN"/>
                     <constraint firstItem="A6G-rl-9TR" firstAttribute="leading" secondItem="cyd-HF-Qjn" secondAttribute="trailing" constant="8" id="oBa-cV-MEP"/>
                 </constraints>
