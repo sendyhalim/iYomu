@@ -14,4 +14,4 @@ included:
 excluded: # paths to ignore during linting. overridden by `included`.
   - Carthage
   - Pods
-  - R.generated.swift
+  - Yomu/R.generated.swift

@@ -153,6 +153,7 @@
 		<dict>
 			<key>children</key>
 			<array>
+				<string>79A917C01EFEC0C300820E57</string>
 				<string>79BD51AD1EFE52D70063F3AC</string>
 				<string>7918EA9C1EF1AEC5004F3366</string>
 				<string>79258B8F1EF1644C00202035</string>
@@ -171,6 +172,7 @@
 		<dict>
 			<key>children</key>
 			<array>
+				<string>79A917C21EFEC29500820E57</string>
 				<string>79258B921EF1652200202035</string>
 				<string>7919319E1EE87E2600607A11</string>
 			</array>
@@ -911,27 +913,7 @@
 			<key>shellPath</key>
 			<string>/bin/sh</string>
 			<key>shellScript</key>
-			<string>"Pods/R.swift/rswift" "$SRCROOT"</string>
-		</dict>
-		<key>798459571EFEBCE600C12ADC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>R.generated.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>798459581EFEBCE600C12ADC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>798459571EFEBCE600C12ADC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>"Pods/R.swift/rswift" "$SRCROOT/Yomu"</string>
 		</dict>
 		<key>7995215E1EE472970059CC34</key>
 		<dict>
@@ -1088,6 +1070,66 @@
 		<dict>
 			<key>fileRef</key>
 			<string>799ACACC1EF451F3006208B5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79A917C01EFEC0C300820E57</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>ChapterCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A917C11EFEC0C300820E57</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79A917C01EFEC0C300820E57</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79A917C21EFEC29500820E57</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChapterCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A917C31EFEC29500820E57</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79A917C21EFEC29500820E57</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79A917C61EFEC40400820E57</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>R.generated.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A917C71EFEC40400820E57</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79A917C61EFEC40400820E57</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1387,8 +1429,9 @@
 				<string>79B3FC691EDC93C1008323C0</string>
 				<string>79B3FC711EDC9638008323C0</string>
 				<string>799521651EE4737E0059CC34</string>
+				<string>79A917C31EFEC29500820E57</string>
 				<string>79B3FC6B1EDC93EB008323C0</string>
-				<string>798459581EFEBCE600C12ADC</string>
+				<string>79A917C71EFEC40400820E57</string>
 				<string>79258B901EF1644C00202035</string>
 				<string>79234C011EE32945000D6734</string>
 				<string>7958C8E81EFEA92400CAD90E</string>
@@ -1446,6 +1489,7 @@
 				<string>796F98F31EE2FD9B00FAF40C</string>
 				<string>79BD51AE1EFE52D70063F3AC</string>
 				<string>799685BE1EE59F75000776FD</string>
+				<string>79A917C11EFEC0C300820E57</string>
 			</array>
 			<key>isa</key>
 			<string>PBXResourcesBuildPhase</string>
@@ -1525,7 +1569,7 @@
 				<string>79C6F5511ED9FCFA00B95629</string>
 				<string>79C6F5561ED9FCFA00B95629</string>
 				<string>79C6F5531ED9FCFA00B95629</string>
-				<string>798459571EFEBCE600C12ADC</string>
+				<string>79A917C61EFEC40400820E57</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
