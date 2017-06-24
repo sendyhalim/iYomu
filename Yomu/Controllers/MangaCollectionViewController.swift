@@ -54,7 +54,7 @@ class MangaCollectionViewController: UITableViewController {
           return
         }
 
-        if case .searchManga(let id) = navigationData {
+        if case .some(.searchManga(let id)) = navigationData {
           self.viewModel
             .fetch(id: id)
             .addDisposableTo(self.disposeBag)
@@ -93,5 +93,11 @@ class MangaCollectionViewController: UITableViewController {
 
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 80
+  }
+
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    _ = YomuNavigationController
+      .instance()!
+      .navigate(to: .chapterCollection)
   }
 }

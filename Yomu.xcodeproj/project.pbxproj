@@ -49,6 +49,8 @@
 		79B3FC6F1EDC960F008323C0 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3FC6E1EDC960F008323C0 /* Chapter.swift */; };
 		79B3FC711EDC9638008323C0 /* ChapterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3FC701EDC9638008323C0 /* ChapterPage.swift */; };
 		79B3FC731EDC9651008323C0 /* MangaRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3FC721EDC9651008323C0 /* MangaRealm.swift */; };
+		79BD51AE1EFE52D70063F3AC /* ChapterCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79BD51AD1EFE52D70063F3AC /* ChapterCollectionViewController.xib */; };
+		79BD51B01EFE62230063F3AC /* ChapterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD51AF1EFE62230063F3AC /* ChapterCollectionViewController.swift */; };
 		79C6F54B1ED9FCFA00B95629 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6F54A1ED9FCFA00B95629 /* AppDelegate.swift */; };
 		79C6F5521ED9FCFA00B95629 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79C6F5511ED9FCFA00B95629 /* Assets.xcassets */; };
 		79C6F5551ED9FCFA00B95629 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C6F5531ED9FCFA00B95629 /* LaunchScreen.storyboard */; };
@@ -109,6 +111,8 @@
 		79B3FC6E1EDC960F008323C0 /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
 		79B3FC701EDC9638008323C0 /* ChapterPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterPage.swift; sourceTree = "<group>"; };
 		79B3FC721EDC9651008323C0 /* MangaRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MangaRealm.swift; sourceTree = "<group>"; };
+		79BD51AD1EFE52D70063F3AC /* ChapterCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterCollectionViewController.xib; sourceTree = "<group>"; };
+		79BD51AF1EFE62230063F3AC /* ChapterCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterCollectionViewController.swift; sourceTree = "<group>"; };
 		79C6F5471ED9FCFA00B95629 /* Yomu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yomu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C6F54A1ED9FCFA00B95629 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79C6F5511ED9FCFA00B95629 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 				799685BC1EE59F75000776FD /* SearchMangaViewController.xib */,
 				7919319A1EE87DBA00607A11 /* SearchedMangaCell.xib */,
 				796F98F21EE2FD9B00FAF40C /* YomuNavigationController.xib */,
+				79BD51AD1EFE52D70063F3AC /* ChapterCollectionViewController.xib */,
 			);
 			path = xibs;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 				79258B8E1EF1644C00202035 /* MangaCollectionViewController.swift */,
 				799685BB1EE59F75000776FD /* SearchMangaViewController.swift */,
 				796F98EF1EE2FBD200FAF40C /* YomuNavigationController.swift */,
+				79BD51AF1EFE62230063F3AC /* ChapterCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -410,6 +416,7 @@
 				7918EA9D1EF1AEC5004F3366 /* MangaCell.xib in Resources */,
 				79258B911EF1644C00202035 /* MangaCollectionViewController.xib in Resources */,
 				796F98F31EE2FD9B00FAF40C /* YomuNavigationController.xib in Resources */,
+				79BD51AE1EFE52D70063F3AC /* ChapterCollectionViewController.xib in Resources */,
 				799685BE1EE59F75000776FD /* SearchMangaViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +488,7 @@
 				796F98F01EE2FBD200FAF40C /* YomuNavigationController.swift in Sources */,
 				799521671EE4751D0059CC34 /* RxMoyaResponse.swift in Sources */,
 				7919319F1EE87E2600607A11 /* SearchedMangaCell.swift in Sources */,
+				79BD51B01EFE62230063F3AC /* ChapterCollectionViewController.swift in Sources */,
 				799685BD1EE59F75000776FD /* SearchMangaViewController.swift in Sources */,
 				79B3FC731EDC9651008323C0 /* MangaRealm.swift in Sources */,
 				79258B941EF1652200202035 /* MangaCell.swift in Sources */,

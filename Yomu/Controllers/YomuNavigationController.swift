@@ -11,6 +11,7 @@ import RxSwift
 
 enum NavigationTarget {
   case searchManga
+  case chapterCollection
 }
 
 enum NavigationData {
@@ -39,7 +40,7 @@ class YomuNavigationController: UINavigationController {
     super.didReceiveMemoryWarning()
   }
 
-  func navigate(to: NavigationTarget) -> Observable<NavigationData> {
+  func navigate(to: NavigationTarget) -> Observable<NavigationData?> {
     switch to {
     case .searchManga:
       let searchMangaVC = SearchMangaViewController(nibName: nil, bundle: nil)
@@ -50,6 +51,12 @@ class YomuNavigationController: UINavigationController {
         .asObservable()
         .flatMap { $0.apiId.asObservable() }
         .map { .searchManga($0) }
+
+    case .chapterCollection:
+      let chapterCollectionVC = ChapterCollectionViewController(nibName: nil, bundle: nil)
+      pushViewController(chapterCollectionVC, animated: true)
+
+      return Observable.just(nil)
     }
   }
 }
