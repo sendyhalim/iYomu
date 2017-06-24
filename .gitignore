@@ -1,0 +1,7 @@
+# Ignored directories
+Carthage/
+Pods/
+
+# Ignored files
+*.log
+*.generated.swift
