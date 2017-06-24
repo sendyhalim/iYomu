@@ -12,7 +12,6 @@ import RxSwift
 class SearchMangaViewController: UITableViewController {
   @IBOutlet weak var searchField: UISearchBar!
 
-  let searchedMangaCellIdentifier = "SearchedMangaCell"
   let viewModel = SearchedMangaCollectionViewModel()
   let newManga = PublishSubject<SearchedMangaViewModel>()
   let disposeBag = DisposeBag()
@@ -20,10 +19,7 @@ class SearchMangaViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    tableView.register(
-      UINib(nibName: searchedMangaCellIdentifier, bundle: nil),
-      forCellReuseIdentifier: searchedMangaCellIdentifier
-    )
+    tableView.register(R.nib.searchedMangaCell)
 
     viewModel
       .fetching
@@ -63,7 +59,7 @@ class SearchMangaViewController: UITableViewController {
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(
-      withIdentifier: searchedMangaCellIdentifier,
+      withIdentifier: R.nib.searchedMangaCell.identifier,
       for: indexPath
     ) as! SearchedMangaCell
 

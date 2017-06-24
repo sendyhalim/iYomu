@@ -10,17 +10,13 @@ import UIKit
 import RxSwift
 
 class MangaCollectionViewController: UITableViewController {
-  let mangaCellIdentifier = "MangaCell"
   let viewModel = MangaCollectionViewModel()
   let disposeBag = DisposeBag()
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    tableView.register(
-      UINib(nibName: mangaCellIdentifier, bundle: nil),
-      forCellReuseIdentifier: mangaCellIdentifier
-    )
+    tableView.register(R.nib.mangaCell)
 
     let rightBarItem = UIBarButtonItem(
       title: "Add Manga 📘",
@@ -82,7 +78,7 @@ class MangaCollectionViewController: UITableViewController {
     cellForRowAt indexPath: IndexPath
   ) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(
-      withIdentifier: mangaCellIdentifier,
+      withIdentifier: R.nib.mangaCell.identifier,
       for: indexPath
     ) as! MangaCell
 
