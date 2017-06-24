@@ -27,9 +27,16 @@ class ChapterCollectionViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    tableView.register(R.nib.chapterCell)
+
     searchInput
       .rx.text.orEmpty
       .bind(to: viewModel.filterPattern)
+      .addDisposableTo(disposeBag)
+
+    viewModel
+      .fetching
+      .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
       .addDisposableTo(disposeBag)
 
     viewModel
@@ -47,10 +54,25 @@ class ChapterCollectionViewController: UITableViewController {
   }
 
   override func numberOfSections(in tableView: UITableView) -> Int {
-    return 0
+    return 1
+  }
+
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 80
   }
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return viewModel.count
+  }
+
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(
+      withIdentifier: R.nib.chapterCell.identifier,
+      for: indexPath
+    ) as! ChapterCell
+
+    cell.setup(viewModel: viewModel[indexPath.row])
+
+    return cell
   }
 }
