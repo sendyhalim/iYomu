@@ -17,6 +17,14 @@ class MangaCell: UITableViewCell {
   var viewModel: MangaViewModel!
   var disposeBag = DisposeBag()
 
+  override func prepareForReuse() {
+    super.prepareForReuse()
+
+    // Reset image and request to prevent race conditions when cell is reused
+    previewImage.image = .none
+    disposeBag = DisposeBag()
+  }
+
   func setup(viewModel: MangaViewModel) {
     self.viewModel = viewModel
 

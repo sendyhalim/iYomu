@@ -17,6 +17,14 @@ class ChapterCell: UITableViewCell {
   var viewModel: ChapterViewModel!
   var disposeBag = DisposeBag()
 
+  override func prepareForReuse() {
+    super.prepareForReuse()
+
+    // Reset image and request to prevent race conditions when cell is reused
+    chapterImagePreview.image = .none
+    disposeBag = DisposeBag()
+  }
+
   func setup(viewModel: ChapterViewModel) {
     self.viewModel = viewModel
 
