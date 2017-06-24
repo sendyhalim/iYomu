@@ -36,7 +36,7 @@ class ChapterCell: UITableViewCell {
       .addDisposableTo(disposeBag)
 
     viewModel
-      .previewUrl
+      .previewUrl()
       .drive(onNext: { [weak self] in
         self?.chapterImagePreview.kf.setImage(with: $0)
       })
