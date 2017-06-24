@@ -11,7 +11,7 @@ import RxSwift
 
 enum NavigationTarget {
   case searchManga
-  case chapterCollection
+  case chapterCollection(String)
 }
 
 enum NavigationData {
@@ -52,8 +52,9 @@ class YomuNavigationController: UINavigationController {
         .flatMap { $0.apiId.asObservable() }
         .map { .searchManga($0) }
 
-    case .chapterCollection:
-      let chapterCollectionVC = ChapterCollectionViewController(nibName: nil, bundle: nil)
+    case .chapterCollection(let mangaId):
+      let viewModel = ChapterCollectionViewModel(mangaId: mangaId)
+      let chapterCollectionVC = ChapterCollectionViewController(viewModel: viewModel)
       pushViewController(chapterCollectionVC, animated: true)
 
       return Observable.just(nil)

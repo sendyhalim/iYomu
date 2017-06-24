@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChapterCollectionViewController" customModule="Yomu" customModuleProvider="target">
             <connections>
+                <outlet property="searchInput" destination="NHN-fw-dlF" id="QA3-ca-Qgc"/>
                 <outlet property="view" destination="vU0-RK-dVR" id="y0Q-i2-cpO"/>
             </connections>
         </placeholder>
@@ -19,6 +20,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <searchBar key="tableHeaderView" contentMode="redraw" id="NHN-fw-dlF">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                <textInputTraits key="textInputTraits"/>
+            </searchBar>
             <point key="canvasLocation" x="26" y="-335"/>
         </tableView>
     </objects>

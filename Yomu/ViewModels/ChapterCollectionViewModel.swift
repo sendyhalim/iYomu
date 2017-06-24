@@ -40,12 +40,14 @@ struct ChapterCollectionViewModel {
   let disposeBag = DisposeBag()
 
   // MARK: Private
+  fileprivate let mangaId: String
   fileprivate let _chapters = Variable(List<ChapterViewModel>())
   fileprivate let _filteredChapters = Variable(List<ChapterViewModel>())
   fileprivate let _fetching = Variable(false)
   fileprivate let _ordering = Variable(SortOrder.descending)
 
-  init() {
+  init(mangaId: String) {
+    self.mangaId = mangaId
     let chapters = self._chapters
     let filteredChapters = self._filteredChapters
     let _ordering = self._ordering
@@ -108,8 +110,8 @@ struct ChapterCollectionViewModel {
       .addDisposableTo(disposeBag)
   }
 
-  func fetch(id: String) -> Disposable {
-    let api = MangaEdenAPI.mangaDetail(id)
+  func fetch() -> Disposable {
+    let api = MangaEdenAPI.mangaDetail(mangaId)
     let request = MangaEden.request(api).share()
 
     let fetchingDisposable = request
@@ -128,13 +130,6 @@ struct ChapterCollectionViewModel {
       .bind(to: _chapters)
 
     return CompositeDisposable(fetchingDisposable, resultDisposable)
-  }
-
-  func reset() {
-    _filteredChapters.value = List()
-    _chapters.value = List()
-    _ordering.value = .descending
-    filterPattern.onNext("")
   }
 
   subscript(index: Int) -> ChapterViewModel {

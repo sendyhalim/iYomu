@@ -96,8 +96,10 @@ class MangaCollectionViewController: UITableViewController {
   }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let mangaViewModel = viewModel[indexPath.row]
+
     _ = YomuNavigationController
       .instance()!
-      .navigate(to: .chapterCollection)
+      .navigate(to: .chapterCollection(mangaViewModel.id))
   }
 }

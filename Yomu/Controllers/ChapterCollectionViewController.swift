@@ -7,12 +7,39 @@
 //
 
 import UIKit
+import RxSwift
 
 class ChapterCollectionViewController: UITableViewController {
+  @IBOutlet weak var searchInput: UISearchBar!
+
+  let viewModel: ChapterCollectionViewModel
+  let disposeBag = DisposeBag()
+
+  init(viewModel: ChapterCollectionViewModel) {
+    self.viewModel = viewModel
+    super.init(nibName: nil, bundle: nil)
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+
+    searchInput
+      .rx.text.orEmpty
+      .bind(to: viewModel.filterPattern)
+      .addDisposableTo(disposeBag)
+
+    viewModel
+      .fetch()
+      .addDisposableTo(disposeBag)
+
+    viewModel
+      .reload
+      .drive(onNext: tableView.reloadData)
+      .addDisposableTo(disposeBag)
   }
 
   override func didReceiveMemoryWarning() {
@@ -24,6 +51,6 @@ class ChapterCollectionViewController: UITableViewController {
   }
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 0
+    return viewModel.count
   }
 }
