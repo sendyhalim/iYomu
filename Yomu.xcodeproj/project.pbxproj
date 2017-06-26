@@ -155,6 +155,8 @@
 			<array>
 				<string>79A917C01EFEC0C300820E57</string>
 				<string>79BD51AD1EFE52D70063F3AC</string>
+				<string>794E47BD1F00C08D0062FA6D</string>
+				<string>794E47B71F00BEC70062FA6D</string>
 				<string>7918EA9C1EF1AEC5004F3366</string>
 				<string>79258B8F1EF1644C00202035</string>
 				<string>799685BC1EE59F75000776FD</string>
@@ -173,6 +175,7 @@
 			<key>children</key>
 			<array>
 				<string>79A917C21EFEC29500820E57</string>
+				<string>794E47BB1F00C04F0062FA6D</string>
 				<string>79258B921EF1652200202035</string>
 				<string>7919319E1EE87E2600607A11</string>
 			</array>
@@ -764,6 +767,90 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>794E47B71F00BEC70062FA6D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>ChapterPageCollectionViewController.xib</string>
+			<key>path</key>
+			<string>ChapterPageCollectionViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>794E47B81F00BEC70062FA6D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>794E47B71F00BEC70062FA6D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>794E47B91F00BFEF0062FA6D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChapterPageCollectionViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>794E47BA1F00BFEF0062FA6D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>794E47B91F00BFEF0062FA6D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>794E47BB1F00C04F0062FA6D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ChapterPageCell.swift</string>
+			<key>path</key>
+			<string>ChapterPageCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>794E47BC1F00C04F0062FA6D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>794E47BB1F00C04F0062FA6D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>794E47BD1F00C08D0062FA6D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>ChapterPageCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>794E47BE1F00C08D0062FA6D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>794E47BD1F00C08D0062FA6D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>7958C8E71EFEA92400CAD90E</key>
 		<dict>
 			<key>fileEncoding</key>
@@ -863,6 +950,7 @@
 			<key>children</key>
 			<array>
 				<string>79BD51AF1EFE62230063F3AC</string>
+				<string>794E47B91F00BFEF0062FA6D</string>
 				<string>79258B8E1EF1644C00202035</string>
 				<string>799685BB1EE59F75000776FD</string>
 				<string>796F98EF1EE2FBD200FAF40C</string>
@@ -1414,9 +1502,11 @@
 				<string>7958C8EA1EFEB3B600CAD90E</string>
 				<string>799521631EE473500059CC34</string>
 				<string>796F98F01EE2FBD200FAF40C</string>
+				<string>794E47BA1F00BFEF0062FA6D</string>
 				<string>799521671EE4751D0059CC34</string>
 				<string>7919319F1EE87E2600607A11</string>
 				<string>79BD51B01EFE62230063F3AC</string>
+				<string>794E47BC1F00C04F0062FA6D</string>
 				<string>799685BD1EE59F75000776FD</string>
 				<string>79B3FC731EDC9651008323C0</string>
 				<string>79258B941EF1652200202035</string>
@@ -1488,7 +1578,9 @@
 				<string>79258B911EF1644C00202035</string>
 				<string>796F98F31EE2FD9B00FAF40C</string>
 				<string>79BD51AE1EFE52D70063F3AC</string>
+				<string>794E47B81F00BEC70062FA6D</string>
 				<string>799685BE1EE59F75000776FD</string>
+				<string>794E47BE1F00C08D0062FA6D</string>
 				<string>79A917C11EFEC0C300820E57</string>
 			</array>
 			<key>isa</key>
