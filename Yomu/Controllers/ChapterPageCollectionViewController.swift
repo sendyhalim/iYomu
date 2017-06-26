@@ -11,9 +11,11 @@ import RxSwift
 
 class ChapterPageCollectionViewController: UIViewController {
   @IBOutlet weak var collectionView: UICollectionView!
+  @IBOutlet weak var scrollView: UIScrollView!
 
   let viewModel: ChapterPageCollectionViewModel
   let disposeBag = DisposeBag()
+  var scale: CGFloat = 1.0
 
   init(viewModel: ChapterPageCollectionViewModel) {
     self.viewModel = viewModel
@@ -30,8 +32,6 @@ class ChapterPageCollectionViewController: UIViewController {
     collectionView.register(R.nib.chapterPageCell)
     collectionView.dataSource = self
     collectionView.delegate = self
-    collectionView.minimumZoomScale = 1.0
-    collectionView.maximumZoomScale = 2.0
 
     viewModel
       .fetch()
@@ -41,11 +41,6 @@ class ChapterPageCollectionViewController: UIViewController {
       .reload
       .drive(onNext: collectionView.reloadData)
       .addDisposableTo(disposeBag)
-  }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
 }
 
@@ -76,8 +71,10 @@ extension ChapterPageCollectionViewController: UICollectionViewDelegateFlowLayou
     layout collectionViewLayout: UICollectionViewLayout,
     sizeForItemAt indexPath: IndexPath
   ) -> CGSize {
-    let width = collectionView.bounds.size.width
-    let height = 3 / 2 * width
+    let vm = viewModel[indexPath.row]
+    let width = scale * collectionView.bounds.size.width
+    let height = scale * CGFloat(vm.heightToWidthRatio) * width
+
     return CGSize(width: width, height: height)
   }
 }

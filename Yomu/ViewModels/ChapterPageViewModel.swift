@@ -12,12 +12,14 @@ import RxSwift
 struct ChapterPageViewModel {
   // MARK: Public
   let imageUrl: Driver<URL>
+  let heightToWidthRatio: Double
 
   // MARK: Private
   fileprivate let chapterPage: Variable<ChapterPage>
 
   init(page: ChapterPage) {
     chapterPage = Variable(page)
+    heightToWidthRatio = Double(page.height) / Double(page.width)
 
     imageUrl = chapterPage
       .asDriver()
