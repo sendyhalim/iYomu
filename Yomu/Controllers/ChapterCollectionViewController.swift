@@ -75,4 +75,10 @@ class ChapterCollectionViewController: UITableViewController {
 
     return cell
   }
+
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    _ = YomuNavigationController
+      .instance()?
+      .navigate(to: .chapterPageCollection(viewModel[indexPath.row]))
+  }
 }

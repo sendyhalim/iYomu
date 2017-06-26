@@ -775,8 +775,6 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>file.xib</string>
-			<key>name</key>
-			<string>ChapterPageCollectionViewController.xib</string>
 			<key>path</key>
 			<string>ChapterPageCollectionViewController.xib</string>
 			<key>sourceTree</key>
@@ -817,8 +815,6 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>ChapterPageCell.swift</string>
 			<key>path</key>
 			<string>ChapterPageCell.swift</string>
 			<key>sourceTree</key>
@@ -848,6 +844,46 @@
 		<dict>
 			<key>fileRef</key>
 			<string>794E47BD1F00C08D0062FA6D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>794E47BF1F00C2730062FA6D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChapterPageCollectionViewModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>794E47C01F00C2730062FA6D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>794E47BF1F00C2730062FA6D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>794E47C11F00C3570062FA6D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChapterPageViewModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>794E47C21F00C3570062FA6D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>794E47C11F00C3570062FA6D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1028,6 +1064,8 @@
 			<key>children</key>
 			<array>
 				<string>7958C8E71EFEA92400CAD90E</string>
+				<string>794E47BF1F00C2730062FA6D</string>
+				<string>794E47C11F00C3570062FA6D</string>
 				<string>7958C8E91EFEB3B600CAD90E</string>
 				<string>79D525651EF3087500431DDE</string>
 				<string>79D525621EF307CC00431DDE</string>
@@ -1500,6 +1538,7 @@
 			<key>files</key>
 			<array>
 				<string>7958C8EA1EFEB3B600CAD90E</string>
+				<string>794E47C01F00C2730062FA6D</string>
 				<string>799521631EE473500059CC34</string>
 				<string>796F98F01EE2FBD200FAF40C</string>
 				<string>794E47BA1F00BFEF0062FA6D</string>
@@ -1515,6 +1554,7 @@
 				<string>79C6F54B1ED9FCFA00B95629</string>
 				<string>79B3FC6D1EDC95AF008323C0</string>
 				<string>79B3FC6F1EDC960F008323C0</string>
+				<string>794E47C21F00C3570062FA6D</string>
 				<string>79234C061EE32A10000D6734</string>
 				<string>79B3FC691EDC93C1008323C0</string>
 				<string>79B3FC711EDC9638008323C0</string>
