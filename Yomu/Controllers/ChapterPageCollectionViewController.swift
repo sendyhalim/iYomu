@@ -10,12 +10,11 @@ import UIKit
 import RxSwift
 
 class ChapterPageCollectionViewController: UIViewController {
-  @IBOutlet weak var collectionView: UICollectionView!
   @IBOutlet weak var scrollView: UIScrollView!
+  var imageContainerView: UIView!
 
   let viewModel: ChapterPageCollectionViewModel
   let disposeBag = DisposeBag()
-  var scale: CGFloat = 1.0
 
   init(viewModel: ChapterPageCollectionViewModel) {
     self.viewModel = viewModel
@@ -29,9 +28,15 @@ class ChapterPageCollectionViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    collectionView.register(R.nib.chapterPageCell)
-    collectionView.dataSource = self
-    collectionView.delegate = self
+    imageContainerView = UIView(frame: CGRect(
+      origin: .zero,
+      size: scrollView.bounds.size
+    ))
+
+    scrollView.addSubview(imageContainerView)
+    scrollView.minimumZoomScale = 1.0
+    scrollView.maximumZoomScale = 2.0
+    scrollView.delegate = self
 
     viewModel
       .fetch()
@@ -39,42 +44,44 @@ class ChapterPageCollectionViewController: UIViewController {
 
     viewModel
       .reload
-      .drive(onNext: collectionView.reloadData)
+      .drive(onNext: self.setupImageViews)
       .addDisposableTo(disposeBag)
   }
+
+  func setupImageViews() {
+    let width = imageContainerView.bounds.size.width
+    let spaceBetweenPage: CGFloat = 20
+    var totalHeight: CGFloat = 0
+
+    for index in 0..<viewModel.count {
+      let vm = viewModel[index]
+      let height = CGFloat(vm.heightToWidthRatio) * width
+      let origin = CGPoint(x: 0, y: totalHeight)
+      let size = CGSize(width: width, height: height)
+      let imageView = UIImageView(frame: CGRect(origin: origin, size: size))
+      imageContainerView.addSubview(imageView)
+
+      totalHeight = totalHeight + height + spaceBetweenPage
+
+      vm
+        .imageUrl
+        .drive(onNext: {
+          imageView.startAnimating()
+          imageView.kf.setImage(with: $0, placeholder: nil, options: nil, progressBlock: nil, completionHandler: { _ in
+            imageView.stopAnimating()
+          })
+        })
+        .addDisposableTo(disposeBag)
+    }
+
+    let totalSize = CGSize(width: width, height: totalHeight)
+    imageContainerView.frame.size = totalSize
+    scrollView.contentSize = totalSize
+  }
 }
 
-extension ChapterPageCollectionViewController: UICollectionViewDataSource {
-  func numberOfSections(in collectionView: UICollectionView) -> Int {
-    return 1
-  }
-
-  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return viewModel.count
-  }
-
-  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(
-      withReuseIdentifier: R.nib.chapterPageCell.identifier,
-      for: indexPath
-    ) as! ChapterPageCell
-
-    cell.setup(viewModel: viewModel[indexPath.row])
-
-    return cell
-  }
-}
-
-extension ChapterPageCollectionViewController: UICollectionViewDelegateFlowLayout {
-  func collectionView(
-    _ collectionView: UICollectionView,
-    layout collectionViewLayout: UICollectionViewLayout,
-    sizeForItemAt indexPath: IndexPath
-  ) -> CGSize {
-    let vm = viewModel[indexPath.row]
-    let width = scale * collectionView.bounds.size.width
-    let height = scale * CGFloat(vm.heightToWidthRatio) * width
-
-    return CGSize(width: width, height: height)
+extension ChapterPageCollectionViewController: UIScrollViewDelegate {
+  func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+    return imageContainerView
   }
 }
