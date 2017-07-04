@@ -9,18 +9,10 @@
 import UIKit
 import RxSwift
 
-class ChapterPageCell: UICollectionViewCell {
+class ChapterPageView: UIView {
   @IBOutlet weak var chapterPageImageView: UIImageView!
 
   var disposeBag = DisposeBag()
-
-  override func prepareForReuse() {
-    super.prepareForReuse()
-
-    // Reset image and request to prevent race conditions when cell is reused
-    disposeBag = DisposeBag()
-    chapterPageImageView.image = .none
-  }
 
   func setup(viewModel: ChapterPageViewModel) {
     viewModel

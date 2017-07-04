@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Zik-GK-cfg" customClass="ChapterPageView" customModule="Yomu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="naH-H4-9uQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="naH-H4-9uQ" firstAttribute="top" secondItem="Zik-GK-cfg" secondAttribute="top" id="0UN-wN-nMP"/>
+                <constraint firstItem="naH-H4-9uQ" firstAttribute="trailing" secondItem="Zik-GK-cfg" secondAttribute="trailing" id="36V-d0-gmg"/>
+                <constraint firstItem="naH-H4-9uQ" firstAttribute="bottom" secondItem="Zik-GK-cfg" secondAttribute="bottom" id="LEz-UW-5Cx"/>
+                <constraint firstItem="naH-H4-9uQ" firstAttribute="leading" secondItem="Zik-GK-cfg" secondAttribute="leading" id="MFN-mM-vfh"/>
+            </constraints>
+            <connections>
+                <outlet property="chapterPageImageView" destination="naH-H4-9uQ" id="vhr-oD-skn"/>
+            </connections>
+            <point key="canvasLocation" x="-77" y="-26"/>
+        </view>
+    </objects>
+</document>

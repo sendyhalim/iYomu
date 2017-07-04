@@ -58,20 +58,12 @@ class ChapterPageCollectionViewController: UIViewController {
       let height = CGFloat(vm.heightToWidthRatio) * width
       let origin = CGPoint(x: 0, y: totalHeight)
       let size = CGSize(width: width, height: height)
-      let imageView = UIImageView(frame: CGRect(origin: origin, size: size))
-      imageContainerView.addSubview(imageView)
+      let chapterPageView = R.nib.chapterPageView.firstView(owner: nil)!
+      chapterPageView.frame = CGRect(origin: origin, size: size)
+      chapterPageView.setup(viewModel: vm)
+      imageContainerView.addSubview(chapterPageView)
 
       totalHeight = totalHeight + height + spaceBetweenPage
-
-      vm
-        .imageUrl
-        .drive(onNext: {
-          imageView.startAnimating()
-          imageView.kf.setImage(with: $0, placeholder: nil, options: nil, progressBlock: nil, completionHandler: { _ in
-            imageView.stopAnimating()
-          })
-        })
-        .addDisposableTo(disposeBag)
     }
 
     let totalSize = CGSize(width: width, height: totalHeight)
