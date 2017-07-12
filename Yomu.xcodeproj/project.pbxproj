@@ -117,6 +117,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>file.xib</string>
+			<key>name</key>
+			<string>MangaCell.xib</string>
 			<key>path</key>
 			<string>MangaCell.xib</string>
 			<key>sourceTree</key>
@@ -137,6 +139,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>file.xib</string>
+			<key>name</key>
+			<string>SearchedMangaCell.xib</string>
 			<key>path</key>
 			<string>SearchedMangaCell.xib</string>
 			<key>sourceTree</key>
@@ -149,43 +153,6 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>7919319C1EE87DE000607A11</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>79A917C01EFEC0C300820E57</string>
-				<string>79BD51AD1EFE52D70063F3AC</string>
-				<string>794E47B71F00BEC70062FA6D</string>
-				<string>794E47BD1F00C08D0062FA6D</string>
-				<string>7918EA9C1EF1AEC5004F3366</string>
-				<string>79258B8F1EF1644C00202035</string>
-				<string>799685BC1EE59F75000776FD</string>
-				<string>7919319A1EE87DBA00607A11</string>
-				<string>796F98F21EE2FD9B00FAF40C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>xibs</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7919319D1EE87DEB00607A11</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>79A917C21EFEC29500820E57</string>
-				<string>794E47BB1F00C04F0062FA6D</string>
-				<string>79258B921EF1652200202035</string>
-				<string>7919319E1EE87E2600607A11</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Implementations</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>7919319E1EE87E2600607A11</key>
 		<dict>
 			<key>fileEncoding</key>
@@ -194,6 +161,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>SearchedMangaCell.swift</string>
 			<key>path</key>
 			<string>SearchedMangaCell.swift</string>
 			<key>sourceTree</key>
@@ -715,6 +684,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>MangaCollectionViewController.swift</string>
 			<key>path</key>
 			<string>MangaCollectionViewController.swift</string>
 			<key>sourceTree</key>
@@ -728,6 +699,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>file.xib</string>
+			<key>name</key>
+			<string>MangaCollectionViewController.xib</string>
 			<key>path</key>
 			<string>MangaCollectionViewController.xib</string>
 			<key>sourceTree</key>
@@ -755,6 +728,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>MangaCell.swift</string>
 			<key>path</key>
 			<string>MangaCell.swift</string>
 			<key>sourceTree</key>
@@ -775,6 +750,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>file.xib</string>
+			<key>name</key>
+			<string>ChapterPageCollectionViewController.xib</string>
 			<key>path</key>
 			<string>ChapterPageCollectionViewController.xib</string>
 			<key>sourceTree</key>
@@ -795,6 +772,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ChapterPageCollectionViewController.swift</string>
 			<key>path</key>
 			<string>ChapterPageCollectionViewController.swift</string>
 			<key>sourceTree</key>
@@ -815,6 +794,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ChapterPageView.swift</string>
 			<key>path</key>
 			<string>ChapterPageView.swift</string>
 			<key>sourceTree</key>
@@ -835,6 +816,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>file.xib</string>
+			<key>name</key>
+			<string>ChapterPageView.xib</string>
 			<key>path</key>
 			<string>ChapterPageView.xib</string>
 			<key>sourceTree</key>
@@ -855,6 +838,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ChapterPageCollectionViewModel.swift</string>
 			<key>path</key>
 			<string>ChapterPageCollectionViewModel.swift</string>
 			<key>sourceTree</key>
@@ -875,6 +860,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ChapterPageViewModel.swift</string>
 			<key>path</key>
 			<string>ChapterPageViewModel.swift</string>
 			<key>sourceTree</key>
@@ -895,6 +882,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ChapterCollectionViewModel.swift</string>
 			<key>path</key>
 			<string>ChapterCollectionViewModel.swift</string>
 			<key>sourceTree</key>
@@ -915,6 +904,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ChapterViewModel.swift</string>
 			<key>path</key>
 			<string>ChapterViewModel.swift</string>
 			<key>sourceTree</key>
@@ -947,20 +938,6 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>796F98EE1EE2FBB400FAF40C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7919319D1EE87DEB00607A11</string>
-				<string>7919319C1EE87DE000607A11</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Views</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>796F98EF1EE2FBD200FAF40C</key>
 		<dict>
 			<key>fileEncoding</key>
@@ -969,6 +946,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>YomuNavigationController.swift</string>
 			<key>path</key>
 			<string>YomuNavigationController.swift</string>
 			<key>sourceTree</key>
@@ -981,23 +960,6 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>796F98F11EE2FBD700FAF40C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>79BD51AF1EFE62230063F3AC</string>
-				<string>794E47B91F00BFEF0062FA6D</string>
-				<string>79258B8E1EF1644C00202035</string>
-				<string>799685BB1EE59F75000776FD</string>
-				<string>796F98EF1EE2FBD200FAF40C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Controllers</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>796F98F21EE2FD9B00FAF40C</key>
 		<dict>
 			<key>fileEncoding</key>
@@ -1006,6 +968,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>file.xib</string>
+			<key>name</key>
+			<string>YomuNavigationController.xib</string>
 			<key>path</key>
 			<string>YomuNavigationController.xib</string>
 			<key>sourceTree</key>
@@ -1059,26 +1023,6 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>799521611EE473410059CC34</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7958C8E71EFEA92400CAD90E</string>
-				<string>794E47BF1F00C2730062FA6D</string>
-				<string>794E47C11F00C3570062FA6D</string>
-				<string>7958C8E91EFEB3B600CAD90E</string>
-				<string>79D525651EF3087500431DDE</string>
-				<string>79D525621EF307CC00431DDE</string>
-				<string>799521641EE4737E0059CC34</string>
-				<string>799521621EE473500059CC34</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ViewModels</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>799521621EE473500059CC34</key>
 		<dict>
 			<key>fileEncoding</key>
@@ -1087,6 +1031,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>SearchedMangaViewModel.swift</string>
 			<key>path</key>
 			<string>SearchedMangaViewModel.swift</string>
 			<key>sourceTree</key>
@@ -1107,6 +1053,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>SearchedMangaCollectionViewModel.swift</string>
 			<key>path</key>
 			<string>SearchedMangaCollectionViewModel.swift</string>
 			<key>sourceTree</key>
@@ -1147,6 +1095,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>SearchMangaViewController.swift</string>
 			<key>path</key>
 			<string>SearchMangaViewController.swift</string>
 			<key>sourceTree</key>
@@ -1160,6 +1110,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>file.xib</string>
+			<key>name</key>
+			<string>SearchMangaViewController.xib</string>
 			<key>path</key>
 			<string>SearchMangaViewController.xib</string>
 			<key>sourceTree</key>
@@ -1199,6 +1151,126 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>79A0AD281F16A04A00AD8954</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79A0AD2A1F16A09200AD8954</string>
+				<string>79A0AD2C1F16A11900AD8954</string>
+				<string>79A0AD291F16A05200AD8954</string>
+				<string>79A0AD2D1F16A17000AD8954</string>
+				<string>79A0AD2B1F16A0E100AD8954</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Screens</string>
+			<key>path</key>
+			<string>Screens</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A0AD291F16A05200AD8954</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79B3FC6C1EDC95AF008323C0</string>
+				<string>79258B921EF1652200202035</string>
+				<string>7918EA9C1EF1AEC5004F3366</string>
+				<string>79258B8E1EF1644C00202035</string>
+				<string>79258B8F1EF1644C00202035</string>
+				<string>79D525651EF3087500431DDE</string>
+				<string>79B3FC721EDC9651008323C0</string>
+				<string>79D525621EF307CC00431DDE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>MangaList</string>
+			<key>path</key>
+			<string>MangaList</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A0AD2A1F16A09200AD8954</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79B3FC6E1EDC960F008323C0</string>
+				<string>79A917C21EFEC29500820E57</string>
+				<string>79A917C01EFEC0C300820E57</string>
+				<string>79BD51AF1EFE62230063F3AC</string>
+				<string>79BD51AD1EFE52D70063F3AC</string>
+				<string>7958C8E71EFEA92400CAD90E</string>
+				<string>7958C8E91EFEB3B600CAD90E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ChapterList</string>
+			<key>path</key>
+			<string>ChapterList</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A0AD2B1F16A0E100AD8954</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>799685BB1EE59F75000776FD</string>
+				<string>799685BC1EE59F75000776FD</string>
+				<string>79B3FC681EDC93C1008323C0</string>
+				<string>7919319E1EE87E2600607A11</string>
+				<string>7919319A1EE87DBA00607A11</string>
+				<string>799521641EE4737E0059CC34</string>
+				<string>799521621EE473500059CC34</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>SearchManga</string>
+			<key>path</key>
+			<string>SearchManga</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A0AD2C1F16A11900AD8954</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79B3FC701EDC9638008323C0</string>
+				<string>794E47B91F00BFEF0062FA6D</string>
+				<string>794E47B71F00BEC70062FA6D</string>
+				<string>794E47BF1F00C2730062FA6D</string>
+				<string>794E47BB1F00C04F0062FA6D</string>
+				<string>794E47BD1F00C08D0062FA6D</string>
+				<string>794E47C11F00C3570062FA6D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ChapterPageList</string>
+			<key>path</key>
+			<string>ChapterPageList</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A0AD2D1F16A17000AD8954</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>796F98EF1EE2FBD200FAF40C</string>
+				<string>796F98F21EE2FD9B00FAF40C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Root</string>
+			<key>path</key>
+			<string>Root</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>79A917C01EFEC0C300820E57</key>
 		<dict>
 			<key>fileEncoding</key>
@@ -1207,6 +1279,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>file.xib</string>
+			<key>name</key>
+			<string>ChapterCell.xib</string>
 			<key>path</key>
 			<string>ChapterCell.xib</string>
 			<key>sourceTree</key>
@@ -1227,6 +1301,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ChapterCell.swift</string>
 			<key>path</key>
 			<string>ChapterCell.swift</string>
 			<key>sourceTree</key>
@@ -1263,17 +1339,14 @@
 		<dict>
 			<key>children</key>
 			<array>
-				<string>79B3FC6E1EDC960F008323C0</string>
-				<string>79B3FC701EDC9638008323C0</string>
 				<string>79B3FC6A1EDC93EB008323C0</string>
-				<string>79B3FC6C1EDC95AF008323C0</string>
-				<string>79B3FC721EDC9651008323C0</string>
-				<string>79B3FC681EDC93C1008323C0</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
+			<key>name</key>
+			<string>DataStructures</string>
 			<key>path</key>
-			<string>Models</string>
+			<string>DataStructures</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1285,6 +1358,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>SearchedManga.swift</string>
 			<key>path</key>
 			<string>SearchedManga.swift</string>
 			<key>sourceTree</key>
@@ -1325,6 +1400,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Manga.swift</string>
 			<key>path</key>
 			<string>Manga.swift</string>
 			<key>sourceTree</key>
@@ -1345,6 +1422,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Chapter.swift</string>
 			<key>path</key>
 			<string>Chapter.swift</string>
 			<key>sourceTree</key>
@@ -1365,6 +1444,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ChapterPage.swift</string>
 			<key>path</key>
 			<string>ChapterPage.swift</string>
 			<key>sourceTree</key>
@@ -1385,6 +1466,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>MangaRealm.swift</string>
 			<key>path</key>
 			<string>MangaRealm.swift</string>
 			<key>sourceTree</key>
@@ -1405,6 +1488,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>file.xib</string>
+			<key>name</key>
+			<string>ChapterCollectionViewController.xib</string>
 			<key>path</key>
 			<string>ChapterCollectionViewController.xib</string>
 			<key>sourceTree</key>
@@ -1425,6 +1510,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ChapterCollectionViewController.swift</string>
 			<key>path</key>
 			<string>ChapterCollectionViewController.swift</string>
 			<key>sourceTree</key>
@@ -1691,12 +1778,10 @@
 			<key>children</key>
 			<array>
 				<string>79234BFF1EE32931000D6734</string>
-				<string>796F98F11EE2FBD700FAF40C</string>
-				<string>79234C021EE32983000D6734</string>
 				<string>79B3FC671EDC91D4008323C0</string>
+				<string>79234C021EE32983000D6734</string>
+				<string>79A0AD281F16A04A00AD8954</string>
 				<string>790593E11EF066DF00F7419E</string>
-				<string>799521611EE473410059CC34</string>
-				<string>796F98EE1EE2FBB400FAF40C</string>
 				<string>79C6F54A1ED9FCFA00B95629</string>
 				<string>79C6F5511ED9FCFA00B95629</string>
 				<string>79C6F5561ED9FCFA00B95629</string>
@@ -2252,6 +2337,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>MangaViewModel.swift</string>
 			<key>path</key>
 			<string>MangaViewModel.swift</string>
 			<key>sourceTree</key>
@@ -2272,6 +2359,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>MangaCollectionViewModel.swift</string>
 			<key>path</key>
 			<string>MangaCollectionViewModel.swift</string>
 			<key>sourceTree</key>

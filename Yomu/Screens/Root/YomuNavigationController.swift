@@ -33,14 +33,6 @@ class YomuNavigationController: UINavigationController {
     return nil
   }
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-  }
-
   func navigate(to: NavigationTarget) -> Observable<NavigationData?> {
     switch to {
     case .searchManga:
