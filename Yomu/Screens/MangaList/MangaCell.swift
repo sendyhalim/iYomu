@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-class MangaCell: UITableViewCell {
+class MangaCell: UICollectionViewCell {
   @IBOutlet weak var previewImage: UIImageView!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var categoriesLabel: UILabel!

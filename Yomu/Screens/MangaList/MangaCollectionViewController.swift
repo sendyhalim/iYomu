@@ -9,14 +9,15 @@
 import UIKit
 import RxSwift
 
-class MangaCollectionViewController: UITableViewController {
+class MangaCollectionViewController: UICollectionViewController {
   let viewModel = MangaCollectionViewModel()
   let disposeBag = DisposeBag()
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    tableView.register(R.nib.mangaCell)
+    collectionView!.register(R.nib.mangaCell)
+    collectionView?.delegate = self
 
     let rightBarItem = UIBarButtonItem(
       title: "Add Manga 📘",
@@ -29,7 +30,7 @@ class MangaCollectionViewController: UITableViewController {
 
     viewModel
       .reload
-      .drive(onNext: tableView.reloadData)
+      .drive(onNext: collectionView!.reloadData)
       .addDisposableTo(disposeBag)
 
     viewModel
@@ -61,37 +62,45 @@ class MangaCollectionViewController: UITableViewController {
       .addDisposableTo(disposeBag)
   }
 
-  override func numberOfSections(in tableView: UITableView) -> Int {
+  override func numberOfSections(in collectionView: UICollectionView) -> Int {
     return 1
   }
 
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return viewModel.count
   }
 
-  override func tableView(
-    _ tableView: UITableView,
-    cellForRowAt indexPath: IndexPath
-  ) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(
-      withIdentifier: R.nib.mangaCell.identifier,
+  override func collectionView(
+    _ collectionView: UICollectionView,
+    cellForItemAt indexPath: IndexPath
+  ) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(
+      withReuseIdentifier: R.nib.mangaCell.identifier,
       for: indexPath
-    ) as! MangaCell
+      ) as! MangaCell
 
     cell.setup(viewModel: viewModel[indexPath.row])
 
     return cell
   }
 
-  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 80
-  }
-
-  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+  override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let mangaViewModel = viewModel[indexPath.row]
 
     _ = YomuNavigationController
       .instance()!
       .navigate(to: .chapterCollection(mangaViewModel.id))
+  }
+}
+
+extension MangaCollectionViewController: UICollectionViewDelegateFlowLayout {
+  func collectionView(
+    _ collectionView: UICollectionView,
+    layout collectionViewLayout: UICollectionViewLayout,
+    sizeForItemAt indexPath: IndexPath
+  ) -> CGSize {
+    let width = UIScreen.main.bounds.size.width
+
+    return CGSize(width: width, height: 80)
   }
 }
