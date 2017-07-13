@@ -11,19 +11,6 @@ import Argo
 import Curry
 import Runes
 
-///  JSON mapping of Manga Eden API.
-///  Example: http://www.mangaeden.com/api/manga/4e70ea6ac092255ef7006a52/
-private struct MangaJSONMapping {
-  static let id = "i"
-  static let slug = "alias"
-  static let title = "title"
-  static let author = "author"
-  static let image = "image"
-  static let releasedYear = "released"
-  static let description = "description"
-  static let categories = "categories"
-}
-
 enum MangaPosition: Int {
   case undefined = -1
 }
@@ -38,7 +25,7 @@ struct Manga {
   let author: String
   let image: ImageUrl
   var releasedYear: Int?
-  let description: String
+  let plot: String
   let categories: [String]
 
   static func copyWith(position: Int, manga: Manga) -> Manga {
@@ -50,7 +37,7 @@ struct Manga {
       author: manga.author,
       image: manga.image,
       releasedYear: manga.releasedYear,
-      description: manga.description,
+      plot: manga.plot,
       categories: manga.categories
     )
   }
@@ -59,6 +46,8 @@ struct Manga {
 extension Manga: Decodable {
   static func decode(_ json: JSON) -> Decoded<Manga> {
 
+    ///  JSON mapping of Manga Eden API.
+    ///  Example: http://www.mangaeden.com/api/manga/4e70ea6ac092255ef7006a52/
     return curry(Manga.init)(MangaPosition.undefined.rawValue)
       <^> json <|? "id"
       <*> json <| "alias"

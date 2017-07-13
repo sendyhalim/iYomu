@@ -18,6 +18,7 @@ class MangaRealm: Object {
   dynamic var imageEndpoint: String = ""
   dynamic var releasedYear: Int = 0
   dynamic var commaSeparatedCategories: String = ""
+  dynamic var plot: String = ""
   dynamic var position: Int = MangaPosition.undefined.rawValue
 
   override static func primaryKey() -> String? {
@@ -40,6 +41,7 @@ class MangaRealm: Object {
     mangaRealm.releasedYear = manga.releasedYear ?? 0
     mangaRealm.commaSeparatedCategories = manga.categories.joined(separator: ",")
     mangaRealm.position = manga.position
+    mangaRealm.plot = manga.plot
 
     return mangaRealm
   }
@@ -65,7 +67,7 @@ class MangaRealm: Object {
       author: mangaRealm.author,
       image: ImageUrl(endpoint: mangaRealm.imageEndpoint),
       releasedYear: mangaRealm.releasedYear,
-      description: "",
+      plot: mangaRealm.plot,
       categories: categories
     )
   }
