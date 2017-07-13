@@ -19,29 +19,51 @@ struct MangaViewModel {
   }
 
   // MARK: Output
-  let previewUrl: Driver<URL>
-  let title: Driver<String>
-  let categoriesString: Driver<String>
+  var previewUrl: Driver<URL> {
+    return _manga
+      .asDriver()
+      .map { $0.image.url  }
+  }
+
+  var title: Driver<String> {
+    return _manga
+      .asDriver()
+      .map { $0.title }
+  }
+
+  var categoriesString: Driver<String> {
+    return _manga
+      .asDriver()
+      .map {
+        $0.categories.joined(separator: ", ")
+      }
+  }
+
+  var author: Driver<String> {
+    return _manga
+      .asDriver()
+      .map { $0.author }
+  }
+
+  var releasedYear: Driver<String> {
+    return _manga
+      .asDriver()
+      .map {
+        $0.releasedYear == nil ? "-" : "\($0.releasedYear!)"
+      }
+  }
+
+  var plot: Driver<String> {
+    return _manga
+      .asDriver()
+      .map { $0.plot }
+  }
 
   // MARK: Private
   fileprivate let _manga: Variable<Manga>
 
   init(manga: Manga) {
     _manga = Variable(manga)
-
-    previewUrl = _manga
-      .asDriver()
-      .map { $0.image.url }
-
-    title = _manga
-      .asDriver()
-      .map { $0.title }
-
-    categoriesString = _manga
-      .asDriver()
-      .map {
-        $0.categories.joined(separator: ", ")
-    }
   }
 
   func update(position: Int) {
