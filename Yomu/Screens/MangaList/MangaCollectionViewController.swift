@@ -18,6 +18,7 @@ class MangaCollectionViewController: UICollectionViewController {
 
     collectionView!.register(R.nib.mangaCell)
     collectionView?.delegate = self
+    collectionView!.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
 
     let rightBarItem = UIBarButtonItem(
       title: "Add Manga 📘",
@@ -99,7 +100,7 @@ extension MangaCollectionViewController: UICollectionViewDelegateFlowLayout {
     layout collectionViewLayout: UICollectionViewLayout,
     sizeForItemAt indexPath: IndexPath
   ) -> CGSize {
-    let width = UIScreen.main.bounds.size.width
+    let width = collectionView.bounds.width - collectionView.contentInset.left - collectionView.contentInset.right
 
     return CGSize(width: width, height: 80)
   }
