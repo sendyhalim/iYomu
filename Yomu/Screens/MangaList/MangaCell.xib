@@ -39,6 +39,7 @@
                     </label>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="HMp-y5-6XT" firstAttribute="trailing" secondItem="SmB-4c-SNk" secondAttribute="trailing" constant="-32" id="5SZ-aU-N3b"/>
                 <constraint firstItem="gRh-9x-atK" firstAttribute="leading" secondItem="SmB-4c-SNk" secondAttribute="leading" constant="15" id="64c-Lu-704"/>
