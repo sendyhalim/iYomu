@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -10,7 +14,31 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filled-box" translatesAutoresizingMaskIntoConstraints="NO" id="Xx2-cN-D1b">
+                    <rect key="frame" x="125" y="271" width="125" height="125"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="125" id="CWP-sS-Nas"/>
+                        <constraint firstAttribute="width" constant="125" id="Jq1-9W-guz"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching your first manga ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRG-t8-rEV">
+                    <rect key="frame" x="82" y="404" width="211" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                    <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="SRG-t8-rEV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GiD-lX-7Kp"/>
+                <constraint firstItem="Xx2-cN-D1b" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jWW-s6-XUJ"/>
+                <constraint firstItem="Xx2-cN-D1b" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="s8c-2T-gvA"/>
+                <constraint firstItem="SRG-t8-rEV" firstAttribute="top" secondItem="Xx2-cN-D1b" secondAttribute="bottom" constant="8" symbolic="YES" id="zhp-d1-EsH"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="filled-box" width="512" height="512"/>
+    </resources>
 </document>

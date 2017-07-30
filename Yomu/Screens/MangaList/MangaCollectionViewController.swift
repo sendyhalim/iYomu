@@ -30,6 +30,7 @@ class MangaCollectionViewController: UIViewController {
 
   func setupEmptyDataSet() {
     emptyDataSetContainerView.emptyView = R.nib.emptyMangaSetView.firstView(owner: nil)!
+    emptyDataSetContainerView.loadingView = R.nib.loadingView.firstView(owner: nil)!
     emptyDataSetContainerView.collectionView = collectionView
   }
 
@@ -52,11 +53,16 @@ class MangaCollectionViewController: UIViewController {
       .reload
       .drive(onNext: { [weak self] in
         if self!.viewModel.count > 0 {
-          self!.emptyDataSetContainerView.hideEmptyDataSetView()
+          self!.emptyDataSetContainerView.showCollectionView()
         } else {
           self!.emptyDataSetContainerView.showEmptyDataSetView()
         }
       })
+      .addDisposableTo(disposeBag)
+
+    viewModel
+      .showEmptyDataSetLoading
+      .drive(onNext: emptyDataSetContainerView.showLoadingView)
       .addDisposableTo(disposeBag)
 
     viewModel
