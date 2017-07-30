@@ -67,6 +67,8 @@
 		79C6F5551ED9FCFA00B95629 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C6F5531ED9FCFA00B95629 /* LaunchScreen.storyboard */; };
 		79D525631EF307CC00431DDE /* MangaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D525621EF307CC00431DDE /* MangaViewModel.swift */; };
 		79D525661EF3087500431DDE /* MangaCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D525651EF3087500431DDE /* MangaCollectionViewModel.swift */; };
+		79DC54E71F2DC11400077FA1 /* EmptyDataSetContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC54E61F2DC11400077FA1 /* EmptyDataSetContainerView.swift */; };
+		79DC54E91F2DC20B00077FA1 /* EmptyMangaSetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79DC54E81F2DC20B00077FA1 /* EmptyMangaSetView.xib */; };
 		9572D9D199520E8F20E91BCA /* Pods_Yomu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F7993593B222CDE3A2A9D44 /* Pods_Yomu.framework */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +149,8 @@
 		79C6F5611ED9FCFA00B95629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79D525621EF307CC00431DDE /* MangaViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MangaViewModel.swift; sourceTree = "<group>"; };
 		79D525651EF3087500431DDE /* MangaCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MangaCollectionViewModel.swift; sourceTree = "<group>"; };
+		79DC54E61F2DC11400077FA1 /* EmptyDataSetContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDataSetContainerView.swift; sourceTree = "<group>"; };
+		79DC54E81F2DC20B00077FA1 /* EmptyMangaSetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyMangaSetView.xib; sourceTree = "<group>"; };
 		CE92F20852E62735FC1E77F4 /* Pods-Yomu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yomu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yomu/Pods-Yomu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,6 +276,7 @@
 				79D525651EF3087500431DDE /* MangaCollectionViewModel.swift */,
 				79B3FC721EDC9651008323C0 /* MangaRealm.swift */,
 				79D525621EF307CC00431DDE /* MangaViewModel.swift */,
+				79DC54E81F2DC20B00077FA1 /* EmptyMangaSetView.xib */,
 			);
 			path = MangaList;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 		79C6F5491ED9FCFA00B95629 /* Yomu */ = {
 			isa = PBXGroup;
 			children = (
+				79DC54E51F2DC0DA00077FA1 /* Common */,
 				79234BFF1EE32931000D6734 /* API */,
 				79B3FC671EDC91D4008323C0 /* DataStructures */,
 				79234C021EE32983000D6734 /* Extensions */,
@@ -378,6 +384,14 @@
 				79C6F5611ED9FCFA00B95629 /* Info.plist */,
 			);
 			path = YomuTests;
+			sourceTree = "<group>";
+		};
+		79DC54E51F2DC0DA00077FA1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				79DC54E61F2DC11400077FA1 /* EmptyDataSetContainerView.swift */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,6 +485,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79DC54E91F2DC20B00077FA1 /* EmptyMangaSetView.xib in Resources */,
 				79C6F5551ED9FCFA00B95629 /* LaunchScreen.storyboard in Resources */,
 				79C6F5521ED9FCFA00B95629 /* Assets.xcassets in Resources */,
 				7919319B1EE87DBA00607A11 /* SearchedMangaCell.xib in Resources */,
@@ -608,6 +623,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7958C8EA1EFEB3B600CAD90E /* ChapterViewModel.swift in Sources */,
+				79DC54E71F2DC11400077FA1 /* EmptyDataSetContainerView.swift in Sources */,
 				794E47C01F00C2730062FA6D /* ChapterPageCollectionViewModel.swift in Sources */,
 				799521631EE473500059CC34 /* SearchedMangaViewModel.swift in Sources */,
 				796F98F01EE2FBD200FAF40C /* YomuNavigationController.swift in Sources */,

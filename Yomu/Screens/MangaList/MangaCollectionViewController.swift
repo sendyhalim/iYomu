@@ -9,17 +9,31 @@
 import UIKit
 import RxSwift
 
-class MangaCollectionViewController: UICollectionViewController {
+class MangaCollectionViewController: UIViewController {
+  @IBOutlet weak var collectionView: UICollectionView!
+  @IBOutlet weak var emptyDataSetContainerView: EmptyDataSetContainerView!
+
   let viewModel = MangaCollectionViewModel()
   let disposeBag = DisposeBag()
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    collectionView!.register(R.nib.mangaCell)
-    collectionView?.delegate = self
-    collectionView!.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    collectionView.register(R.nib.mangaCell)
+    collectionView.delegate = self
+    collectionView.dataSource = self
+    collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
 
+    setupEmptyDataSet()
+    setupViewModelBindings()
+  }
+
+  func setupEmptyDataSet() {
+    emptyDataSetContainerView.emptyView = R.nib.emptyMangaSetView.firstView(owner: nil)!
+    emptyDataSetContainerView.collectionView = collectionView
+  }
+
+  func setupViewModelBindings() {
     let rightBarItem = UIBarButtonItem(
       title: "Add Manga 📘",
       style: .plain,
@@ -31,7 +45,18 @@ class MangaCollectionViewController: UICollectionViewController {
 
     viewModel
       .reload
-      .drive(onNext: collectionView!.reloadData)
+      .drive(onNext: collectionView.reloadData)
+      .addDisposableTo(disposeBag)
+
+    viewModel
+      .reload
+      .drive(onNext: { [weak self] in
+        if self!.viewModel.count > 0 {
+          self!.emptyDataSetContainerView.hideEmptyDataSetView()
+        } else {
+          self!.emptyDataSetContainerView.showEmptyDataSetView()
+        }
+      })
       .addDisposableTo(disposeBag)
 
     viewModel
@@ -62,19 +87,21 @@ class MangaCollectionViewController: UICollectionViewController {
       })
       .addDisposableTo(disposeBag)
   }
+}
 
-  override func numberOfSections(in collectionView: UICollectionView) -> Int {
+extension MangaCollectionViewController: UICollectionViewDataSource {
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
     return 1
   }
 
-  override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return viewModel.count
   }
 
-  override func collectionView(
+  func collectionView(
     _ collectionView: UICollectionView,
     cellForItemAt indexPath: IndexPath
-  ) -> UICollectionViewCell {
+    ) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(
       withReuseIdentifier: R.nib.mangaCell.identifier,
       for: indexPath
@@ -84,17 +111,17 @@ class MangaCollectionViewController: UICollectionViewController {
 
     return cell
   }
+}
 
-  override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+extension MangaCollectionViewController: UICollectionViewDelegateFlowLayout {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let mangaViewModel = viewModel[indexPath.row]
 
     _ = YomuNavigationController
       .instance()!
       .navigate(to: .chapterCollection(mangaViewModel.id))
   }
-}
 
-extension MangaCollectionViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(
     _ collectionView: UICollectionView,
     layout collectionViewLayout: UICollectionViewLayout,
