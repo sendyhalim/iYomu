@@ -27,6 +27,7 @@ struct MangaCollectionViewModel {
 
   // MARK: Output
   let fetching: Driver<Bool>
+  let showEmptyDataSetLoading: Driver<Bool>
   let reload: Driver<Void>
 
   // MARK: Private
@@ -66,6 +67,14 @@ struct MangaCollectionViewModel {
       }
       .subscribe(Realm.rx.add(update: true))
       .addDisposableTo(disposeBag)
+
+    // We want to show empty data set loading view if manga count is 0 and we're in the fetching state
+    showEmptyDataSetLoading = Driver
+      .combineLatest(
+        fetching,
+        _mangas.asDriver().map { $0.count == 0 }
+      )
+      .map { $0 && $1 }
   }
 
   subscript(index: Int) -> MangaViewModel {
