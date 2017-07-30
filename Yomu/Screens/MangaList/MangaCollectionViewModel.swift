@@ -27,7 +27,7 @@ struct MangaCollectionViewModel {
 
   // MARK: Output
   let fetching: Driver<Bool>
-  let showEmptyDataSetLoading: Driver<Bool>
+  let showEmptyDataSetLoading: Driver<Void>
   let reload: Driver<Void>
 
   // MARK: Private
@@ -74,7 +74,11 @@ struct MangaCollectionViewModel {
         fetching,
         _mangas.asDriver().map { $0.count == 0 }
       )
-      .map { $0 && $1 }
+      .map {
+        $0 && $1
+      }
+      .filter(identity)
+      .map { _ in () }
   }
 
   subscript(index: Int) -> MangaViewModel {
