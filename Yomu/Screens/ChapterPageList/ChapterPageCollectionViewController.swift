@@ -42,6 +42,20 @@ class ChapterPageCollectionViewController: UIViewController {
     scrollView.maximumZoomScale = 2.0
     scrollView.delegate = self
 
+    navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(
+      title: "Back",
+      style: .plain,
+      target: nil,
+      action: nil
+    )
+
+    viewModel
+      .title
+      .drive(onNext: { [weak self] in
+        self?.title = $0
+      })
+      .addDisposableTo(disposeBag)
+
     viewModel
       .fetch()
       .addDisposableTo(disposeBag)

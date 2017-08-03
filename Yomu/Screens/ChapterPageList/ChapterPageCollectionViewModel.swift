@@ -54,11 +54,6 @@ struct ChapterPageCollectionViewModel {
     return _chapterPages.value.count
   }
 
-  /// Chapter page size based on config
-//  var pageSize: CGSize {
-//    return _pageSize.value
-//  }
-
   // MARK: Input
   let zoomIn = PublishSubject<Void>()
   let zoomOut = PublishSubject<Void>()
@@ -67,8 +62,7 @@ struct ChapterPageCollectionViewModel {
   let reload: Driver<Void>
   let chapterPages: Driver<List<ChapterPage>>
   let invalidateLayout: Driver<Void>
-  // let zoomScale: Driver<String>
-  let headerTitle: Driver<String>
+  let title: Driver<String>
   let readingProgress: Driver<String>
   let pageCount: Driver<String>
   let disposeBag = DisposeBag()
@@ -82,7 +76,6 @@ struct ChapterPageCollectionViewModel {
   init(chapterViewModel: ChapterViewModel) {
     let _chapterPages = self._chapterPages
     let _zoomScale = self._zoomScale
-    // let _pageSize = self._pageSize
     let _currentPageIndex = self._currentPageIndex
 
     chapterVM = chapterViewModel
@@ -100,43 +93,11 @@ struct ChapterPageCollectionViewModel {
       .asDriver()
       .map { "/ \($0.count) pages" }
 
-//    zoomIn
-//      .map {
-//        ZoomScale(scale: _zoomScale.value.scale + Config.chapterPageSize.zoomScaleStep)
-//      }
-//      .bind(to: _zoomScale)
-//      .addDisposableTo(disposeBag)
-//
-//    zoomOut
-//      .filter {
-//        (_zoomScale.value.scale - Config.chapterPageSize.zoomScaleStep) > Config.chapterPageSize.minimumZoomScale
-//      }
-//      .map {
-//        ZoomScale(scale: _zoomScale.value.scale - Config.chapterPageSize.zoomScaleStep)
-//      }
-//      .bind(to: _zoomScale)
-//      .addDisposableTo(disposeBag)
-
-//    _zoomScale
-//      .asObservable()
-//      .map { zoom in
-//        CGSize(
-//          width: Int(Double(Config.chapterPageSize.width) * zoom.scale),
-//          height: Int(Double(Config.chapterPageSize.height) * zoom.scale)
-//        )
-//      }
-//      .bind(to: _pageSize)
-//      .addDisposableTo(disposeBag)
-//
-//    zoomScale = _zoomScale
-//      .asDriver()
-//      .map { $0.description }
-
     invalidateLayout = _zoomScale
       .asDriver()
       .map { _ in () }
 
-    headerTitle = chapterVM.number
+    title = chapterVM.title
   }
 
   subscript(index: Int) -> ChapterPageViewModel {
