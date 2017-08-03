@@ -29,6 +29,13 @@ class ChapterPageCollectionViewController: UIViewController {
     return true
   }
 
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+
+    imageContainerView.removeFromSuperview()
+    imageContainerView = nil
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
