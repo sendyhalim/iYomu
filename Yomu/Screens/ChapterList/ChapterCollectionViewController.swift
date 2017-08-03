@@ -35,6 +35,13 @@ class ChapterCollectionViewController: UITableViewController {
       .addDisposableTo(disposeBag)
 
     viewModel
+      .title
+      .drive(onNext: { [weak self] in
+        self?.title = $0
+      })
+      .addDisposableTo(disposeBag)
+
+    viewModel
       .fetching
       .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
       .addDisposableTo(disposeBag)

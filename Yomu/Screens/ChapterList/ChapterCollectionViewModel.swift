@@ -38,6 +38,7 @@ struct ChapterCollectionViewModel {
   let reload: Driver<Void>
   let fetching: Driver<Bool>
   let disposeBag = DisposeBag()
+  let title: Driver<String>
 
   // MARK: Private
   fileprivate let mangaId: String
@@ -45,6 +46,7 @@ struct ChapterCollectionViewModel {
   fileprivate let _filteredChapters = Variable(List<ChapterViewModel>())
   fileprivate let _fetching = Variable(false)
   fileprivate let _ordering = Variable(SortOrder.descending)
+  fileprivate let _title = Variable("")
 
   init(mangaId: String) {
     self.mangaId = mangaId
@@ -54,6 +56,8 @@ struct ChapterCollectionViewModel {
 
     // MARK: Fetching chapters
     fetching = _fetching.asDriver()
+
+    title = _title.asDriver()
 
     chapters
       .asObservable()
@@ -120,7 +124,13 @@ struct ChapterCollectionViewModel {
       .asDriver(onErrorJustReturn: false)
       .drive(_fetching)
 
-    let resultDisposable = request
+    let parseMangaTitleDisposable = request
+      .filterSuccessfulStatusCodes()
+      .map(Manga.self)
+      .map { $0.title }
+      .bind(to: _title)
+
+    let parseChaptersDisposable = request
       .filterSuccessfulStatusCodes()
       .mapArray(Chapter.self, withRootKey: "chapters")
       .map {
@@ -129,7 +139,7 @@ struct ChapterCollectionViewModel {
       .map(List<ChapterViewModel>.init)
       .bind(to: _chapters)
 
-    return CompositeDisposable(fetchingDisposable, resultDisposable)
+    return CompositeDisposable(fetchingDisposable, parseChaptersDisposable, parseMangaTitleDisposable)
   }
 
   subscript(index: Int) -> ChapterViewModel {
