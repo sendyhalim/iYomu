@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   ) -> Bool {
     // Set max memory cache to be 50 MB
     ImageCache.default.maxMemoryCost = 50 * 1024 * 1024
-    
+
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.backgroundColor = UIColor.white
     window?.rootViewController = YomuNavigationController(nibName: nil, bundle: nil)

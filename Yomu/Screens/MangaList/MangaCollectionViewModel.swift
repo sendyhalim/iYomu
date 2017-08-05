@@ -132,7 +132,9 @@ struct MangaCollectionViewModel {
   }
 
   func remove(mangaIndex: Int) {
-    deletedManga.on(.next(self[mangaIndex]))
+    let manga = _mangas.value.remove(index: mangaIndex)!
+
+    deletedManga.on(.next(manga))
     updateMangaPositions()
   }
 

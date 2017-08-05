@@ -26,6 +26,7 @@ class MangaCollectionViewController: UIViewController {
 
     setupEmptyDataSet()
     setupViewModelBindings()
+    setupGestureRecognizers()
   }
 
   func setupEmptyDataSet() {
@@ -92,6 +93,27 @@ class MangaCollectionViewController: UIViewController {
         YomuNavigationController.instance()?.popViewController(animated: true)
       })
       .addDisposableTo(disposeBag)
+  }
+
+  func setupGestureRecognizers() {
+    let swipeGesture = UISwipeGestureRecognizer(
+      target: self,
+      action: #selector(MangaCollectionViewController.deleteCell(swipeGesture:))
+    )
+
+    swipeGesture.direction = UISwipeGestureRecognizerDirection.left
+
+    collectionView.addGestureRecognizer(swipeGesture)
+  }
+
+  func deleteCell(swipeGesture: UISwipeGestureRecognizer) {
+    let swipeLocation = swipeGesture.location(in: collectionView)
+
+    guard let indexPath = collectionView.indexPathForItem(at: swipeLocation) else {
+      return
+    }
+
+    viewModel.remove(mangaIndex: indexPath.row)
   }
 }
 
