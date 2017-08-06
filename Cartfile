@@ -12,3 +12,4 @@ github "hyperoslo/Hue" ~> 2.0.1
 github "robb/Cartography" ~> 1.1.0
 github "devxoul/URLNavigator" ~> 1.2.0
 github "sendyhalim/OrderedSet" ~> 0.0.2
+github "icanzilb/EasyAnimation" ~> 2.0.1
