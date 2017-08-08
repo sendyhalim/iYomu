@@ -40,16 +40,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2w-yk-Jxt">
+                                <rect key="frame" x="373" y="0.0" width="100" height="80"/>
+                                <color key="backgroundColor" red="0.60784313725490191" green="0.18431372549019609" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="YPU-Yd-Iig"/>
+                                </constraints>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HMp-y5-6XT" firstAttribute="leading" secondItem="gRh-9x-atK" secondAttribute="trailing" constant="8" symbolic="YES" id="3rv-YK-RQq"/>
                             <constraint firstItem="HtV-v1-l4w" firstAttribute="trailing" secondItem="v9X-m7-WRT" secondAttribute="trailing" constant="-10" id="MRK-ku-any"/>
+                            <constraint firstItem="H2w-yk-Jxt" firstAttribute="bottom" secondItem="v9X-m7-WRT" secondAttribute="bottom" id="NLT-dl-dlc"/>
                             <constraint firstItem="HtV-v1-l4w" firstAttribute="top" secondItem="gRh-9x-atK" secondAttribute="top" constant="10" id="RVP-B0-7kj"/>
                             <constraint firstItem="HtV-v1-l4w" firstAttribute="leading" secondItem="gRh-9x-atK" secondAttribute="trailing" constant="8" symbolic="YES" id="UNd-qW-OqK"/>
                             <constraint firstItem="gRh-9x-atK" firstAttribute="leading" secondItem="v9X-m7-WRT" secondAttribute="leading" constant="10" id="aPZ-rP-BDj"/>
+                            <constraint firstItem="H2w-yk-Jxt" firstAttribute="top" secondItem="v9X-m7-WRT" secondAttribute="top" id="d7f-3L-oG7"/>
                             <constraint firstItem="HMp-y5-6XT" firstAttribute="trailing" secondItem="v9X-m7-WRT" secondAttribute="trailing" constant="-10" id="fYa-ha-eP8"/>
                             <constraint firstItem="HMp-y5-6XT" firstAttribute="bottom" secondItem="gRh-9x-atK" secondAttribute="bottom" constant="-10" id="hn1-ur-YBj"/>
+                            <constraint firstItem="H2w-yk-Jxt" firstAttribute="trailing" secondItem="v9X-m7-WRT" secondAttribute="trailing" constant="100" id="xgT-s2-28A"/>
                             <constraint firstItem="gRh-9x-atK" firstAttribute="top" secondItem="v9X-m7-WRT" secondAttribute="top" constant="10" id="ykM-iC-JFe"/>
                         </constraints>
                     </view>
@@ -58,18 +71,19 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="v9X-m7-WRT" firstAttribute="top" secondItem="SmB-4c-SNk" secondAttribute="top" id="19C-uV-rjb"/>
-                <constraint firstAttribute="trailing" secondItem="v9X-m7-WRT" secondAttribute="trailing" id="jUx-9V-f1j"/>
-                <constraint firstAttribute="bottom" secondItem="v9X-m7-WRT" secondAttribute="bottom" id="uAP-m9-eiA"/>
+                <constraint firstItem="v9X-m7-WRT" firstAttribute="trailing" secondItem="SmB-4c-SNk" secondAttribute="trailing" id="jUx-9V-f1j"/>
+                <constraint firstItem="v9X-m7-WRT" firstAttribute="bottom" secondItem="SmB-4c-SNk" secondAttribute="bottom" id="uAP-m9-eiA"/>
                 <constraint firstItem="v9X-m7-WRT" firstAttribute="leading" secondItem="SmB-4c-SNk" secondAttribute="leading" id="xVX-gB-f2p"/>
             </constraints>
             <size key="customSize" width="373" height="77"/>
             <connections>
                 <outlet property="categoriesLabel" destination="HMp-y5-6XT" id="Gcd-Ua-Or2"/>
                 <outlet property="contentContainerView" destination="v9X-m7-WRT" id="qqN-pI-vXF"/>
+                <outlet property="deleteButton" destination="H2w-yk-Jxt" id="JLV-e1-Gw5"/>
                 <outlet property="previewImage" destination="gRh-9x-atK" id="Wg3-pc-6fL"/>
                 <outlet property="titleLabel" destination="HtV-v1-l4w" id="U0l-dg-YZv"/>
             </connections>
-            <point key="canvasLocation" x="28.5" y="23.5"/>
+            <point key="canvasLocation" x="28.5" y="23"/>
         </collectionViewCell>
     </objects>
 </document>

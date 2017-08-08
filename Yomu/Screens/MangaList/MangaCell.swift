@@ -14,6 +14,7 @@ class MangaCell: UICollectionViewCell {
   @IBOutlet weak var previewImage: UIImageView!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var categoriesLabel: UILabel!
+  @IBOutlet weak var deleteButton: UIButton!
 
   var viewModel: MangaViewModel!
   var disposeBag = DisposeBag()
