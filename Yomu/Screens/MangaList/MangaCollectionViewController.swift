@@ -96,14 +96,21 @@ class MangaCollectionViewController: UIViewController {
   }
 
   func setupGestureRecognizers() {
-    let swipeGesture = UISwipeGestureRecognizer(
+    // Setup left swipe gesture
+    let leftSwipeGesture = UISwipeGestureRecognizer(
       target: self,
-      action: #selector(MangaCollectionViewController.deleteCell(swipeGesture:))
+      action: #selector(MangaCollectionViewController.deleteCell)
     )
+    leftSwipeGesture.direction = UISwipeGestureRecognizerDirection.left
+    collectionView.addGestureRecognizer(leftSwipeGesture)
 
-    swipeGesture.direction = UISwipeGestureRecognizerDirection.left
-
-    collectionView.addGestureRecognizer(swipeGesture)
+    // Setup right swipe gesture
+    let rightSwipeGesture = UISwipeGestureRecognizer(
+      target: self,
+      action: #selector(MangaCollectionViewController.deleteCell)
+    )
+    rightSwipeGesture.direction = UISwipeGestureRecognizerDirection.right
+    collectionView.addGestureRecognizer(rightSwipeGesture)
   }
 
   func deleteCell(swipeGesture: UISwipeGestureRecognizer) {
@@ -113,7 +120,9 @@ class MangaCollectionViewController: UIViewController {
       return
     }
 
-    viewModel.remove(mangaIndex: indexPath.row)
+    let cell = collectionView.cellForItem(at: indexPath) as! MangaCell
+
+    cell.onSwipe(gesture: swipeGesture)
   }
 }
 
