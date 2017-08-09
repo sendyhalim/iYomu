@@ -10,6 +10,10 @@ import UIKit
 import EasyAnimation
 import RxSwift
 
+protocol MangaCellDelegate: class {
+  func deleteButtonClicked(mangaViewModel: MangaViewModel)
+}
+
 class MangaCell: UICollectionViewCell {
   @IBOutlet weak var contentContainerView: UIView!
   @IBOutlet weak var previewImage: UIImageView!
@@ -17,6 +21,7 @@ class MangaCell: UICollectionViewCell {
   @IBOutlet weak var categoriesLabel: UILabel!
   @IBOutlet weak var deleteButton: UIButton!
 
+  weak var delegate: MangaCellDelegate?
   var viewModel: MangaViewModel!
   var disposeBag = DisposeBag()
   var deleteButtonIsShown = false
@@ -34,6 +39,14 @@ class MangaCell: UICollectionViewCell {
     self.viewModel = viewModel
 
     disposeBag = DisposeBag()
+
+    deleteButton
+      .rx.tap
+      .subscribe(onNext: { [weak self] in
+        self?.hideDeleteButton(duration: 0)
+        self?.delegate?.deleteButtonClicked(mangaViewModel: viewModel)
+      })
+      .addDisposableTo(disposeBag)
 
     viewModel
       .title
@@ -86,10 +99,14 @@ class MangaCell: UICollectionViewCell {
       return
     }
 
+    hideDeleteButton(duration: swipeAnimationDuration)
+  }
+
+  func hideDeleteButton(duration: Double) {
     let deleteButtonWidth = deleteButton.bounds.width
 
     UIView.animate(
-      withDuration: swipeAnimationDuration,
+      withDuration: duration,
       delay: 0,
       usingSpringWithDamping: 0.75,
       initialSpringVelocity: 0,

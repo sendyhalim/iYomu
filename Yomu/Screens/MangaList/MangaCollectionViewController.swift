@@ -142,9 +142,10 @@ extension MangaCollectionViewController: UICollectionViewDataSource {
     let cell = collectionView.dequeueReusableCell(
       withReuseIdentifier: R.nib.mangaCell.identifier,
       for: indexPath
-      ) as! MangaCell
+    ) as! MangaCell
 
     cell.setup(viewModel: viewModel[indexPath.row])
+    cell.delegate = self
 
     return cell
   }
@@ -167,5 +168,11 @@ extension MangaCollectionViewController: UICollectionViewDelegateFlowLayout {
     let width = collectionView.bounds.width - collectionView.contentInset.left - collectionView.contentInset.right
 
     return CGSize(width: width, height: 80)
+  }
+}
+
+extension MangaCollectionViewController: MangaCellDelegate {
+  func deleteButtonClicked(mangaViewModel: MangaViewModel) {
+    viewModel.remove(mangaViewModel: mangaViewModel)
   }
 }
