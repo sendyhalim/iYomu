@@ -111,6 +111,34 @@ class MangaCollectionViewController: UIViewController {
     )
     rightSwipeGesture.direction = UISwipeGestureRecognizerDirection.right
     collectionView.addGestureRecognizer(rightSwipeGesture)
+
+    // Setup long press gesture to reorder cells
+    let longPressGesture = UILongPressGestureRecognizer(
+      target: self,
+      action: #selector(MangaCollectionViewController.handleLongPressGesture)
+    )
+
+    collectionView.addGestureRecognizer(longPressGesture)
+  }
+
+  func handleLongPressGesture(gesture: UILongPressGestureRecognizer) {
+    switch gesture.state {
+    case .began:
+      guard let indexPath = collectionView.indexPathForItem(at: gesture.location(in: collectionView)) else {
+        return
+      }
+
+      collectionView.beginInteractiveMovementForItem(at: indexPath)
+
+    case .changed:
+      collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: collectionView))
+
+    case .ended:
+      collectionView.endInteractiveMovement()
+
+    default:
+      collectionView.cancelInteractiveMovement()
+    }
   }
 
   func deleteCell(swipeGesture: UISwipeGestureRecognizer) {
@@ -168,6 +196,18 @@ extension MangaCollectionViewController: UICollectionViewDelegateFlowLayout {
     let width = collectionView.bounds.width - collectionView.contentInset.left - collectionView.contentInset.right
 
     return CGSize(width: width, height: 80)
+  }
+
+  func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
+    return true
+  }
+
+  func collectionView(
+    _ collectionView: UICollectionView,
+    moveItemAt sourceIndexPath: IndexPath,
+    to destinationIndexPath: IndexPath
+  ) {
+    viewModel.move(fromIndex: sourceIndexPath.row, toIndex: destinationIndexPath.row)
   }
 }
 
