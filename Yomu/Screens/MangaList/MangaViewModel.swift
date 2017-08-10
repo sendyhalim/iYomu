@@ -8,6 +8,8 @@
 
 import RxCocoa
 import RxSwift
+import class RealmSwift.Realm
+import RxRealm
 
 struct MangaViewModel {
   var manga: Manga {
@@ -59,11 +61,19 @@ struct MangaViewModel {
       .map { $0.plot }
   }
 
+  let disposeBag = DisposeBag()
+
   // MARK: Private
   fileprivate let _manga: Variable<Manga>
 
   init(manga: Manga) {
     _manga = Variable(manga)
+
+    _manga
+      .asDriver()
+      .map(MangaRealm.from)
+      .drive(Realm.rx.add(update: true))
+      .addDisposableTo(disposeBag)
   }
 
   func update(position: Int) {
