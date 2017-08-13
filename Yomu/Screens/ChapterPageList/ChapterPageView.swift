@@ -14,6 +14,12 @@ class ChapterPageView: UIView {
 
   var disposeBag = DisposeBag()
 
+  override func awakeFromNib() {
+    super.awakeFromNib()
+
+    chapterPageImageView.kf.indicatorType = .activity
+  }
+
   func setup(viewModel: ChapterPageViewModel) {
     viewModel
       .imageUrl

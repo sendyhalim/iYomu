@@ -17,6 +17,12 @@ class ChapterCell: UITableViewCell {
   var viewModel: ChapterViewModel!
   var disposeBag = DisposeBag()
 
+  override func awakeFromNib() {
+    super.awakeFromNib()
+
+    chapterImagePreview.kf.indicatorType = .activity
+  }
+
   override func prepareForReuse() {
     super.prepareForReuse()
 

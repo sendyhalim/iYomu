@@ -27,6 +27,12 @@ class MangaCell: UICollectionViewCell {
   var deleteButtonIsShown = false
   let swipeAnimationDuration = 0.5
 
+  override func awakeFromNib() {
+    super.awakeFromNib()
+
+    previewImage.kf.indicatorType = .activity
+  }
+  
   override func prepareForReuse() {
     super.prepareForReuse()
 

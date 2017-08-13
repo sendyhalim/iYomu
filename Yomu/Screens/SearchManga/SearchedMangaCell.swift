@@ -18,6 +18,12 @@ class SearchedMangaCell: UITableViewCell {
   var viewModel: SearchedMangaViewModel!
   var disposeBag = DisposeBag()
 
+  override func awakeFromNib() {
+    super.awakeFromNib()
+
+    previewImage.kf.indicatorType = .activity
+  }
+
   override func prepareForReuse() {
     super.prepareForReuse()
 
