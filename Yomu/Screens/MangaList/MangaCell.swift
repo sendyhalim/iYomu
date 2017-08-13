@@ -32,7 +32,7 @@ class MangaCell: UICollectionViewCell {
 
     previewImage.kf.indicatorType = .activity
   }
-  
+
   override func prepareForReuse() {
     super.prepareForReuse()
 
