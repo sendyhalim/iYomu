@@ -21,13 +21,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ahU-mq-0nM" customClass="EmptyDataSetContainerView" customModule="Yomu" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahU-mq-0nM" customClass="EmptyDataSetContainerView" customModule="Yomu" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AcK-fD-DKM">
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AcK-fD-DKM">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VR3-06-qvJ">
                                 <size key="itemSize" width="50" height="50"/>
@@ -38,9 +36,21 @@
                         </collectionView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="AcK-fD-DKM" secondAttribute="bottom" id="Gcp-DC-G7c"/>
+                        <constraint firstAttribute="trailing" secondItem="AcK-fD-DKM" secondAttribute="trailing" id="MTl-JI-IYF"/>
+                        <constraint firstItem="AcK-fD-DKM" firstAttribute="leading" secondItem="ahU-mq-0nM" secondAttribute="leading" id="dez-53-22k"/>
+                        <constraint firstItem="AcK-fD-DKM" firstAttribute="top" secondItem="ahU-mq-0nM" secondAttribute="top" id="l0C-KL-TpQ"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ahU-mq-0nM" firstAttribute="leading" secondItem="pMF-bm-lWz" secondAttribute="leading" id="0pj-oG-LUP"/>
+                <constraint firstAttribute="trailing" secondItem="ahU-mq-0nM" secondAttribute="trailing" id="3jv-mJ-H1n"/>
+                <constraint firstItem="ahU-mq-0nM" firstAttribute="top" secondItem="pMF-bm-lWz" secondAttribute="top" id="W8q-b1-xko"/>
+                <constraint firstAttribute="bottom" secondItem="ahU-mq-0nM" secondAttribute="bottom" id="j25-hU-dYD"/>
+            </constraints>
             <point key="canvasLocation" x="-331" y="-496"/>
         </view>
     </objects>
