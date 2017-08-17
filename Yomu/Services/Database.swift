@@ -37,4 +37,8 @@ struct Database {
   static func queryMangaRealm(id: String) -> MangaRealm {
     return connection().object(ofType: MangaRealm.self, forPrimaryKey: id)!
   }
+
+  static func exists(mangaId: String) -> Bool {
+    return connection().objects(MangaRealm.self).filter("id = '\(mangaId)'").count > 0
+  }
 }

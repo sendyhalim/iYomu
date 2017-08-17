@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hue
 import Kingfisher
 import RxSwift
 
@@ -14,6 +15,7 @@ class SearchedMangaCell: UITableViewCell {
   @IBOutlet weak var previewImage: UIImageView!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var categoriesLabel: UILabel!
+  @IBOutlet weak var accessoryLabel: UILabel!
 
   var viewModel: SearchedMangaViewModel!
   var disposeBag = DisposeBag()
@@ -52,6 +54,14 @@ class SearchedMangaCell: UITableViewCell {
     viewModel
       .categoriesString
       .drive(categoriesLabel.rx.text)
+      .addDisposableTo(disposeBag)
+
+    viewModel
+      .categoryLabelColorHex
+      .map(UIColor.init(hex:))
+      .drive(onNext: { [weak self] in
+        self?.accessoryLabel.textColor = $0
+      })
       .addDisposableTo(disposeBag)
   }
 }

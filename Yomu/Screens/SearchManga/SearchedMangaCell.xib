@@ -44,7 +44,7 @@
                             <constraint firstAttribute="width" constant="20" id="8BR-va-dhI"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                        <color key="textColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" red="0.18823529411764706" green="0.51372549019607838" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -62,6 +62,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="accessoryLabel" destination="mHz-6a-Lr3" id="Apj-hP-oYo"/>
                 <outlet property="categoriesLabel" destination="A6G-rl-9TR" id="YxI-PE-7yk"/>
                 <outlet property="previewImage" destination="cyd-HF-Qjn" id="7Hj-jw-h9m"/>
                 <outlet property="titleLabel" destination="ymX-K6-rGI" id="Zl3-qd-Lzk"/>

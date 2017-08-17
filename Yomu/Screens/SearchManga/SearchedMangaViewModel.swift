@@ -15,6 +15,7 @@ struct SearchedMangaViewModel {
   let categoriesString: Driver<String>
   let title: Driver<String>
   let apiId: Driver<String>
+  let categoryLabelColorHex: Driver<String>
 
   // MARK: Private
   fileprivate let manga: Variable<SearchedManga>
@@ -37,5 +38,14 @@ struct SearchedMangaViewModel {
     categoriesString = self.manga
       .asDriver()
       .map { $0.categories.joined(separator: ", ") }
+
+    categoryLabelColorHex = Driver.just(Database.exists(mangaId: self.manga.value.apiId))
+      .map {
+        $0 ? "#DDDDDD" : "#3083FB"
+      }
+  }
+
+  func existsInDb() -> Bool {
+    return Database.exists(mangaId: manga.value.apiId)
   }
 }
