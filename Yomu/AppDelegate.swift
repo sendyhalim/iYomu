@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import Toaster
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,6 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.rootViewController = YomuNavigationController(nibName: nil, bundle: nil)
     window?.makeKeyAndVisible()
 
+    // Setup toaster background color
+    ToastView.appearance().backgroundColor = UIColor(hex: "#4d2d74")
+
+    // Setup initial controller to be shown
     YomuNavigationController.instance()?.pushViewController(
       MangaCollectionViewController(nibName: "MangaCollectionViewController", bundle: nil),
       animated: true

@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import Toaster
 
 class SearchMangaViewController: UITableViewController {
   @IBOutlet weak var searchField: UISearchBar!
@@ -76,6 +77,16 @@ class SearchMangaViewController: UITableViewController {
     let searchedManga = viewModel[indexPath.row]
 
     guard !searchedManga.existsInDb() else {
+      let _disposeBag = DisposeBag()
+      ToastCenter.default.currentToast?.cancel()
+
+      searchedManga
+        .title
+        .drive(onNext: {
+          Toast(text: "Whoops, looks like \($0) is already in your collection", delay: 0, duration: Delay.short).show()
+        })
+        .addDisposableTo(_disposeBag)
+
       return
     }
 
