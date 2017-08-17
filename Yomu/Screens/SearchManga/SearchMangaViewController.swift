@@ -75,6 +75,10 @@ class SearchMangaViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let searchedManga = viewModel[indexPath.row]
 
+    guard !searchedManga.existsInDb() else {
+      return
+    }
+
     newManga.on(.next(searchedManga))
   }
 }
