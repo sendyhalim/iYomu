@@ -1,892 +1,2490 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		790593E31EF0672900F7419E /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790593E21EF0672900F7419E /* Database.swift */; };
-		790D7A8F1F461A15004EE916 /* Toaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790D7A8E1F461A15004EE916 /* Toaster.framework */; };
-		7918EA9D1EF1AEC5004F3366 /* MangaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7918EA9C1EF1AEC5004F3366 /* MangaCell.xib */; };
-		7919319B1EE87DBA00607A11 /* SearchedMangaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7919319A1EE87DBA00607A11 /* SearchedMangaCell.xib */; };
-		7919319F1EE87E2600607A11 /* SearchedMangaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919319E1EE87E2600607A11 /* SearchedMangaCell.swift */; };
-		79211D6F1ED9FD970049B6E2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79211D5F1ED9FD970049B6E2 /* Alamofire.framework */; };
-		79211D701ED9FD970049B6E2 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79211D601ED9FD970049B6E2 /* Argo.framework */; };
-		79211D711ED9FD970049B6E2 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79211D611ED9FD970049B6E2 /* Cartography.framework */; };
-		79211D721ED9FD970049B6E2 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79211D621ED9FD970049B6E2 /* Curry.framework */; };
-		79211D731ED9FD970049B6E2 /* Hue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79211D631ED9FD970049B6E2 /* Hue.framework */; };
-		79211D741ED9FD970049B6E2 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79211D641ED9FD970049B6E2 /* Kingfisher.framework */; };
-		79211D751ED9FD970049B6E2 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79211D651ED9FD970049B6E2 /* Moya.framework */; };
-		79211D761ED9FD970049B6E2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79211D661ED9FD970049B6E2 /* Realm.framework */; };
-		79211D771ED9FD970049B6E2 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79211D671ED9FD970049B6E2 /* RealmSwift.framework */; };
-		79211D781ED9FD970049B6E2 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79211D681ED9FD970049B6E2 /* Result.framework */; };
-		79211D791ED9FD970049B6E2 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79211D691ED9FD970049B6E2 /* Runes.framework */; };
-		79211D7A1ED9FD970049B6E2 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79211D6A1ED9FD970049B6E2 /* RxCocoa.framework */; };
-		79211D7B1ED9FD970049B6E2 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79211D6B1ED9FD970049B6E2 /* RxMoya.framework */; };
-		79211D7C1ED9FD970049B6E2 /* RxRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79211D6C1ED9FD970049B6E2 /* RxRealm.framework */; };
-		79211D7D1ED9FD970049B6E2 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79211D6D1ED9FD970049B6E2 /* RxSwift.framework */; };
-		79211D7E1ED9FD970049B6E2 /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79211D6E1ED9FD970049B6E2 /* Swiftz.framework */; };
-		79234C011EE32945000D6734 /* YomuAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79234C001EE32945000D6734 /* YomuAPI.swift */; };
-		79234C041EE3298C000D6734 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79234C031EE3298C000D6734 /* String.swift */; };
-		79234C061EE32A10000D6734 /* MangaEdenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79234C051EE32A10000D6734 /* MangaEdenAPI.swift */; };
-		79258B901EF1644C00202035 /* MangaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258B8E1EF1644C00202035 /* MangaCollectionViewController.swift */; };
-		79258B911EF1644C00202035 /* MangaCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79258B8F1EF1644C00202035 /* MangaCollectionViewController.xib */; };
-		79258B941EF1652200202035 /* MangaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258B921EF1652200202035 /* MangaCell.swift */; };
-		794E47B81F00BEC70062FA6D /* ChapterPageCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 794E47B71F00BEC70062FA6D /* ChapterPageCollectionViewController.xib */; };
-		794E47BA1F00BFEF0062FA6D /* ChapterPageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E47B91F00BFEF0062FA6D /* ChapterPageCollectionViewController.swift */; };
-		794E47BC1F00C04F0062FA6D /* ChapterPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E47BB1F00C04F0062FA6D /* ChapterPageView.swift */; };
-		794E47BE1F00C08D0062FA6D /* ChapterPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 794E47BD1F00C08D0062FA6D /* ChapterPageView.xib */; };
-		794E47C01F00C2730062FA6D /* ChapterPageCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E47BF1F00C2730062FA6D /* ChapterPageCollectionViewModel.swift */; };
-		794E47C21F00C3570062FA6D /* ChapterPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E47C11F00C3570062FA6D /* ChapterPageViewModel.swift */; };
-		7958C8E81EFEA92400CAD90E /* ChapterCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7958C8E71EFEA92400CAD90E /* ChapterCollectionViewModel.swift */; };
-		7958C8EA1EFEB3B600CAD90E /* ChapterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7958C8E91EFEB3B600CAD90E /* ChapterViewModel.swift */; };
-		796F98F01EE2FBD200FAF40C /* YomuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F98EF1EE2FBD200FAF40C /* YomuNavigationController.swift */; };
-		796F98F31EE2FD9B00FAF40C /* YomuNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 796F98F21EE2FD9B00FAF40C /* YomuNavigationController.xib */; };
-		7995215F1EE472970059CC34 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7995215E1EE472970059CC34 /* URL.swift */; };
-		799521631EE473500059CC34 /* SearchedMangaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799521621EE473500059CC34 /* SearchedMangaViewModel.swift */; };
-		799521651EE4737E0059CC34 /* SearchedMangaCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799521641EE4737E0059CC34 /* SearchedMangaCollectionViewModel.swift */; };
-		799521671EE4751D0059CC34 /* RxMoyaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799521661EE4751D0059CC34 /* RxMoyaResponse.swift */; };
-		799685BD1EE59F75000776FD /* SearchMangaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799685BB1EE59F75000776FD /* SearchMangaViewController.swift */; };
-		799685BE1EE59F75000776FD /* SearchMangaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 799685BC1EE59F75000776FD /* SearchMangaViewController.xib */; };
-		799ACACD1EF451F3006208B5 /* OrderedSet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799ACACC1EF451F3006208B5 /* OrderedSet.framework */; };
-		79A917C11EFEC0C300820E57 /* ChapterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79A917C01EFEC0C300820E57 /* ChapterCell.xib */; };
-		79A917C31EFEC29500820E57 /* ChapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A917C21EFEC29500820E57 /* ChapterCell.swift */; };
-		79A917C71EFEC40400820E57 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A917C61EFEC40400820E57 /* R.generated.swift */; };
-		79B3FC691EDC93C1008323C0 /* SearchedManga.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3FC681EDC93C1008323C0 /* SearchedManga.swift */; };
-		79B3FC6B1EDC93EB008323C0 /* ImageUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3FC6A1EDC93EB008323C0 /* ImageUrl.swift */; };
-		79B3FC6D1EDC95AF008323C0 /* Manga.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3FC6C1EDC95AF008323C0 /* Manga.swift */; };
-		79B3FC6F1EDC960F008323C0 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3FC6E1EDC960F008323C0 /* Chapter.swift */; };
-		79B3FC711EDC9638008323C0 /* ChapterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3FC701EDC9638008323C0 /* ChapterPage.swift */; };
-		79B3FC731EDC9651008323C0 /* MangaRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3FC721EDC9651008323C0 /* MangaRealm.swift */; };
-		79BD51AE1EFE52D70063F3AC /* ChapterCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79BD51AD1EFE52D70063F3AC /* ChapterCollectionViewController.xib */; };
-		79BD51B01EFE62230063F3AC /* ChapterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD51AF1EFE62230063F3AC /* ChapterCollectionViewController.swift */; };
-		79C6F54B1ED9FCFA00B95629 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6F54A1ED9FCFA00B95629 /* AppDelegate.swift */; };
-		79C6F5521ED9FCFA00B95629 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79C6F5511ED9FCFA00B95629 /* Assets.xcassets */; };
-		79C6F5551ED9FCFA00B95629 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C6F5531ED9FCFA00B95629 /* LaunchScreen.storyboard */; };
-		79D525631EF307CC00431DDE /* MangaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D525621EF307CC00431DDE /* MangaViewModel.swift */; };
-		79D525661EF3087500431DDE /* MangaCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D525651EF3087500431DDE /* MangaCollectionViewModel.swift */; };
-		79DC54E71F2DC11400077FA1 /* EmptyDataSetContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC54E61F2DC11400077FA1 /* EmptyDataSetContainerView.swift */; };
-		79DC54E91F2DC20B00077FA1 /* EmptyMangaSetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79DC54E81F2DC20B00077FA1 /* EmptyMangaSetView.xib */; };
-		79DC54EB1F2DCCD600077FA1 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79DC54EA1F2DCCD600077FA1 /* LoadingView.xib */; };
-		9572D9D199520E8F20E91BCA /* Pods_Yomu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F7993593B222CDE3A2A9D44 /* Pods_Yomu.framework */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		79C6F55C1ED9FCFA00B95629 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 79C6F53F1ED9FCFA00B95629 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 79C6F5461ED9FCFA00B95629;
-			remoteInfo = Yomu;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		0F7993593B222CDE3A2A9D44 /* Pods_Yomu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yomu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1845E03D997EBD53106682F7 /* Pods-Yomu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yomu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yomu/Pods-Yomu.debug.xcconfig"; sourceTree = "<group>"; };
-		790593E21EF0672900F7419E /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
-		790D7A8E1F461A15004EE916 /* Toaster.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Toaster.framework; path = Carthage/Build/iOS/Toaster.framework; sourceTree = "<group>"; };
-		7918EA9C1EF1AEC5004F3366 /* MangaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MangaCell.xib; sourceTree = "<group>"; };
-		7919319A1EE87DBA00607A11 /* SearchedMangaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchedMangaCell.xib; sourceTree = "<group>"; };
-		7919319E1EE87E2600607A11 /* SearchedMangaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchedMangaCell.swift; sourceTree = "<group>"; };
-		79211D5F1ED9FD970049B6E2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		79211D601ED9FD970049B6E2 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
-		79211D611ED9FD970049B6E2 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/iOS/Cartography.framework; sourceTree = "<group>"; };
-		79211D621ED9FD970049B6E2 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
-		79211D631ED9FD970049B6E2 /* Hue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hue.framework; path = Carthage/Build/iOS/Hue.framework; sourceTree = "<group>"; };
-		79211D641ED9FD970049B6E2 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
-		79211D651ED9FD970049B6E2 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
-		79211D661ED9FD970049B6E2 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		79211D671ED9FD970049B6E2 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		79211D681ED9FD970049B6E2 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		79211D691ED9FD970049B6E2 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
-		79211D6A1ED9FD970049B6E2 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		79211D6B1ED9FD970049B6E2 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
-		79211D6C1ED9FD970049B6E2 /* RxRealm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRealm.framework; path = Carthage/Build/iOS/RxRealm.framework; sourceTree = "<group>"; };
-		79211D6D1ED9FD970049B6E2 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		79211D6E1ED9FD970049B6E2 /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Carthage/Build/iOS/Swiftz.framework; sourceTree = "<group>"; };
-		79234C001EE32945000D6734 /* YomuAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YomuAPI.swift; sourceTree = "<group>"; };
-		79234C031EE3298C000D6734 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		79234C051EE32A10000D6734 /* MangaEdenAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MangaEdenAPI.swift; sourceTree = "<group>"; };
-		79258B8E1EF1644C00202035 /* MangaCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MangaCollectionViewController.swift; sourceTree = "<group>"; };
-		79258B8F1EF1644C00202035 /* MangaCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MangaCollectionViewController.xib; sourceTree = "<group>"; };
-		79258B921EF1652200202035 /* MangaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MangaCell.swift; sourceTree = "<group>"; };
-		794E47B71F00BEC70062FA6D /* ChapterPageCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterPageCollectionViewController.xib; sourceTree = "<group>"; };
-		794E47B91F00BFEF0062FA6D /* ChapterPageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterPageCollectionViewController.swift; sourceTree = "<group>"; };
-		794E47BB1F00C04F0062FA6D /* ChapterPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterPageView.swift; sourceTree = "<group>"; };
-		794E47BD1F00C08D0062FA6D /* ChapterPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterPageView.xib; sourceTree = "<group>"; };
-		794E47BF1F00C2730062FA6D /* ChapterPageCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterPageCollectionViewModel.swift; sourceTree = "<group>"; };
-		794E47C11F00C3570062FA6D /* ChapterPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterPageViewModel.swift; sourceTree = "<group>"; };
-		7958C8E71EFEA92400CAD90E /* ChapterCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterCollectionViewModel.swift; sourceTree = "<group>"; };
-		7958C8E91EFEB3B600CAD90E /* ChapterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterViewModel.swift; sourceTree = "<group>"; };
-		796C3D221EE29F2D0029BBB2 /* URLNavigator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URLNavigator.framework; path = Carthage/Build/iOS/URLNavigator.framework; sourceTree = "<group>"; };
-		796F98EF1EE2FBD200FAF40C /* YomuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YomuNavigationController.swift; sourceTree = "<group>"; };
-		796F98F21EE2FD9B00FAF40C /* YomuNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YomuNavigationController.xib; sourceTree = "<group>"; };
-		7995215E1EE472970059CC34 /* URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
-		799521621EE473500059CC34 /* SearchedMangaViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchedMangaViewModel.swift; sourceTree = "<group>"; };
-		799521641EE4737E0059CC34 /* SearchedMangaCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchedMangaCollectionViewModel.swift; sourceTree = "<group>"; };
-		799521661EE4751D0059CC34 /* RxMoyaResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxMoyaResponse.swift; sourceTree = "<group>"; };
-		799685BB1EE59F75000776FD /* SearchMangaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMangaViewController.swift; sourceTree = "<group>"; };
-		799685BC1EE59F75000776FD /* SearchMangaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchMangaViewController.xib; sourceTree = "<group>"; };
-		799ACACC1EF451F3006208B5 /* OrderedSet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OrderedSet.framework; path = Carthage/Build/iOS/OrderedSet.framework; sourceTree = "<group>"; };
-		79A917C01EFEC0C300820E57 /* ChapterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterCell.xib; sourceTree = "<group>"; };
-		79A917C21EFEC29500820E57 /* ChapterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterCell.swift; sourceTree = "<group>"; };
-		79A917C61EFEC40400820E57 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		79B3FC681EDC93C1008323C0 /* SearchedManga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchedManga.swift; sourceTree = "<group>"; };
-		79B3FC6A1EDC93EB008323C0 /* ImageUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUrl.swift; sourceTree = "<group>"; };
-		79B3FC6C1EDC95AF008323C0 /* Manga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manga.swift; sourceTree = "<group>"; };
-		79B3FC6E1EDC960F008323C0 /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
-		79B3FC701EDC9638008323C0 /* ChapterPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterPage.swift; sourceTree = "<group>"; };
-		79B3FC721EDC9651008323C0 /* MangaRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MangaRealm.swift; sourceTree = "<group>"; };
-		79BD51AD1EFE52D70063F3AC /* ChapterCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterCollectionViewController.xib; sourceTree = "<group>"; };
-		79BD51AF1EFE62230063F3AC /* ChapterCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterCollectionViewController.swift; sourceTree = "<group>"; };
-		79C6F5471ED9FCFA00B95629 /* Yomu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yomu.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		79C6F54A1ED9FCFA00B95629 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79C6F5511ED9FCFA00B95629 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		79C6F5541ED9FCFA00B95629 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		79C6F5561ED9FCFA00B95629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79C6F55B1ED9FCFA00B95629 /* YomuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YomuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		79C6F5611ED9FCFA00B95629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79D525621EF307CC00431DDE /* MangaViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MangaViewModel.swift; sourceTree = "<group>"; };
-		79D525651EF3087500431DDE /* MangaCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MangaCollectionViewModel.swift; sourceTree = "<group>"; };
-		79DC54E61F2DC11400077FA1 /* EmptyDataSetContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDataSetContainerView.swift; sourceTree = "<group>"; };
-		79DC54E81F2DC20B00077FA1 /* EmptyMangaSetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyMangaSetView.xib; sourceTree = "<group>"; };
-		79DC54EA1F2DCCD600077FA1 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
-		CE92F20852E62735FC1E77F4 /* Pods-Yomu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yomu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yomu/Pods-Yomu.release.xcconfig"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		79C6F5441ED9FCFA00B95629 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				790D7A8F1F461A15004EE916 /* Toaster.framework in Frameworks */,
-				79211D6F1ED9FD970049B6E2 /* Alamofire.framework in Frameworks */,
-				79211D701ED9FD970049B6E2 /* Argo.framework in Frameworks */,
-				79211D711ED9FD970049B6E2 /* Cartography.framework in Frameworks */,
-				79211D721ED9FD970049B6E2 /* Curry.framework in Frameworks */,
-				79211D731ED9FD970049B6E2 /* Hue.framework in Frameworks */,
-				79211D741ED9FD970049B6E2 /* Kingfisher.framework in Frameworks */,
-				79211D751ED9FD970049B6E2 /* Moya.framework in Frameworks */,
-				79211D761ED9FD970049B6E2 /* Realm.framework in Frameworks */,
-				79211D771ED9FD970049B6E2 /* RealmSwift.framework in Frameworks */,
-				79211D781ED9FD970049B6E2 /* Result.framework in Frameworks */,
-				79211D791ED9FD970049B6E2 /* Runes.framework in Frameworks */,
-				79211D7A1ED9FD970049B6E2 /* RxCocoa.framework in Frameworks */,
-				79211D7B1ED9FD970049B6E2 /* RxMoya.framework in Frameworks */,
-				79211D7C1ED9FD970049B6E2 /* RxRealm.framework in Frameworks */,
-				79211D7D1ED9FD970049B6E2 /* RxSwift.framework in Frameworks */,
-				79211D7E1ED9FD970049B6E2 /* Swiftz.framework in Frameworks */,
-				799ACACD1EF451F3006208B5 /* OrderedSet.framework in Frameworks */,
-				9572D9D199520E8F20E91BCA /* Pods_Yomu.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		79C6F5581ED9FCFA00B95629 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		6C4A15FF0393EA1F75FFB37C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1845E03D997EBD53106682F7 /* Pods-Yomu.debug.xcconfig */,
-				CE92F20852E62735FC1E77F4 /* Pods-Yomu.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		790593E11EF066DF00F7419E /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				790593E21EF0672900F7419E /* Database.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		79211D5E1ED9FD970049B6E2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				790D7A8E1F461A15004EE916 /* Toaster.framework */,
-				799ACACC1EF451F3006208B5 /* OrderedSet.framework */,
-				796C3D221EE29F2D0029BBB2 /* URLNavigator.framework */,
-				79211D5F1ED9FD970049B6E2 /* Alamofire.framework */,
-				79211D601ED9FD970049B6E2 /* Argo.framework */,
-				79211D611ED9FD970049B6E2 /* Cartography.framework */,
-				79211D621ED9FD970049B6E2 /* Curry.framework */,
-				79211D631ED9FD970049B6E2 /* Hue.framework */,
-				79211D641ED9FD970049B6E2 /* Kingfisher.framework */,
-				79211D651ED9FD970049B6E2 /* Moya.framework */,
-				79211D661ED9FD970049B6E2 /* Realm.framework */,
-				79211D671ED9FD970049B6E2 /* RealmSwift.framework */,
-				79211D681ED9FD970049B6E2 /* Result.framework */,
-				79211D691ED9FD970049B6E2 /* Runes.framework */,
-				79211D6A1ED9FD970049B6E2 /* RxCocoa.framework */,
-				79211D6B1ED9FD970049B6E2 /* RxMoya.framework */,
-				79211D6C1ED9FD970049B6E2 /* RxRealm.framework */,
-				79211D6D1ED9FD970049B6E2 /* RxSwift.framework */,
-				79211D6E1ED9FD970049B6E2 /* Swiftz.framework */,
-				0F7993593B222CDE3A2A9D44 /* Pods_Yomu.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		79234BFF1EE32931000D6734 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				79234C051EE32A10000D6734 /* MangaEdenAPI.swift */,
-				79234C001EE32945000D6734 /* YomuAPI.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		79234C021EE32983000D6734 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				799521661EE4751D0059CC34 /* RxMoyaResponse.swift */,
-				79234C031EE3298C000D6734 /* String.swift */,
-				7995215E1EE472970059CC34 /* URL.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		79A0AD281F16A04A00AD8954 /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				79A0AD2A1F16A09200AD8954 /* ChapterList */,
-				79A0AD2C1F16A11900AD8954 /* ChapterPageList */,
-				79A0AD291F16A05200AD8954 /* MangaList */,
-				79A0AD2D1F16A17000AD8954 /* Root */,
-				79A0AD2B1F16A0E100AD8954 /* SearchManga */,
-			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
-		79A0AD291F16A05200AD8954 /* MangaList */ = {
-			isa = PBXGroup;
-			children = (
-				79DC54E81F2DC20B00077FA1 /* EmptyMangaSetView.xib */,
-				79DC54EA1F2DCCD600077FA1 /* LoadingView.xib */,
-				79B3FC6C1EDC95AF008323C0 /* Manga.swift */,
-				79258B921EF1652200202035 /* MangaCell.swift */,
-				7918EA9C1EF1AEC5004F3366 /* MangaCell.xib */,
-				79258B8E1EF1644C00202035 /* MangaCollectionViewController.swift */,
-				79258B8F1EF1644C00202035 /* MangaCollectionViewController.xib */,
-				79D525651EF3087500431DDE /* MangaCollectionViewModel.swift */,
-				79B3FC721EDC9651008323C0 /* MangaRealm.swift */,
-				79D525621EF307CC00431DDE /* MangaViewModel.swift */,
-			);
-			path = MangaList;
-			sourceTree = "<group>";
-		};
-		79A0AD2A1F16A09200AD8954 /* ChapterList */ = {
-			isa = PBXGroup;
-			children = (
-				79B3FC6E1EDC960F008323C0 /* Chapter.swift */,
-				79A917C21EFEC29500820E57 /* ChapterCell.swift */,
-				79A917C01EFEC0C300820E57 /* ChapterCell.xib */,
-				79BD51AF1EFE62230063F3AC /* ChapterCollectionViewController.swift */,
-				79BD51AD1EFE52D70063F3AC /* ChapterCollectionViewController.xib */,
-				7958C8E71EFEA92400CAD90E /* ChapterCollectionViewModel.swift */,
-				7958C8E91EFEB3B600CAD90E /* ChapterViewModel.swift */,
-			);
-			path = ChapterList;
-			sourceTree = "<group>";
-		};
-		79A0AD2B1F16A0E100AD8954 /* SearchManga */ = {
-			isa = PBXGroup;
-			children = (
-				799685BB1EE59F75000776FD /* SearchMangaViewController.swift */,
-				799685BC1EE59F75000776FD /* SearchMangaViewController.xib */,
-				79B3FC681EDC93C1008323C0 /* SearchedManga.swift */,
-				7919319E1EE87E2600607A11 /* SearchedMangaCell.swift */,
-				7919319A1EE87DBA00607A11 /* SearchedMangaCell.xib */,
-				799521641EE4737E0059CC34 /* SearchedMangaCollectionViewModel.swift */,
-				799521621EE473500059CC34 /* SearchedMangaViewModel.swift */,
-			);
-			path = SearchManga;
-			sourceTree = "<group>";
-		};
-		79A0AD2C1F16A11900AD8954 /* ChapterPageList */ = {
-			isa = PBXGroup;
-			children = (
-				79B3FC701EDC9638008323C0 /* ChapterPage.swift */,
-				794E47B91F00BFEF0062FA6D /* ChapterPageCollectionViewController.swift */,
-				794E47B71F00BEC70062FA6D /* ChapterPageCollectionViewController.xib */,
-				794E47BF1F00C2730062FA6D /* ChapterPageCollectionViewModel.swift */,
-				794E47BB1F00C04F0062FA6D /* ChapterPageView.swift */,
-				794E47BD1F00C08D0062FA6D /* ChapterPageView.xib */,
-				794E47C11F00C3570062FA6D /* ChapterPageViewModel.swift */,
-			);
-			path = ChapterPageList;
-			sourceTree = "<group>";
-		};
-		79A0AD2D1F16A17000AD8954 /* Root */ = {
-			isa = PBXGroup;
-			children = (
-				796F98EF1EE2FBD200FAF40C /* YomuNavigationController.swift */,
-				796F98F21EE2FD9B00FAF40C /* YomuNavigationController.xib */,
-			);
-			path = Root;
-			sourceTree = "<group>";
-		};
-		79B3FC671EDC91D4008323C0 /* DataStructures */ = {
-			isa = PBXGroup;
-			children = (
-				79B3FC6A1EDC93EB008323C0 /* ImageUrl.swift */,
-			);
-			path = DataStructures;
-			sourceTree = "<group>";
-		};
-		79C6F53E1ED9FCFA00B95629 = {
-			isa = PBXGroup;
-			children = (
-				79211D5E1ED9FD970049B6E2 /* Frameworks */,
-				6C4A15FF0393EA1F75FFB37C /* Pods */,
-				79C6F5481ED9FCFA00B95629 /* Products */,
-				79C6F5491ED9FCFA00B95629 /* Yomu */,
-				79C6F55E1ED9FCFA00B95629 /* YomuTests */,
-			);
-			sourceTree = "<group>";
-		};
-		79C6F5481ED9FCFA00B95629 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				79C6F5471ED9FCFA00B95629 /* Yomu.app */,
-				79C6F55B1ED9FCFA00B95629 /* YomuTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		79C6F5491ED9FCFA00B95629 /* Yomu */ = {
-			isa = PBXGroup;
-			children = (
-				79234BFF1EE32931000D6734 /* API */,
-				79DC54E51F2DC0DA00077FA1 /* Common */,
-				79B3FC671EDC91D4008323C0 /* DataStructures */,
-				79234C021EE32983000D6734 /* Extensions */,
-				79A0AD281F16A04A00AD8954 /* Screens */,
-				790593E11EF066DF00F7419E /* Services */,
-				79C6F54A1ED9FCFA00B95629 /* AppDelegate.swift */,
-				79C6F5511ED9FCFA00B95629 /* Assets.xcassets */,
-				79C6F5561ED9FCFA00B95629 /* Info.plist */,
-				79C6F5531ED9FCFA00B95629 /* LaunchScreen.storyboard */,
-				79A917C61EFEC40400820E57 /* R.generated.swift */,
-			);
-			path = Yomu;
-			sourceTree = "<group>";
-		};
-		79C6F55E1ED9FCFA00B95629 /* YomuTests */ = {
-			isa = PBXGroup;
-			children = (
-				79C6F5611ED9FCFA00B95629 /* Info.plist */,
-			);
-			path = YomuTests;
-			sourceTree = "<group>";
-		};
-		79DC54E51F2DC0DA00077FA1 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				79DC54E61F2DC11400077FA1 /* EmptyDataSetContainerView.swift */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		79C6F5461ED9FCFA00B95629 /* Yomu */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 79C6F5641ED9FCFA00B95629 /* Build configuration list for PBXNativeTarget "Yomu" */;
-			buildPhases = (
-				BC01BA89A05E875603722A6E /* 📦 Check Pods Manifest.lock */,
-				79803DBF1EFEBB9400CA7DCC /* [R.Swift] Run Script */,
-				79C6F5431ED9FCFA00B95629 /* Sources */,
-				79C6F5441ED9FCFA00B95629 /* Frameworks */,
-				79C6F5451ED9FCFA00B95629 /* Resources */,
-				79211D7F1ED9FDF50049B6E2 /* [Carthage] Run Script */,
-				79211D801ED9FE590049B6E2 /* [Swiftlint] Run Script */,
-				82CC81B7B2F5FBAE7B7B1F91 /* 📦 Embed Pods Frameworks */,
-				56DB5BEE743E20AE3859EBFB /* 📦 Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Yomu;
-			productName = Yomu;
-			productReference = 79C6F5471ED9FCFA00B95629 /* Yomu.app */;
-			productType = "com.apple.product-type.application";
-		};
-		79C6F55A1ED9FCFA00B95629 /* YomuTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 79C6F5671ED9FCFA00B95629 /* Build configuration list for PBXNativeTarget "YomuTests" */;
-			buildPhases = (
-				79C6F5571ED9FCFA00B95629 /* Sources */,
-				79C6F5581ED9FCFA00B95629 /* Frameworks */,
-				79C6F5591ED9FCFA00B95629 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				79C6F55D1ED9FCFA00B95629 /* PBXTargetDependency */,
-			);
-			name = YomuTests;
-			productName = YomuTests;
-			productReference = 79C6F55B1ED9FCFA00B95629 /* YomuTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		79C6F53F1ED9FCFA00B95629 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "Sendy Halim";
-				TargetAttributes = {
-					79C6F5461ED9FCFA00B95629 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 4QCP9AS6BP;
-						ProvisioningStyle = Automatic;
-					};
-					79C6F55A1ED9FCFA00B95629 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 4QCP9AS6BP;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 79C6F5461ED9FCFA00B95629;
-					};
-				};
-			};
-			buildConfigurationList = 79C6F5421ED9FCFA00B95629 /* Build configuration list for PBXProject "Yomu" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 79C6F53E1ED9FCFA00B95629;
-			productRefGroup = 79C6F5481ED9FCFA00B95629 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				79C6F5461ED9FCFA00B95629 /* Yomu */,
-				79C6F55A1ED9FCFA00B95629 /* YomuTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		79C6F5451ED9FCFA00B95629 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				79DC54E91F2DC20B00077FA1 /* EmptyMangaSetView.xib in Resources */,
-				79C6F5551ED9FCFA00B95629 /* LaunchScreen.storyboard in Resources */,
-				79C6F5521ED9FCFA00B95629 /* Assets.xcassets in Resources */,
-				7919319B1EE87DBA00607A11 /* SearchedMangaCell.xib in Resources */,
-				7918EA9D1EF1AEC5004F3366 /* MangaCell.xib in Resources */,
-				79258B911EF1644C00202035 /* MangaCollectionViewController.xib in Resources */,
-				796F98F31EE2FD9B00FAF40C /* YomuNavigationController.xib in Resources */,
-				79BD51AE1EFE52D70063F3AC /* ChapterCollectionViewController.xib in Resources */,
-				794E47B81F00BEC70062FA6D /* ChapterPageCollectionViewController.xib in Resources */,
-				799685BE1EE59F75000776FD /* SearchMangaViewController.xib in Resources */,
-				79DC54EB1F2DCCD600077FA1 /* LoadingView.xib in Resources */,
-				794E47BE1F00C08D0062FA6D /* ChapterPageView.xib in Resources */,
-				79A917C11EFEC0C300820E57 /* ChapterCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		79C6F5591ED9FCFA00B95629 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		56DB5BEE743E20AE3859EBFB /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yomu/Pods-Yomu-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		79211D7F1ED9FDF50049B6E2 /* [Carthage] Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Cartography.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Hue.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxRealm.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Swiftz.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/OrderedSet.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Toaster.framework",
-			);
-			name = "[Carthage] Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "carthage copy-frameworks";
-		};
-		79211D801ED9FE590049B6E2 /* [Swiftlint] Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[Swiftlint] Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = swiftlint;
-		};
-		79803DBF1EFEBB9400CA7DCC /* [R.Swift] Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[R.Swift] Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"Pods/R.swift/rswift\" \"$SRCROOT/Yomu\"";
-		};
-		82CC81B7B2F5FBAE7B7B1F91 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yomu/Pods-Yomu-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BC01BA89A05E875603722A6E /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		79C6F5431ED9FCFA00B95629 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7958C8EA1EFEB3B600CAD90E /* ChapterViewModel.swift in Sources */,
-				79DC54E71F2DC11400077FA1 /* EmptyDataSetContainerView.swift in Sources */,
-				794E47C01F00C2730062FA6D /* ChapterPageCollectionViewModel.swift in Sources */,
-				799521631EE473500059CC34 /* SearchedMangaViewModel.swift in Sources */,
-				796F98F01EE2FBD200FAF40C /* YomuNavigationController.swift in Sources */,
-				794E47BA1F00BFEF0062FA6D /* ChapterPageCollectionViewController.swift in Sources */,
-				799521671EE4751D0059CC34 /* RxMoyaResponse.swift in Sources */,
-				7919319F1EE87E2600607A11 /* SearchedMangaCell.swift in Sources */,
-				79BD51B01EFE62230063F3AC /* ChapterCollectionViewController.swift in Sources */,
-				794E47BC1F00C04F0062FA6D /* ChapterPageView.swift in Sources */,
-				799685BD1EE59F75000776FD /* SearchMangaViewController.swift in Sources */,
-				79B3FC731EDC9651008323C0 /* MangaRealm.swift in Sources */,
-				79258B941EF1652200202035 /* MangaCell.swift in Sources */,
-				790593E31EF0672900F7419E /* Database.swift in Sources */,
-				79234C041EE3298C000D6734 /* String.swift in Sources */,
-				79C6F54B1ED9FCFA00B95629 /* AppDelegate.swift in Sources */,
-				79B3FC6D1EDC95AF008323C0 /* Manga.swift in Sources */,
-				79B3FC6F1EDC960F008323C0 /* Chapter.swift in Sources */,
-				794E47C21F00C3570062FA6D /* ChapterPageViewModel.swift in Sources */,
-				79234C061EE32A10000D6734 /* MangaEdenAPI.swift in Sources */,
-				79B3FC691EDC93C1008323C0 /* SearchedManga.swift in Sources */,
-				79B3FC711EDC9638008323C0 /* ChapterPage.swift in Sources */,
-				799521651EE4737E0059CC34 /* SearchedMangaCollectionViewModel.swift in Sources */,
-				79A917C31EFEC29500820E57 /* ChapterCell.swift in Sources */,
-				79B3FC6B1EDC93EB008323C0 /* ImageUrl.swift in Sources */,
-				79A917C71EFEC40400820E57 /* R.generated.swift in Sources */,
-				79258B901EF1644C00202035 /* MangaCollectionViewController.swift in Sources */,
-				79234C011EE32945000D6734 /* YomuAPI.swift in Sources */,
-				7958C8E81EFEA92400CAD90E /* ChapterCollectionViewModel.swift in Sources */,
-				79D525661EF3087500431DDE /* MangaCollectionViewModel.swift in Sources */,
-				7995215F1EE472970059CC34 /* URL.swift in Sources */,
-				79D525631EF307CC00431DDE /* MangaViewModel.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		79C6F5571ED9FCFA00B95629 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		79C6F55D1ED9FCFA00B95629 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 79C6F5461ED9FCFA00B95629 /* Yomu */;
-			targetProxy = 79C6F55C1ED9FCFA00B95629 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		79C6F5531ED9FCFA00B95629 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				79C6F5541ED9FCFA00B95629 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			path = .;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		79C6F5621ED9FCFA00B95629 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		79C6F5631ED9FCFA00B95629 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		79C6F5651ED9FCFA00B95629 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1845E03D997EBD53106682F7 /* Pods-Yomu.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4QCP9AS6BP;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = Yomu/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.Yomu;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		79C6F5661ED9FCFA00B95629 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE92F20852E62735FC1E77F4 /* Pods-Yomu.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4QCP9AS6BP;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = Yomu/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.Yomu;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		79C6F5681ED9FCFA00B95629 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 4QCP9AS6BP;
-				INFOPLIST_FILE = YomuTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.YomuTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yomu.app/Yomu";
-			};
-			name = Debug;
-		};
-		79C6F5691ED9FCFA00B95629 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 4QCP9AS6BP;
-				INFOPLIST_FILE = YomuTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.YomuTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yomu.app/Yomu";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		79C6F5421ED9FCFA00B95629 /* Build configuration list for PBXProject "Yomu" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				79C6F5621ED9FCFA00B95629 /* Debug */,
-				79C6F5631ED9FCFA00B95629 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		79C6F5641ED9FCFA00B95629 /* Build configuration list for PBXNativeTarget "Yomu" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				79C6F5651ED9FCFA00B95629 /* Debug */,
-				79C6F5661ED9FCFA00B95629 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		79C6F5671ED9FCFA00B95629 /* Build configuration list for PBXNativeTarget "YomuTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				79C6F5681ED9FCFA00B95629 /* Debug */,
-				79C6F5691ED9FCFA00B95629 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 79C6F53F1ED9FCFA00B95629 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0F7993593B222CDE3A2A9D44</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_Yomu.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>1845E03D997EBD53106682F7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-Yomu.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-Yomu/Pods-Yomu.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>56DB5BEE743E20AE3859EBFB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>&#128230; Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Yomu/Pods-Yomu-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>6C4A15FF0393EA1F75FFB37C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1845E03D997EBD53106682F7</string>
+				<string>CE92F20852E62735FC1E77F4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>790593E11EF066DF00F7419E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>790593E21EF0672900F7419E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Services</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>790593E21EF0672900F7419E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Database.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>790593E31EF0672900F7419E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>790593E21EF0672900F7419E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>790D7A8E1F461A15004EE916</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Toaster.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/Toaster.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>790D7A8F1F461A15004EE916</key>
+		<dict>
+			<key>fileRef</key>
+			<string>790D7A8E1F461A15004EE916</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7918EA9C1EF1AEC5004F3366</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>MangaCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7918EA9D1EF1AEC5004F3366</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7918EA9C1EF1AEC5004F3366</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7919319A1EE87DBA00607A11</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>SearchedMangaCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7919319B1EE87DBA00607A11</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7919319A1EE87DBA00607A11</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7919319E1EE87E2600607A11</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SearchedMangaCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7919319F1EE87E2600607A11</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7919319E1EE87E2600607A11</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79211D5E1ED9FD970049B6E2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>790D7A8E1F461A15004EE916</string>
+				<string>799ACACC1EF451F3006208B5</string>
+				<string>796C3D221EE29F2D0029BBB2</string>
+				<string>79211D5F1ED9FD970049B6E2</string>
+				<string>79211D601ED9FD970049B6E2</string>
+				<string>79211D611ED9FD970049B6E2</string>
+				<string>79211D621ED9FD970049B6E2</string>
+				<string>79211D631ED9FD970049B6E2</string>
+				<string>79211D641ED9FD970049B6E2</string>
+				<string>79211D651ED9FD970049B6E2</string>
+				<string>79211D661ED9FD970049B6E2</string>
+				<string>79211D671ED9FD970049B6E2</string>
+				<string>79211D681ED9FD970049B6E2</string>
+				<string>79211D691ED9FD970049B6E2</string>
+				<string>79211D6A1ED9FD970049B6E2</string>
+				<string>79211D6B1ED9FD970049B6E2</string>
+				<string>79211D6C1ED9FD970049B6E2</string>
+				<string>79211D6D1ED9FD970049B6E2</string>
+				<string>79211D6E1ED9FD970049B6E2</string>
+				<string>0F7993593B222CDE3A2A9D44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79211D5F1ED9FD970049B6E2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Alamofire.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/Alamofire.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79211D601ED9FD970049B6E2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Argo.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/Argo.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79211D611ED9FD970049B6E2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Cartography.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/Cartography.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79211D621ED9FD970049B6E2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Curry.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/Curry.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79211D631ED9FD970049B6E2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Hue.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/Hue.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79211D641ED9FD970049B6E2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Kingfisher.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/Kingfisher.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79211D651ED9FD970049B6E2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Moya.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/Moya.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79211D661ED9FD970049B6E2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Realm.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/Realm.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79211D671ED9FD970049B6E2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>RealmSwift.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/RealmSwift.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79211D681ED9FD970049B6E2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Result.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/Result.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79211D691ED9FD970049B6E2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Runes.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/Runes.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79211D6A1ED9FD970049B6E2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>RxCocoa.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/RxCocoa.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79211D6B1ED9FD970049B6E2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>RxMoya.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/RxMoya.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79211D6C1ED9FD970049B6E2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>RxRealm.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/RxRealm.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79211D6D1ED9FD970049B6E2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>RxSwift.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/RxSwift.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79211D6E1ED9FD970049B6E2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Swiftz.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/Swiftz.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79211D6F1ED9FD970049B6E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79211D5F1ED9FD970049B6E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79211D701ED9FD970049B6E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79211D601ED9FD970049B6E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79211D711ED9FD970049B6E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79211D611ED9FD970049B6E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79211D721ED9FD970049B6E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79211D621ED9FD970049B6E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79211D731ED9FD970049B6E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79211D631ED9FD970049B6E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79211D741ED9FD970049B6E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79211D641ED9FD970049B6E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79211D751ED9FD970049B6E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79211D651ED9FD970049B6E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79211D761ED9FD970049B6E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79211D661ED9FD970049B6E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79211D771ED9FD970049B6E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79211D671ED9FD970049B6E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79211D781ED9FD970049B6E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79211D681ED9FD970049B6E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79211D791ED9FD970049B6E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79211D691ED9FD970049B6E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79211D7A1ED9FD970049B6E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79211D6A1ED9FD970049B6E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79211D7B1ED9FD970049B6E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79211D6B1ED9FD970049B6E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79211D7C1ED9FD970049B6E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79211D6C1ED9FD970049B6E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79211D7D1ED9FD970049B6E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79211D6D1ED9FD970049B6E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79211D7E1ED9FD970049B6E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79211D6E1ED9FD970049B6E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79211D7F1ED9FDF50049B6E2</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array>
+				<string>$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/Argo.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/Cartography.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/Curry.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/Hue.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/Moya.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/Realm.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/Result.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/Runes.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/RxRealm.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/Swiftz.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/OrderedSet.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/Toaster.framework</string>
+			</array>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[Carthage] Run Script</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>carthage copy-frameworks</string>
+		</dict>
+		<key>79211D801ED9FE590049B6E2</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[Swiftlint] Run Script</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>swiftlint</string>
+		</dict>
+		<key>79234BFF1EE32931000D6734</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79234C051EE32A10000D6734</string>
+				<string>79234C001EE32945000D6734</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>API</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79234C001EE32945000D6734</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>YomuAPI.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79234C011EE32945000D6734</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79234C001EE32945000D6734</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79234C021EE32983000D6734</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>799521661EE4751D0059CC34</string>
+				<string>79234C031EE3298C000D6734</string>
+				<string>7995215E1EE472970059CC34</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Extensions</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79234C031EE3298C000D6734</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>String.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79234C041EE3298C000D6734</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79234C031EE3298C000D6734</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79234C051EE32A10000D6734</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MangaEdenAPI.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79234C061EE32A10000D6734</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79234C051EE32A10000D6734</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79258B8E1EF1644C00202035</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MangaCollectionViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79258B8F1EF1644C00202035</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>MangaCollectionViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79258B901EF1644C00202035</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79258B8E1EF1644C00202035</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79258B911EF1644C00202035</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79258B8F1EF1644C00202035</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79258B921EF1652200202035</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MangaCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79258B941EF1652200202035</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79258B921EF1652200202035</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>794E47B71F00BEC70062FA6D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>ChapterPageCollectionViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>794E47B81F00BEC70062FA6D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>794E47B71F00BEC70062FA6D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>794E47B91F00BFEF0062FA6D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChapterPageCollectionViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>794E47BA1F00BFEF0062FA6D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>794E47B91F00BFEF0062FA6D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>794E47BB1F00C04F0062FA6D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChapterPageView.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>794E47BC1F00C04F0062FA6D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>794E47BB1F00C04F0062FA6D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>794E47BD1F00C08D0062FA6D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>ChapterPageView.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>794E47BE1F00C08D0062FA6D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>794E47BD1F00C08D0062FA6D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>794E47BF1F00C2730062FA6D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChapterPageCollectionViewModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>794E47C01F00C2730062FA6D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>794E47BF1F00C2730062FA6D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>794E47C11F00C3570062FA6D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChapterPageViewModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>794E47C21F00C3570062FA6D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>794E47C11F00C3570062FA6D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>795121821F47261500D5417B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79C6F5511ED9FCFA00B95629</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Resources</string>
+			<key>path</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7958C8E71EFEA92400CAD90E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChapterCollectionViewModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7958C8E81EFEA92400CAD90E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7958C8E71EFEA92400CAD90E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7958C8E91EFEB3B600CAD90E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChapterViewModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7958C8EA1EFEB3B600CAD90E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7958C8E91EFEB3B600CAD90E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>796C3D221EE29F2D0029BBB2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>URLNavigator.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/URLNavigator.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>796F98EF1EE2FBD200FAF40C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>YomuNavigationController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>796F98F01EE2FBD200FAF40C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>796F98EF1EE2FBD200FAF40C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>796F98F21EE2FD9B00FAF40C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>YomuNavigationController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>796F98F31EE2FD9B00FAF40C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>796F98F21EE2FD9B00FAF40C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79803DBF1EFEBB9400CA7DCC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[R.Swift] Run Script</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"Pods/R.swift/rswift" "$SRCROOT/Yomu"</string>
+		</dict>
+		<key>7995215E1EE472970059CC34</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>URL.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7995215F1EE472970059CC34</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7995215E1EE472970059CC34</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>799521621EE473500059CC34</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SearchedMangaViewModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>799521631EE473500059CC34</key>
+		<dict>
+			<key>fileRef</key>
+			<string>799521621EE473500059CC34</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>799521641EE4737E0059CC34</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SearchedMangaCollectionViewModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>799521651EE4737E0059CC34</key>
+		<dict>
+			<key>fileRef</key>
+			<string>799521641EE4737E0059CC34</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>799521661EE4751D0059CC34</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>RxMoyaResponse.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>799521671EE4751D0059CC34</key>
+		<dict>
+			<key>fileRef</key>
+			<string>799521661EE4751D0059CC34</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>799685BB1EE59F75000776FD</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SearchMangaViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>799685BC1EE59F75000776FD</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>SearchMangaViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>799685BD1EE59F75000776FD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>799685BB1EE59F75000776FD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>799685BE1EE59F75000776FD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>799685BC1EE59F75000776FD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>799ACACC1EF451F3006208B5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>OrderedSet.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/OrderedSet.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>799ACACD1EF451F3006208B5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>799ACACC1EF451F3006208B5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79A0AD281F16A04A00AD8954</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79A0AD2A1F16A09200AD8954</string>
+				<string>79A0AD2C1F16A11900AD8954</string>
+				<string>79A0AD291F16A05200AD8954</string>
+				<string>79A0AD2D1F16A17000AD8954</string>
+				<string>79A0AD2B1F16A0E100AD8954</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Screens</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A0AD291F16A05200AD8954</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79DC54E81F2DC20B00077FA1</string>
+				<string>79DC54EA1F2DCCD600077FA1</string>
+				<string>79B3FC6C1EDC95AF008323C0</string>
+				<string>79258B921EF1652200202035</string>
+				<string>7918EA9C1EF1AEC5004F3366</string>
+				<string>79258B8E1EF1644C00202035</string>
+				<string>79258B8F1EF1644C00202035</string>
+				<string>79D525651EF3087500431DDE</string>
+				<string>79B3FC721EDC9651008323C0</string>
+				<string>79D525621EF307CC00431DDE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>MangaList</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A0AD2A1F16A09200AD8954</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79B3FC6E1EDC960F008323C0</string>
+				<string>79A917C21EFEC29500820E57</string>
+				<string>79A917C01EFEC0C300820E57</string>
+				<string>79BD51AF1EFE62230063F3AC</string>
+				<string>79BD51AD1EFE52D70063F3AC</string>
+				<string>7958C8E71EFEA92400CAD90E</string>
+				<string>7958C8E91EFEB3B600CAD90E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>ChapterList</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A0AD2B1F16A0E100AD8954</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>799685BB1EE59F75000776FD</string>
+				<string>799685BC1EE59F75000776FD</string>
+				<string>79B3FC681EDC93C1008323C0</string>
+				<string>7919319E1EE87E2600607A11</string>
+				<string>7919319A1EE87DBA00607A11</string>
+				<string>799521641EE4737E0059CC34</string>
+				<string>799521621EE473500059CC34</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>SearchManga</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A0AD2C1F16A11900AD8954</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79B3FC701EDC9638008323C0</string>
+				<string>794E47B91F00BFEF0062FA6D</string>
+				<string>794E47B71F00BEC70062FA6D</string>
+				<string>794E47BF1F00C2730062FA6D</string>
+				<string>794E47BB1F00C04F0062FA6D</string>
+				<string>794E47BD1F00C08D0062FA6D</string>
+				<string>794E47C11F00C3570062FA6D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>ChapterPageList</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A0AD2D1F16A17000AD8954</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>796F98EF1EE2FBD200FAF40C</string>
+				<string>796F98F21EE2FD9B00FAF40C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Root</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A917C01EFEC0C300820E57</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>ChapterCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A917C11EFEC0C300820E57</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79A917C01EFEC0C300820E57</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79A917C21EFEC29500820E57</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChapterCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A917C31EFEC29500820E57</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79A917C21EFEC29500820E57</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79A917C61EFEC40400820E57</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>R.generated.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A917C71EFEC40400820E57</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79A917C61EFEC40400820E57</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79B3FC671EDC91D4008323C0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79B3FC6A1EDC93EB008323C0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>DataStructures</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79B3FC681EDC93C1008323C0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SearchedManga.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79B3FC691EDC93C1008323C0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79B3FC681EDC93C1008323C0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79B3FC6A1EDC93EB008323C0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ImageUrl.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79B3FC6B1EDC93EB008323C0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79B3FC6A1EDC93EB008323C0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79B3FC6C1EDC95AF008323C0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Manga.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79B3FC6D1EDC95AF008323C0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79B3FC6C1EDC95AF008323C0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79B3FC6E1EDC960F008323C0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Chapter.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79B3FC6F1EDC960F008323C0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79B3FC6E1EDC960F008323C0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79B3FC701EDC9638008323C0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChapterPage.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79B3FC711EDC9638008323C0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79B3FC701EDC9638008323C0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79B3FC721EDC9651008323C0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MangaRealm.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79B3FC731EDC9651008323C0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79B3FC721EDC9651008323C0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79BD51AD1EFE52D70063F3AC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>ChapterCollectionViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79BD51AE1EFE52D70063F3AC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79BD51AD1EFE52D70063F3AC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79BD51AF1EFE62230063F3AC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChapterCollectionViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79BD51B01EFE62230063F3AC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79BD51AF1EFE62230063F3AC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79C6F53E1ED9FCFA00B95629</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79211D5E1ED9FD970049B6E2</string>
+				<string>6C4A15FF0393EA1F75FFB37C</string>
+				<string>79C6F5481ED9FCFA00B95629</string>
+				<string>795121821F47261500D5417B</string>
+				<string>79C6F5491ED9FCFA00B95629</string>
+				<string>79C6F55E1ED9FCFA00B95629</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79C6F53F1ED9FCFA00B95629</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0830</string>
+				<key>LastUpgradeCheck</key>
+				<string>0830</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Sendy Halim</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>79C6F5461ED9FCFA00B95629</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>8.3.2</string>
+						<key>DevelopmentTeam</key>
+						<string>4QCP9AS6BP</string>
+						<key>ProvisioningStyle</key>
+						<string>Automatic</string>
+					</dict>
+					<key>79C6F55A1ED9FCFA00B95629</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>8.3.2</string>
+						<key>DevelopmentTeam</key>
+						<string>4QCP9AS6BP</string>
+						<key>ProvisioningStyle</key>
+						<string>Automatic</string>
+						<key>TestTargetID</key>
+						<string>79C6F5461ED9FCFA00B95629</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>79C6F5421ED9FCFA00B95629</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>79C6F53E1ED9FCFA00B95629</string>
+			<key>productRefGroup</key>
+			<string>79C6F5481ED9FCFA00B95629</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>79C6F5461ED9FCFA00B95629</string>
+				<string>79C6F55A1ED9FCFA00B95629</string>
+			</array>
+		</dict>
+		<key>79C6F5421ED9FCFA00B95629</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>79C6F5621ED9FCFA00B95629</string>
+				<string>79C6F5631ED9FCFA00B95629</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>79C6F5431ED9FCFA00B95629</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>7958C8EA1EFEB3B600CAD90E</string>
+				<string>79DC54E71F2DC11400077FA1</string>
+				<string>794E47C01F00C2730062FA6D</string>
+				<string>799521631EE473500059CC34</string>
+				<string>796F98F01EE2FBD200FAF40C</string>
+				<string>794E47BA1F00BFEF0062FA6D</string>
+				<string>799521671EE4751D0059CC34</string>
+				<string>7919319F1EE87E2600607A11</string>
+				<string>79BD51B01EFE62230063F3AC</string>
+				<string>794E47BC1F00C04F0062FA6D</string>
+				<string>799685BD1EE59F75000776FD</string>
+				<string>79B3FC731EDC9651008323C0</string>
+				<string>79258B941EF1652200202035</string>
+				<string>790593E31EF0672900F7419E</string>
+				<string>79234C041EE3298C000D6734</string>
+				<string>79C6F54B1ED9FCFA00B95629</string>
+				<string>79B3FC6D1EDC95AF008323C0</string>
+				<string>79B3FC6F1EDC960F008323C0</string>
+				<string>794E47C21F00C3570062FA6D</string>
+				<string>79234C061EE32A10000D6734</string>
+				<string>79B3FC691EDC93C1008323C0</string>
+				<string>79B3FC711EDC9638008323C0</string>
+				<string>799521651EE4737E0059CC34</string>
+				<string>79A917C31EFEC29500820E57</string>
+				<string>79B3FC6B1EDC93EB008323C0</string>
+				<string>79A917C71EFEC40400820E57</string>
+				<string>79258B901EF1644C00202035</string>
+				<string>79234C011EE32945000D6734</string>
+				<string>7958C8E81EFEA92400CAD90E</string>
+				<string>79D525661EF3087500431DDE</string>
+				<string>7995215F1EE472970059CC34</string>
+				<string>79D525631EF307CC00431DDE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>79C6F5441ED9FCFA00B95629</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>790D7A8F1F461A15004EE916</string>
+				<string>79211D6F1ED9FD970049B6E2</string>
+				<string>79211D701ED9FD970049B6E2</string>
+				<string>79211D711ED9FD970049B6E2</string>
+				<string>79211D721ED9FD970049B6E2</string>
+				<string>79211D731ED9FD970049B6E2</string>
+				<string>79211D741ED9FD970049B6E2</string>
+				<string>79211D751ED9FD970049B6E2</string>
+				<string>79211D761ED9FD970049B6E2</string>
+				<string>79211D771ED9FD970049B6E2</string>
+				<string>79211D781ED9FD970049B6E2</string>
+				<string>79211D791ED9FD970049B6E2</string>
+				<string>79211D7A1ED9FD970049B6E2</string>
+				<string>79211D7B1ED9FD970049B6E2</string>
+				<string>79211D7C1ED9FD970049B6E2</string>
+				<string>79211D7D1ED9FD970049B6E2</string>
+				<string>79211D7E1ED9FD970049B6E2</string>
+				<string>799ACACD1EF451F3006208B5</string>
+				<string>9572D9D199520E8F20E91BCA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>79C6F5451ED9FCFA00B95629</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>79DC54E91F2DC20B00077FA1</string>
+				<string>79C6F5551ED9FCFA00B95629</string>
+				<string>79C6F5521ED9FCFA00B95629</string>
+				<string>7919319B1EE87DBA00607A11</string>
+				<string>7918EA9D1EF1AEC5004F3366</string>
+				<string>79258B911EF1644C00202035</string>
+				<string>796F98F31EE2FD9B00FAF40C</string>
+				<string>79BD51AE1EFE52D70063F3AC</string>
+				<string>794E47B81F00BEC70062FA6D</string>
+				<string>799685BE1EE59F75000776FD</string>
+				<string>79DC54EB1F2DCCD600077FA1</string>
+				<string>794E47BE1F00C08D0062FA6D</string>
+				<string>79A917C11EFEC0C300820E57</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>79C6F5461ED9FCFA00B95629</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>79C6F5641ED9FCFA00B95629</string>
+			<key>buildPhases</key>
+			<array>
+				<string>BC01BA89A05E875603722A6E</string>
+				<string>79803DBF1EFEBB9400CA7DCC</string>
+				<string>79C6F5431ED9FCFA00B95629</string>
+				<string>79C6F5441ED9FCFA00B95629</string>
+				<string>79C6F5451ED9FCFA00B95629</string>
+				<string>79211D7F1ED9FDF50049B6E2</string>
+				<string>79211D801ED9FE590049B6E2</string>
+				<string>82CC81B7B2F5FBAE7B7B1F91</string>
+				<string>56DB5BEE743E20AE3859EBFB</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Yomu</string>
+			<key>productName</key>
+			<string>Yomu</string>
+			<key>productReference</key>
+			<string>79C6F5471ED9FCFA00B95629</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>79C6F5471ED9FCFA00B95629</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Yomu.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>79C6F5481ED9FCFA00B95629</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79C6F5471ED9FCFA00B95629</string>
+				<string>79C6F55B1ED9FCFA00B95629</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79C6F5491ED9FCFA00B95629</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79234BFF1EE32931000D6734</string>
+				<string>79DC54E51F2DC0DA00077FA1</string>
+				<string>79B3FC671EDC91D4008323C0</string>
+				<string>79234C021EE32983000D6734</string>
+				<string>79A0AD281F16A04A00AD8954</string>
+				<string>790593E11EF066DF00F7419E</string>
+				<string>79C6F54A1ED9FCFA00B95629</string>
+				<string>79C6F5561ED9FCFA00B95629</string>
+				<string>79C6F5531ED9FCFA00B95629</string>
+				<string>79A917C61EFEC40400820E57</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Yomu</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79C6F54A1ED9FCFA00B95629</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79C6F54B1ED9FCFA00B95629</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79C6F54A1ED9FCFA00B95629</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79C6F5511ED9FCFA00B95629</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>name</key>
+			<string>Assets.xcassets</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79C6F5521ED9FCFA00B95629</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79C6F5511ED9FCFA00B95629</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79C6F5531ED9FCFA00B95629</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79C6F5541ED9FCFA00B95629</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>path</key>
+			<string>.</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79C6F5541ED9FCFA00B95629</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79C6F5551ED9FCFA00B95629</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79C6F5531ED9FCFA00B95629</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79C6F5561ED9FCFA00B95629</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79C6F5571ED9FCFA00B95629</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>79C6F5581ED9FCFA00B95629</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>79C6F5591ED9FCFA00B95629</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>79C6F55A1ED9FCFA00B95629</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>79C6F5671ED9FCFA00B95629</string>
+			<key>buildPhases</key>
+			<array>
+				<string>79C6F5571ED9FCFA00B95629</string>
+				<string>79C6F5581ED9FCFA00B95629</string>
+				<string>79C6F5591ED9FCFA00B95629</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>79C6F55D1ED9FCFA00B95629</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>YomuTests</string>
+			<key>productName</key>
+			<string>YomuTests</string>
+			<key>productReference</key>
+			<string>79C6F55B1ED9FCFA00B95629</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>79C6F55B1ED9FCFA00B95629</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>YomuTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>79C6F55C1ED9FCFA00B95629</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>79C6F53F1ED9FCFA00B95629</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>79C6F5461ED9FCFA00B95629</string>
+			<key>remoteInfo</key>
+			<string>Yomu</string>
+		</dict>
+		<key>79C6F55D1ED9FCFA00B95629</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>79C6F5461ED9FCFA00B95629</string>
+			<key>targetProxy</key>
+			<string>79C6F55C1ED9FCFA00B95629</string>
+		</dict>
+		<key>79C6F55E1ED9FCFA00B95629</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79C6F5611ED9FCFA00B95629</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>YomuTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79C6F5611ED9FCFA00B95629</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79C6F5621ED9FCFA00B95629</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_ACTIVE_COMPILATION_CONDITIONS</key>
+				<string>DEBUG</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>79C6F5631ED9FCFA00B95629</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Owholemodule</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>79C6F5641ED9FCFA00B95629</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>79C6F5651ED9FCFA00B95629</string>
+				<string>79C6F5661ED9FCFA00B95629</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>79C6F5651ED9FCFA00B95629</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>1845E03D997EBD53106682F7</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+				<string>YES</string>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>4QCP9AS6BP</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)/Carthage/Build/iOS</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>Yomu/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.sendyhalim.Yomu</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>79C6F5661ED9FCFA00B95629</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>CE92F20852E62735FC1E77F4</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+				<string>YES</string>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>4QCP9AS6BP</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)/Carthage/Build/iOS</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>Yomu/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.sendyhalim.Yomu</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>79C6F5671ED9FCFA00B95629</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>79C6F5681ED9FCFA00B95629</string>
+				<string>79C6F5691ED9FCFA00B95629</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>79C6F5681ED9FCFA00B95629</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+				<string>YES</string>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>4QCP9AS6BP</string>
+				<key>INFOPLIST_FILE</key>
+				<string>YomuTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.sendyhalim.YomuTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Yomu.app/Yomu</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>79C6F5691ED9FCFA00B95629</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+				<string>YES</string>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>4QCP9AS6BP</string>
+				<key>INFOPLIST_FILE</key>
+				<string>YomuTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.sendyhalim.YomuTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Yomu.app/Yomu</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>79D525621EF307CC00431DDE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MangaViewModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79D525631EF307CC00431DDE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79D525621EF307CC00431DDE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79D525651EF3087500431DDE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MangaCollectionViewModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79D525661EF3087500431DDE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79D525651EF3087500431DDE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79DC54E51F2DC0DA00077FA1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>79DC54E61F2DC11400077FA1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Common</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79DC54E61F2DC11400077FA1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>EmptyDataSetContainerView.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79DC54E71F2DC11400077FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79DC54E61F2DC11400077FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79DC54E81F2DC20B00077FA1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>EmptyMangaSetView.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79DC54E91F2DC20B00077FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79DC54E81F2DC20B00077FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>79DC54EA1F2DCCD600077FA1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>LoadingView.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79DC54EB1F2DCCD600077FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>79DC54EA1F2DCCD600077FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>82CC81B7B2F5FBAE7B7B1F91</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>&#128230; Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Yomu/Pods-Yomu-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>9572D9D199520E8F20E91BCA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0F7993593B222CDE3A2A9D44</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BC01BA89A05E875603722A6E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>&#128230; Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>CE92F20852E62735FC1E77F4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-Yomu.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-Yomu/Pods-Yomu.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>79C6F53F1ED9FCFA00B95629</string>
+</dict>
+</plist>
