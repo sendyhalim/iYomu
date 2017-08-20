@@ -22,7 +22,7 @@ class MangaCollectionViewController: UIViewController {
     collectionView.register(R.nib.mangaCell)
     collectionView.delegate = self
     collectionView.dataSource = self
-    collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
 
     setupEmptyDataSet()
     setupViewModelBindings()
@@ -193,9 +193,7 @@ extension MangaCollectionViewController: UICollectionViewDelegateFlowLayout {
     layout collectionViewLayout: UICollectionViewLayout,
     sizeForItemAt indexPath: IndexPath
   ) -> CGSize {
-    let width = collectionView.bounds.width - collectionView.contentInset.left - collectionView.contentInset.right
-
-    return CGSize(width: width, height: 80)
+    return CGSize(width: collectionView.bounds.width, height: 80)
   }
 
   func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
