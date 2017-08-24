@@ -39,6 +39,7 @@ struct SearchedMangaViewModel {
       .asDriver()
       .map { $0.categories.joined(separator: ", ") }
 
+    // NOTE: Are we doing this on the main thread?
     categoryLabelColorHex = Driver.just(Database.exists(mangaId: self.manga.value.apiId))
       .map {
         $0 ? "#DDDDDD" : "#3083FB"

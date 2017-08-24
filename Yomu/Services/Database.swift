@@ -41,4 +41,8 @@ struct Database {
   static func exists(mangaId: String) -> Bool {
     return connection().objects(MangaRealm.self).filter("id = '\(mangaId)'").count > 0
   }
+
+  static func exists(readChapterId: String) -> Bool {
+    return connection().objects(ReadChapterRealm.self).filter("id = '\(readChapterId)'").count > 0
+  }
 }
