@@ -84,8 +84,14 @@ class ChapterCollectionViewController: UITableViewController {
   }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let chapterViewModel = viewModel[indexPath.row]
+
+    chapterViewModel
+      .markAsRead()
+      .addDisposableTo(disposeBag)
+
     _ = YomuNavigationController
       .instance()?
-      .navigate(to: .chapterPageCollection(viewModel[indexPath.row]))
+      .navigate(to: .chapterPageCollection(chapterViewModel))
   }
 }

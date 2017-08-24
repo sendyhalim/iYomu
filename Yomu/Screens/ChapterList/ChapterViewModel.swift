@@ -20,29 +20,28 @@ struct ChapterViewModel {
 
   // MARK: Output
   let title: Driver<String>
-  let number: Driver<String>
-  let read: Driver<Bool>
+  var number: Driver<String> {
+    return read
+      .asDriver()
+      .map {
+        $0 ? $0 : Database.exists(readChapterId: self.chapter.id)
+      }
+      .map {
+        $0 ? "* Chapter \(self.chapter.number)" : "Chapter \(self.chapter.number)"
+      }
+  }
 
   // MARK: Private
   private let _chapter: Variable<Chapter>
+  private let read = Variable<Bool>(false)
+  private let disposeBag = DisposeBag()
 
   init(chapter: Chapter) {
     _chapter = Variable(chapter)
 
-    number = _chapter
-      .asDriver()
-      .map { "Chapter \($0.number.description)" }
-
     title = _chapter
       .asDriver()
       .map { $0.title }
-
-    read = _chapter
-      .asDriver()
-      .map {
-        // NOTE: Are we doing this on the main thread?
-        Database.exists(readChapterId: $0.id)
-      }
   }
 
   func chapterNumberMatches(pattern: String) -> Bool {
@@ -69,6 +68,8 @@ struct ChapterViewModel {
   }
 
   func markAsRead() -> Disposable {
+    read.value = true
+
     return Observable
       .just(ReadChapterRealm.from(chapter: chapter))
       .subscribe(Realm.rx.add(update: true))
