@@ -51,7 +51,7 @@ class MangaRealm: Object {
   ///  - parameter mangaRealm: `MangaRealm`
   ///
   ///  - returns: `Manga`
-  static func from(mangaRealm: MangaRealm) -> Manga {
+  static func mangaFrom(mangaRealm: MangaRealm) -> Manga {
     let categories = mangaRealm
       .commaSeparatedCategories.characters
       .split {

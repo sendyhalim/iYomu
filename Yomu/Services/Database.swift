@@ -25,13 +25,13 @@ struct Database {
   static func queryMangas() -> Array<Manga> {
     return connection()
       .objects(MangaRealm.self)
-      .map(MangaRealm.from(mangaRealm:))
+      .map(MangaRealm.mangaFrom(mangaRealm:))
   }
 
   static func queryManga(id: String) -> Manga {
     let mangaRealm: MangaRealm = queryMangaRealm(id: id)
 
-    return MangaRealm.from(mangaRealm: mangaRealm)
+    return MangaRealm.mangaFrom(mangaRealm: mangaRealm)
   }
 
   static func queryMangaRealm(id: String) -> MangaRealm {
