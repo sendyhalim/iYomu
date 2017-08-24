@@ -31,7 +31,7 @@ class SearchMangaViewController: UITableViewController {
     searchField
       .rx.text.orEmpty
       .filter { $0.characters.count > 2 } // At least 3 characters
-      .throttle(1.0, scheduler: MainScheduler.instance)
+      .throttle(1.0, latest: true, scheduler: MainScheduler.instance)
       .subscribe(onNext: { [weak self] in
         guard let `self` = self else {
           return
