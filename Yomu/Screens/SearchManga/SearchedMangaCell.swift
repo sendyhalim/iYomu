@@ -15,7 +15,7 @@ class SearchedMangaCell: UITableViewCell {
   @IBOutlet weak var previewImage: UIImageView!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var categoriesLabel: UILabel!
-  @IBOutlet weak var accessoryLabel: UILabel!
+  @IBOutlet weak var bookmarkedImageView: UIImageView!
 
   var viewModel: SearchedMangaViewModel!
   var disposeBag = DisposeBag()
@@ -57,10 +57,9 @@ class SearchedMangaCell: UITableViewCell {
       .addDisposableTo(disposeBag)
 
     viewModel
-      .categoryLabelColorHex
-      .map(UIColor.init(hex:))
+      .bookmarked
       .drive(onNext: { [weak self] in
-        self?.accessoryLabel.textColor = $0
+        self?.bookmarkedImageView.isHighlighted = $0
       })
       .addDisposableTo(disposeBag)
   }

@@ -15,7 +15,7 @@ struct SearchedMangaViewModel {
   let categoriesString: Driver<String>
   let title: Driver<String>
   let apiId: Driver<String>
-  let categoryLabelColorHex: Driver<String>
+  let bookmarked: Driver<Bool>
 
   // MARK: Private
   fileprivate let manga: Variable<SearchedManga>
@@ -40,10 +40,7 @@ struct SearchedMangaViewModel {
       .map { $0.categories.joined(separator: ", ") }
 
     // NOTE: Are we doing this on the main thread?
-    categoryLabelColorHex = Driver.just(Database.exists(mangaId: self.manga.value.apiId))
-      .map {
-        $0 ? "#DDDDDD" : "#3083FB"
-      }
+    bookmarked = Driver.just(Database.exists(mangaId: self.manga.value.apiId))
   }
 
   func existsInDb() -> Bool {
