@@ -3,7 +3,7 @@
 iOS Manga App Reader. Checkout [Yomu](https://github.com/sendyhalim/Yomu) for macOS version
 
 ## Preview
-<img src="https://user-images.githubusercontent.com/3948217/29461565-63a1a348-8456-11e7-94dc-47a5f82de21d.png" width="215"><img src="https://user-images.githubusercontent.com/3948217/29461566-63a4d0c2-8456-11e7-9869-fc3448e7929d.png" width="215"><img src="https://user-images.githubusercontent.com/3948217/29495965-37254cc2-85f3-11e7-81b2-3384014c602b.png" width="215"><img src="https://user-images.githubusercontent.com/3948217/29461564-639c7846-8456-11e7-908e-1ce47d6d605d.png" width="215">
+<img src="https://user-images.githubusercontent.com/3948217/29461565-63a1a348-8456-11e7-94dc-47a5f82de21d.png" width="215"><img src="https://user-images.githubusercontent.com/3948217/29730632-289bd25e-8a0b-11e7-8a61-6c94c7f61342.png" width="215"><img src="https://user-images.githubusercontent.com/3948217/29495965-37254cc2-85f3-11e7-81b2-3384014c602b.png" width="215"><img src="https://user-images.githubusercontent.com/3948217/29461564-639c7846-8456-11e7-908e-1ce47d6d605d.png" width="215">
 
 ## Development
 Just clone this repo and run `make bootstrap`
