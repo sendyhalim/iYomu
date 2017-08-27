@@ -20,16 +20,23 @@ struct ChapterViewModel {
 
   // MARK: Output
   let title: Driver<String>
-  var number: Driver<String> {
+  let number: Driver<String>
+
+  lazy var readColorString: Driver<String> = {
+    let readColor = "#A0A0A0"
+    let unreadColor = "#000000"
+    let read = self.read
+
+    if !read.value {
+      read.value = Database.exists(readChapterId: self._chapter.value.id)
+    }
+
     return read
       .asDriver()
       .map {
-        $0 ? $0 : Database.exists(readChapterId: self.chapter.id)
+        $0 ? readColor : unreadColor
       }
-      .map {
-        $0 ? "* Chapter \(self.chapter.number)" : "Chapter \(self.chapter.number)"
-      }
-  }
+  }()
 
   // MARK: Private
   private let _chapter: Variable<Chapter>
@@ -42,6 +49,10 @@ struct ChapterViewModel {
     title = _chapter
       .asDriver()
       .map { $0.title }
+
+    number = _chapter
+      .asDriver()
+      .map { "Chapter \($0.number)" }
   }
 
   func chapterNumberMatches(pattern: String) -> Bool {
