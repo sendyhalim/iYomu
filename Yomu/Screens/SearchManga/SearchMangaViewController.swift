@@ -11,7 +11,7 @@ import RxSwift
 import Toaster
 
 class SearchMangaViewController: UITableViewController {
-  @IBOutlet weak var searchField: UISearchBar!
+  @IBOutlet weak var searchField: SearchBar!
 
   let viewModel = SearchedMangaCollectionViewModel()
   let newManga = PublishSubject<SearchedMangaViewModel>()

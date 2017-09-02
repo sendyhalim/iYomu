@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 
 class ChapterCollectionViewController: UITableViewController {
-  @IBOutlet weak var searchInput: UISearchBar!
+  @IBOutlet weak var searchInput: SearchBar!
 
   let viewModel: ChapterCollectionViewModel
   let disposeBag = DisposeBag()
