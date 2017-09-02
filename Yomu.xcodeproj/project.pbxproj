@@ -71,6 +71,7 @@
 		79DC54E71F2DC11400077FA1 /* EmptyDataSetContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC54E61F2DC11400077FA1 /* EmptyDataSetContainerView.swift */; };
 		79DC54E91F2DC20B00077FA1 /* EmptyMangaSetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79DC54E81F2DC20B00077FA1 /* EmptyMangaSetView.xib */; };
 		79DC54EB1F2DCCD600077FA1 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79DC54EA1F2DCCD600077FA1 /* LoadingView.xib */; };
+		79FE24351F5B1C8B00C3452D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FE24341F5B1C8B00C3452D /* SearchBar.swift */; };
 		9572D9D199520E8F20E91BCA /* Pods_Yomu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F7993593B222CDE3A2A9D44 /* Pods_Yomu.framework */; };
 /* End PBXBuildFile section */
 
@@ -156,6 +157,7 @@
 		79DC54E61F2DC11400077FA1 /* EmptyDataSetContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDataSetContainerView.swift; sourceTree = "<group>"; };
 		79DC54E81F2DC20B00077FA1 /* EmptyMangaSetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyMangaSetView.xib; sourceTree = "<group>"; };
 		79DC54EA1F2DCCD600077FA1 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		79FE24341F5B1C8B00C3452D /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CE92F20852E62735FC1E77F4 /* Pods-Yomu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yomu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yomu/Pods-Yomu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -406,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				79DC54E61F2DC11400077FA1 /* EmptyDataSetContainerView.swift */,
+				79FE24341F5B1C8B00C3452D /* SearchBar.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				79B3FC731EDC9651008323C0 /* MangaRealm.swift in Sources */,
 				79258B941EF1652200202035 /* MangaCell.swift in Sources */,
 				790593E31EF0672900F7419E /* Database.swift in Sources */,
+				79FE24351F5B1C8B00C3452D /* SearchBar.swift in Sources */,
 				79234C041EE3298C000D6734 /* String.swift in Sources */,
 				79C6F54B1ED9FCFA00B95629 /* AppDelegate.swift in Sources */,
 				79B3FC6D1EDC95AF008323C0 /* Manga.swift in Sources */,
