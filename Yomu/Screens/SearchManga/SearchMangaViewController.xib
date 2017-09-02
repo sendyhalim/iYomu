@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <searchBar key="tableHeaderView" contentMode="redraw" id="5jj-6U-dIE" customClass="SearchBar" customModule="Yomu" customModuleProvider="target">
+            <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search Mangas" id="5jj-6U-dIE" customClass="SearchBar" customModule="Yomu" customModuleProvider="target">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                 <textInputTraits key="textInputTraits"/>
