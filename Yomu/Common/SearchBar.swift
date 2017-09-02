@@ -15,5 +15,16 @@ class SearchBar: UISearchBar {
     super.willMove(toSuperview: newSuperview)
 
     setImage(#imageLiteral(resourceName: "search"), for: .search, state: .normal)
+    searchBarStyle = .minimal
+
+    let textField = value(forKey: "_searchField") as! UITextField
+
+    textField.borderStyle = .none
+    textField.backgroundColor = UIColor(hex: "#F7F7F7")
+    textField.clipsToBounds = true
+    textField.layer.cornerRadius = 6.0
+    textField.layer.borderWidth = 1.0
+    textField.layer.borderColor = textField.backgroundColor!.cgColor
+    textField.textColor = UIColor(hex: "#555555")
   }
 }
