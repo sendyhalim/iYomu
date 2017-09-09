@@ -55,11 +55,10 @@ class ChapterCollectionViewController: UITableViewController {
       .drive(onNext: tableView.reloadData)
       .addDisposableTo(disposeBag)
   }
+}
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-  }
-
+// MARK: - Data source
+extension ChapterCollectionViewController {
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
@@ -76,13 +75,16 @@ class ChapterCollectionViewController: UITableViewController {
     let cell = tableView.dequeueReusableCell(
       withIdentifier: R.nib.chapterCell.identifier,
       for: indexPath
-    ) as! ChapterCell
+      ) as! ChapterCell
 
     cell.setup(viewModel: viewModel[indexPath.row])
 
     return cell
   }
+}
 
+// MARK: - Delegate
+extension ChapterCollectionViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let chapterViewModel = viewModel[indexPath.row]
 
