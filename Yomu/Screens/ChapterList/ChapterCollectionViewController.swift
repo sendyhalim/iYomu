@@ -10,10 +10,9 @@ import UIKit
 import RxSwift
 
 class ChapterCollectionViewController: UITableViewController {
-  @IBOutlet weak var searchInput: SearchBar!
-
   let viewModel: ChapterCollectionViewModel
   let disposeBag = DisposeBag()
+  var chapterCollectionHeader: ChapterCollectionHeader!
 
   init(viewModel: ChapterCollectionViewModel) {
     self.viewModel = viewModel
@@ -29,10 +28,14 @@ class ChapterCollectionViewController: UITableViewController {
 
     tableView.register(R.nib.chapterCell)
 
-    searchInput
-      .rx.text.orEmpty
-      .bind(to: viewModel.filterPattern)
-      .addDisposableTo(disposeBag)
+    chapterCollectionHeader = R.nib.chapterCollectionHeader.firstView(owner: nil, options: nil)
+    tableView.tableHeaderView = chapterCollectionHeader
+
+    chapterCollectionHeader.setup()
+    chapterCollectionHeader
+      .searchChapter
+      .drive(viewModel.filterPattern)
+      .addDisposableTo(chapterCollectionHeader.disposeBag)
 
     viewModel
       .title
@@ -75,7 +78,7 @@ extension ChapterCollectionViewController {
     let cell = tableView.dequeueReusableCell(
       withIdentifier: R.nib.chapterCell.identifier,
       for: indexPath
-      ) as! ChapterCell
+    ) as! ChapterCell
 
     cell.setup(viewModel: viewModel[indexPath.row])
 
