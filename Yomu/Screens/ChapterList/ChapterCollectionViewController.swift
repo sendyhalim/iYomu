@@ -33,9 +33,26 @@ class ChapterCollectionViewController: UITableViewController {
 
     chapterCollectionHeader.setup()
     chapterCollectionHeader
-      .searchChapter
+      .searchInput
+      .rx.text.orEmpty
+      .asDriver()
       .drive(viewModel.filterPattern)
       .addDisposableTo(chapterCollectionHeader.disposeBag)
+
+    chapterCollectionHeader
+      .sortButton
+      .rx.tap
+      .asDriver()
+      .drive(viewModel.toggleSort)
+      .addDisposableTo(chapterCollectionHeader.disposeBag)
+
+    viewModel
+      .sortOrder
+      .map {
+        $0 == .descending ? #imageLiteral(resourceName: "descending") : #imageLiteral(resourceName: "ascending")
+      }
+      .drive(chapterCollectionHeader.sortButton.rx.image())
+      .addDisposableTo(disposeBag)
 
     viewModel
       .title

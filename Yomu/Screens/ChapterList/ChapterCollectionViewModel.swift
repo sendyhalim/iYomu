@@ -39,6 +39,7 @@ struct ChapterCollectionViewModel {
   let fetching: Driver<Bool>
   let disposeBag = DisposeBag()
   let title: Driver<String>
+  let sortOrder: Driver<SortOrder>
 
   // MARK: Private
   fileprivate let mangaId: String
@@ -54,10 +55,9 @@ struct ChapterCollectionViewModel {
     let filteredChapters = self._filteredChapters
     let _ordering = self._ordering
 
-    // MARK: Fetching chapters
     fetching = _fetching.asDriver()
-
     title = _title.asDriver()
+    sortOrder = _ordering.asDriver()
 
     chapters
       .asObservable()

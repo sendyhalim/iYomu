@@ -40,6 +40,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="searchInput" destination="SGc-VP-3Zw" id="RDt-in-ezj"/>
+                <outlet property="sortButton" destination="F2z-Yx-Oh2" id="LaB-dM-Ott"/>
             </connections>
             <point key="canvasLocation" x="-18.5" y="-31.5"/>
         </view>

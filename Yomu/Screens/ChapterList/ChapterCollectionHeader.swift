@@ -12,11 +12,9 @@ import RxSwift
 
 class ChapterCollectionHeader: UIView {
   @IBOutlet weak var searchInput: UISearchBar!
+  @IBOutlet weak var sortButton: UIButton!
 
   var disposeBag = DisposeBag()
-  var searchChapter: Driver<String> {
-    return self.searchInput.rx.text.orEmpty.asDriver()
-  }
 
   func setup() {
     disposeBag = DisposeBag()
