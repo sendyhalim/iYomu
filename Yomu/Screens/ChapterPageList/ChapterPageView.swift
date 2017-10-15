@@ -26,6 +26,6 @@ class ChapterPageView: UIView {
       .drive(onNext: { [weak self] in
         self?.chapterPageImageView.kf.setImage(with: $0)
       })
-      .addDisposableTo(disposeBag)
-  }
+      .disposed(by: disposeBag)
+ }
 }

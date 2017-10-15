@@ -42,25 +42,25 @@ class SearchedMangaCell: UITableViewCell {
     viewModel
       .title
       .drive(titleLabel.rx.text)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     viewModel
       .previewUrl
       .drive(onNext: { [weak self] in
         self?.previewImage.kf.setImage(with: $0)
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     viewModel
       .categoriesString
       .drive(categoriesLabel.rx.text)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
-    viewModel
+   viewModel
       .bookmarked
       .drive(onNext: { [weak self] in
         self?.bookmarkedImageView.isHighlighted = $0
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
   }
 }

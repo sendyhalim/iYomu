@@ -56,7 +56,6 @@
 		79A19F0C1F4F43BF00F1DEA7 /* ReadChapterRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A19F0B1F4F43BF00F1DEA7 /* ReadChapterRealm.swift */; };
 		79A917C11EFEC0C300820E57 /* ChapterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79A917C01EFEC0C300820E57 /* ChapterCell.xib */; };
 		79A917C31EFEC29500820E57 /* ChapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A917C21EFEC29500820E57 /* ChapterCell.swift */; };
-		79A917C71EFEC40400820E57 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A917C61EFEC40400820E57 /* R.generated.swift */; };
 		79B3FC691EDC93C1008323C0 /* SearchedManga.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3FC681EDC93C1008323C0 /* SearchedManga.swift */; };
 		79B3FC6B1EDC93EB008323C0 /* ImageUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3FC6A1EDC93EB008323C0 /* ImageUrl.swift */; };
 		79B3FC6D1EDC95AF008323C0 /* Manga.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3FC6C1EDC95AF008323C0 /* Manga.swift */; };
@@ -74,6 +73,7 @@
 		79DC54E91F2DC20B00077FA1 /* EmptyMangaSetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79DC54E81F2DC20B00077FA1 /* EmptyMangaSetView.xib */; };
 		79DC54EB1F2DCCD600077FA1 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79DC54EA1F2DCCD600077FA1 /* LoadingView.xib */; };
 		79FE24351F5B1C8B00C3452D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FE24341F5B1C8B00C3452D /* SearchBar.swift */; };
+		79FF225F1F93D442000F5E83 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF225E1F93D442000F5E83 /* R.generated.swift */; };
 		9572D9D199520E8F20E91BCA /* Pods_Yomu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F7993593B222CDE3A2A9D44 /* Pods_Yomu.framework */; };
 /* End PBXBuildFile section */
 
@@ -140,7 +140,6 @@
 		79A19F0B1F4F43BF00F1DEA7 /* ReadChapterRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadChapterRealm.swift; sourceTree = "<group>"; };
 		79A917C01EFEC0C300820E57 /* ChapterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterCell.xib; sourceTree = "<group>"; };
 		79A917C21EFEC29500820E57 /* ChapterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterCell.swift; sourceTree = "<group>"; };
-		79A917C61EFEC40400820E57 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		79B3FC681EDC93C1008323C0 /* SearchedManga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchedManga.swift; sourceTree = "<group>"; };
 		79B3FC6A1EDC93EB008323C0 /* ImageUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUrl.swift; sourceTree = "<group>"; };
 		79B3FC6C1EDC95AF008323C0 /* Manga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manga.swift; sourceTree = "<group>"; };
@@ -162,6 +161,7 @@
 		79DC54E81F2DC20B00077FA1 /* EmptyMangaSetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyMangaSetView.xib; sourceTree = "<group>"; };
 		79DC54EA1F2DCCD600077FA1 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		79FE24341F5B1C8B00C3452D /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		79FF225E1F93D442000F5E83 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		CE92F20852E62735FC1E77F4 /* Pods-Yomu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yomu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yomu/Pods-Yomu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -397,7 +397,7 @@
 				79C6F54A1ED9FCFA00B95629 /* AppDelegate.swift */,
 				79C6F5561ED9FCFA00B95629 /* Info.plist */,
 				79C6F5531ED9FCFA00B95629 /* LaunchScreen.storyboard */,
-				79A917C61EFEC40400820E57 /* R.generated.swift */,
+				79FF225E1F93D442000F5E83 /* R.generated.swift */,
 			);
 			path = Yomu;
 			sourceTree = "<group>";
@@ -426,15 +426,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79C6F5641ED9FCFA00B95629 /* Build configuration list for PBXNativeTarget "Yomu" */;
 			buildPhases = (
-				BC01BA89A05E875603722A6E /* 📦 Check Pods Manifest.lock */,
+				BC01BA89A05E875603722A6E /* [CP] Check Pods Manifest.lock */,
 				79803DBF1EFEBB9400CA7DCC /* [R.Swift] Run Script */,
 				79C6F5431ED9FCFA00B95629 /* Sources */,
 				79C6F5441ED9FCFA00B95629 /* Frameworks */,
 				79C6F5451ED9FCFA00B95629 /* Resources */,
 				79211D7F1ED9FDF50049B6E2 /* [Carthage] Run Script */,
 				79211D801ED9FE590049B6E2 /* [Swiftlint] Run Script */,
-				82CC81B7B2F5FBAE7B7B1F91 /* 📦 Embed Pods Frameworks */,
-				56DB5BEE743E20AE3859EBFB /* 📦 Copy Pods Resources */,
+				82CC81B7B2F5FBAE7B7B1F91 /* [CP] Embed Pods Frameworks */,
+				56DB5BEE743E20AE3859EBFB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -470,12 +470,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Sendy Halim";
 				TargetAttributes = {
 					79C6F5461ED9FCFA00B95629 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 4QCP9AS6BP;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					79C6F55A1ED9FCFA00B95629 = {
@@ -537,14 +538,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		56DB5BEE743E20AE3859EBFB /* 📦 Copy Pods Resources */ = {
+		56DB5BEE743E20AE3859EBFB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,36 +611,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"Pods/R.swift/rswift\" \"$SRCROOT/Yomu\"";
+			shellScript = "\"Pods/R.swift/rswift\" generate \"$SRCROOT/Yomu\"";
 		};
-		82CC81B7B2F5FBAE7B7B1F91 /* 📦 Embed Pods Frameworks */ = {
+		82CC81B7B2F5FBAE7B7B1F91 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Yomu/Pods-Yomu-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yomu/Pods-Yomu-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BC01BA89A05E875603722A6E /* 📦 Check Pods Manifest.lock */ = {
+		BC01BA89A05E875603722A6E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yomu-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -671,13 +678,13 @@
 				79B3FC6D1EDC95AF008323C0 /* Manga.swift in Sources */,
 				79B3FC6F1EDC960F008323C0 /* Chapter.swift in Sources */,
 				794E47C21F00C3570062FA6D /* ChapterPageViewModel.swift in Sources */,
+				79FF225F1F93D442000F5E83 /* R.generated.swift in Sources */,
 				79234C061EE32A10000D6734 /* MangaEdenAPI.swift in Sources */,
 				79B3FC691EDC93C1008323C0 /* SearchedManga.swift in Sources */,
 				79B3FC711EDC9638008323C0 /* ChapterPage.swift in Sources */,
 				799521651EE4737E0059CC34 /* SearchedMangaCollectionViewModel.swift in Sources */,
 				79A917C31EFEC29500820E57 /* ChapterCell.swift in Sources */,
 				79B3FC6B1EDC93EB008323C0 /* ImageUrl.swift in Sources */,
-				79A917C71EFEC40400820E57 /* R.generated.swift in Sources */,
 				79258B901EF1644C00202035 /* MangaCollectionViewController.swift in Sources */,
 				79234C011EE32945000D6734 /* YomuAPI.swift in Sources */,
 				7958C8E81EFEA92400CAD90E /* ChapterCollectionViewModel.swift in Sources */,
@@ -727,7 +734,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -735,7 +744,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -778,7 +791,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -786,7 +801,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -827,7 +846,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.Yomu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -846,7 +866,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.Yomu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

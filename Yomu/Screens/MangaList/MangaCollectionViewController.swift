@@ -48,9 +48,9 @@ class MangaCollectionViewController: UIViewController {
     viewModel
       .reload
       .drive(onNext: collectionView.reloadData)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
-    viewModel
+   viewModel
       .reload
       .drive(onNext: { [weak self] in
         if self!.viewModel.count > 0 {
@@ -59,19 +59,19 @@ class MangaCollectionViewController: UIViewController {
           self!.emptyDataSetContainerView.showEmptyDataSetView()
         }
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
-    viewModel
+   viewModel
       .showEmptyDataSetLoading
       .drive(onNext: emptyDataSetContainerView.showLoadingView)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
-    viewModel
+   viewModel
       .fetching
       .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
-    navigationItem
+   navigationItem
       .rightBarButtonItem?
       .rx.tap
       .flatMap {
@@ -87,12 +87,12 @@ class MangaCollectionViewController: UIViewController {
         if case .some(.searchManga(let id)) = navigationData {
           self.viewModel
             .fetch(id: id)
-            .addDisposableTo(self.disposeBag)
-        }
+            .disposed(by: self.disposeBag)
+       }
 
         YomuNavigationController.instance()?.popViewController(animated: true)
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
   }
 
   func setupGestureRecognizers() {
@@ -121,7 +121,7 @@ class MangaCollectionViewController: UIViewController {
     collectionView.addGestureRecognizer(longPressGesture)
   }
 
-  func handleLongPressGesture(gesture: UILongPressGestureRecognizer) {
+  @objc func handleLongPressGesture(gesture: UILongPressGestureRecognizer) {
     switch gesture.state {
     case .began:
       guard let indexPath = collectionView.indexPathForItem(at: gesture.location(in: collectionView)) else {
@@ -141,7 +141,7 @@ class MangaCollectionViewController: UIViewController {
     }
   }
 
-  func deleteCell(swipeGesture: UISwipeGestureRecognizer) {
+  @objc func deleteCell(swipeGesture: UISwipeGestureRecognizer) {
     let swipeLocation = swipeGesture.location(in: collectionView)
 
     guard let indexPath = collectionView.indexPathForItem(at: swipeLocation) else {

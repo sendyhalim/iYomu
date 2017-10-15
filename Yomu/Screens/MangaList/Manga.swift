@@ -43,7 +43,7 @@ struct Manga {
   }
 }
 
-extension Manga: Decodable {
+extension Manga: Argo.Decodable {
   static func decode(_ json: JSON) -> Decoded<Manga> {
 
     ///  JSON mapping of Manga Eden API.

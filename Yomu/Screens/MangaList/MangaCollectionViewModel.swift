@@ -59,14 +59,14 @@ struct MangaCollectionViewModel {
         return Database.queryMangaRealm(id: manga.id)
       }
       .subscribe(Realm.rx.delete())
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     addedManga
       .map {
         MangaRealm.from(manga: $0.manga)
       }
       .subscribe(Realm.rx.add(update: true))
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     // We want to show empty data set loading view if manga count is 0 and we're in the fetching state
     showEmptyDataSetLoading = Driver

@@ -62,7 +62,7 @@ struct ChapterCollectionViewModel {
     chapters
       .asObservable()
       .bind(to: _filteredChapters)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     reload = _filteredChapters
       .asDriver()
@@ -84,7 +84,7 @@ struct ChapterCollectionViewModel {
         }
       }
       .bind(to: _filteredChapters)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     // MARK: Sorting chapters
     toggleSort
@@ -92,7 +92,7 @@ struct ChapterCollectionViewModel {
         _ordering.value == .descending ? .ascending : .descending
       }
       .bind(to: _ordering)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     _ordering
       .asObservable()
@@ -103,7 +103,7 @@ struct ChapterCollectionViewModel {
       }
       .map { (compare: @escaping (Int) -> (Int) -> Bool) in
         let sorted = filteredChapters.value.sorted {
-          let (left, right) = $0
+          let (left, right) = ($0, $1)
 
           return compare(left.chapter.number)(right.chapter.number)
         }
@@ -111,7 +111,7 @@ struct ChapterCollectionViewModel {
         return List(fromArray: sorted)
       }
       .bind(to: _filteredChapters)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
   }
 
   func fetch() -> Disposable {

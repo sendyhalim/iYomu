@@ -52,24 +52,24 @@ class MangaCell: UICollectionViewCell {
         self?.hideDeleteButton(duration: 0)
         self?.delegate?.deleteButtonClicked(mangaViewModel: viewModel)
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     viewModel
       .title
       .drive(titleLabel.rx.text)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
-    viewModel
+   viewModel
       .previewUrl
       .drive(onNext: { [weak self] in
         self?.previewImage.kf.setImage(with: $0)
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     viewModel
       .categoriesString
       .drive(categoriesLabel.rx.text)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
   }
 
   func onSwipe(gesture: UISwipeGestureRecognizer) {

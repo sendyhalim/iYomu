@@ -73,8 +73,8 @@ struct MangaViewModel {
       .asDriver()
       .map(MangaRealm.from)
       .drive(Realm.rx.add(update: true))
-      .addDisposableTo(disposeBag)
-  }
+      .disposed(by: disposeBag)
+ }
 
   func update(position: Int) {
     _manga.value.position = position

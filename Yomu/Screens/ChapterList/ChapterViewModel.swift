@@ -66,7 +66,7 @@ struct ChapterViewModel {
       .map { chapters in
         chapters
           .sorted {
-            let (x, y) = $0
+            let (x, y) = ($0, $1)
 
             return x.number < y.number
           }

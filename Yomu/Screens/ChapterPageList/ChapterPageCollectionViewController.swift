@@ -61,16 +61,16 @@ class ChapterPageCollectionViewController: UIViewController {
       .drive(onNext: { [weak self] in
         self?.title = $0
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     viewModel
       .fetch()
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     viewModel
       .reload
       .drive(onNext: self.setupImageViews)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
   }
 
   func setupImageViews() {

@@ -24,7 +24,7 @@ struct SearchedManga {
   let categories: [String]
 }
 
-extension SearchedManga: Decodable {
+extension SearchedManga: Argo.Decodable {
   static func decode(_ json: JSON) -> Decoded<SearchedManga> {
     return curry(SearchedManga.init)
       <^> json <| "_id"

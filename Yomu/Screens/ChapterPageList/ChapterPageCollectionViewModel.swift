@@ -112,7 +112,7 @@ struct ChapterPageCollectionViewModel {
       .mapArray(ChapterPage.self, withRootKey: "images")
       .subscribe(onNext: {
         let sortedPages = $0.sorted {
-          let (x, y) = $0
+          let (x, y) = ($0, $1)
 
           return x.number < y.number
         }

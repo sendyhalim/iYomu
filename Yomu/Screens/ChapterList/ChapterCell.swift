@@ -39,25 +39,25 @@ class ChapterCell: UITableViewCell {
     self.viewModel
       .title
       .drive(titleLabel.rx.text)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
-    self.viewModel
+   self.viewModel
       .previewUrl()
       .drive(onNext: { [weak self] in
         self?.chapterImagePreview.kf.setImage(with: $0)
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
-    self.viewModel
+   self.viewModel
       .number
       .drive(chapterNumberLabel.rx.text)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
-    self.viewModel
+   self.viewModel
       .readColorString
       .drive(onNext: { [weak self] in
         self?.titleLabel.textColor = UIColor(hex: $0)
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
   }
 }

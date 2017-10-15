@@ -11,9 +11,9 @@ import RealmSwift
 
 /// Represents chapter object that has been read for `Realm` database
 class ReadChapterRealm: Object {
-  dynamic var id: String = ""
-  dynamic var number: Int = 0
-  dynamic var title: String = ""
+  @objc dynamic var id: String = ""
+  @objc dynamic var number: Int = 0
+  @objc dynamic var title: String = ""
 
   override static func primaryKey() -> String? {
     return "id"

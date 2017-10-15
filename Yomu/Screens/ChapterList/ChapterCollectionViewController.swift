@@ -37,14 +37,14 @@ class ChapterCollectionViewController: UITableViewController {
       .rx.text.orEmpty
       .asDriver()
       .drive(viewModel.filterPattern)
-      .addDisposableTo(chapterCollectionHeader.disposeBag)
+      .disposed(by: chapterCollectionHeader.disposeBag)
 
     chapterCollectionHeader
       .sortButton
       .rx.tap
       .asDriver()
       .drive(viewModel.toggleSort)
-      .addDisposableTo(chapterCollectionHeader.disposeBag)
+      .disposed(by: chapterCollectionHeader.disposeBag)
 
     viewModel
       .sortOrder
@@ -52,28 +52,28 @@ class ChapterCollectionViewController: UITableViewController {
         $0 == .descending ? #imageLiteral(resourceName: "descending") : #imageLiteral(resourceName: "ascending")
       }
       .drive(chapterCollectionHeader.sortButton.rx.image())
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     viewModel
       .title
       .drive(onNext: { [weak self] in
         self?.title = $0
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     viewModel
       .fetching
       .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     viewModel
       .fetch()
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     viewModel
       .reload
       .drive(onNext: tableView.reloadData)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
   }
 }
 
@@ -110,7 +110,7 @@ extension ChapterCollectionViewController {
 
     chapterViewModel
       .markAsRead()
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     _ = YomuNavigationController
       .instance()?

@@ -25,9 +25,9 @@ class SearchMangaViewController: UITableViewController {
     viewModel
       .fetching
       .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
-    // Register bindings
+     // Register bindings
     searchField
       .rx.text.orEmpty
       .filter { $0.characters.count > 2 } // At least 3 characters
@@ -39,14 +39,14 @@ class SearchMangaViewController: UITableViewController {
 
         self.viewModel
           .search(term: $0)
-          .addDisposableTo(self.disposeBag)
+          .disposed(by: self.disposeBag)
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     viewModel
       .reload
       .drive(onNext: tableView.reloadData)
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
   }
 
   // MARK: - Table view data source
@@ -85,7 +85,7 @@ class SearchMangaViewController: UITableViewController {
         .drive(onNext: {
           Toast(text: "Whoops, looks like \($0) is already in your collection", delay: 0, duration: Delay.short).show()
         })
-        .addDisposableTo(_disposeBag)
+        .disposed(by: _disposeBag)
 
       return
     }
