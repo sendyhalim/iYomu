@@ -82,6 +82,8 @@ class SearchMangaViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let searchedManga = viewModel[indexPath.row]
 
+    searchMangaHeader.searchInput.resignFirstResponder()
+
     guard !searchedManga.existsInDb() else {
       let _disposeBag = DisposeBag()
       ToastCenter.default.currentToast?.cancel()
