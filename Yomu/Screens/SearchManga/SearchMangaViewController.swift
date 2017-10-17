@@ -8,11 +8,13 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 import Toaster
+import Swiftz
 
 class SearchMangaViewController: UITableViewController {
   var searchMangaHeader: SearchMangaHeader!
-  let viewModel = SearchedMangaCollectionViewModel()
+  var viewModel = SearchedMangaCollectionViewModel()
   let newManga = PublishSubject<SearchedMangaViewModel>()
   let disposeBag = DisposeBag()
 
@@ -34,9 +36,11 @@ class SearchMangaViewController: UITableViewController {
           return
         }
 
+        // Is there a better way to cancel previous requests?
+        self.viewModel.disposeBag = DisposeBag()
         self.viewModel
           .search(term: $0)
-          .disposed(by: self.disposeBag)
+          .disposed(by: self.viewModel.disposeBag)
       })
       .disposed(by: searchMangaHeader.disposeBag)
 

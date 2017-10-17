@@ -49,16 +49,16 @@ struct SearchedMangaCollectionViewModel {
       .map(const(false))
       .startWith(true)
       .asDriver(onErrorJustReturn: false)
-      .drive(_fetching)
+      .drive(self._fetching)
 
     let resultDisposable = request
       .filterSuccessfulStatusCodes()
       .mapArray(SearchedManga.self, withRootKey: "mangas")
       .map {
-        $0.map(SearchedMangaViewModel.init)
+          $0.map(SearchedMangaViewModel.init)
       }
       .map(List<SearchedMangaViewModel>.init)
-      .bind(to: _mangas)
+      .bind(to: self._mangas)
 
     return CompositeDisposable(fetchingDisposable, resultDisposable)
   }
