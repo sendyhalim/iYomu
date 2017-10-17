@@ -28,7 +28,7 @@ class ChapterCollectionViewController: UITableViewController {
 
     tableView.register(R.nib.chapterCell)
 
-    chapterCollectionHeader = R.nib.chapterCollectionHeader.firstView(owner: nil, options: nil)
+    chapterCollectionHeader = R.nib.chapterCollectionHeader.firstView(owner: nil)
     tableView.tableHeaderView = chapterCollectionHeader
 
     chapterCollectionHeader.setup()

@@ -11,8 +11,7 @@ import RxSwift
 import Toaster
 
 class SearchMangaViewController: UITableViewController {
-  @IBOutlet weak var searchField: SearchBar!
-
+  var searchMangaHeader: SearchMangaHeader!
   let viewModel = SearchedMangaCollectionViewModel()
   let newManga = PublishSubject<SearchedMangaViewModel>()
   let disposeBag = DisposeBag()
@@ -22,13 +21,11 @@ class SearchMangaViewController: UITableViewController {
 
     tableView.register(R.nib.searchedMangaCell)
 
-    viewModel
-      .fetching
-      .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
-      .disposed(by: disposeBag)
+    searchMangaHeader = R.nib.searchMangaHeader.firstView(owner: nil)
+    tableView.tableHeaderView = searchMangaHeader
 
-     // Register bindings
-    searchField
+    searchMangaHeader
+      .searchInput
       .rx.text.orEmpty
       .filter { $0.characters.count > 2 } // At least 3 characters
       .throttle(1.0, latest: true, scheduler: MainScheduler.instance)
@@ -41,6 +38,11 @@ class SearchMangaViewController: UITableViewController {
           .search(term: $0)
           .disposed(by: self.disposeBag)
       })
+      .disposed(by: searchMangaHeader.disposeBag)
+
+    viewModel
+      .fetching
+      .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
       .disposed(by: disposeBag)
 
     viewModel
