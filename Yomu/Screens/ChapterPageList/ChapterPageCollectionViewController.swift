@@ -39,15 +39,7 @@ class ChapterPageCollectionViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    imageContainerView = UIView(frame: CGRect(
-      origin: .zero,
-      size: scrollView.bounds.size
-    ))
-
-    scrollView.addSubview(imageContainerView)
-    scrollView.minimumZoomScale = 1.0
-    scrollView.maximumZoomScale = 2.0
-    scrollView.delegate = self
+    setupScrollView()
 
     navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(
       title: "Back",
@@ -71,6 +63,37 @@ class ChapterPageCollectionViewController: UIViewController {
       .reload
       .drive(onNext: self.setupImageViews)
       .disposed(by: disposeBag)
+  }
+
+  func setupScrollView() {
+    imageContainerView = UIView(frame: CGRect(
+      origin: .zero,
+      size: scrollView.bounds.size
+    ))
+
+    scrollView.addSubview(imageContainerView)
+    scrollView.minimumZoomScale = 1.0
+    scrollView.maximumZoomScale = 2.0
+    scrollView.delegate = self
+
+    // Double tap to zoom in or zoom out
+    let tap = UITapGestureRecognizer(
+      target: self,
+      action: #selector(ChapterPageCollectionViewController.toogleZoom(gesture:))
+    )
+    tap.numberOfTapsRequired = 2
+    scrollView.addGestureRecognizer(tap)
+  }
+
+  @objc
+  func toogleZoom(gesture: UITapGestureRecognizer) {
+    if scrollView.zoomScale > 1.0 {
+      // Zoom out
+      scrollView.setZoomScale(1.0, animated: true)
+    } else {
+      // Zoom in
+      scrollView.setZoomScale(2.0, animated: true)
+    }
   }
 
   func setupImageViews() {
