@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="435" height="53"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" placeholder="Search Chapters" translatesAutoresizingMaskIntoConstraints="NO" id="t3P-gJ-LSK" customClass="SearchBar" customModule="Yomu" customModuleProvider="target">
+                <searchBar contentMode="redraw" placeholder="Search Mangas" translatesAutoresizingMaskIntoConstraints="NO" id="t3P-gJ-LSK" customClass="SearchBar" customModule="Yomu" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="435" height="53"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
