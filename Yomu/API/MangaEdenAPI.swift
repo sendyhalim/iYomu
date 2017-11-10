@@ -47,9 +47,9 @@ extension MangaEdenAPI: TargetType {
 }
 
 struct MangaEden {
-  fileprivate static let provider = RxMoyaProvider<MangaEdenAPI>()
+  fileprivate static let provider = MoyaProvider<MangaEdenAPI>()
 
   static func request(_ api: MangaEdenAPI) -> Observable<Response> {
-    return provider.request(api).asObservable()
+    return provider.rx.request(api).asObservable()
   }
 }

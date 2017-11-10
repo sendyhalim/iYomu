@@ -1,13 +1,13 @@
-github "onevcat/Kingfisher" ~> 4.1.1
+github "onevcat/Kingfisher" ~> 4.2.0
 github "typelift/Swiftz" "master"
 github "ReactiveX/RxSwift" == 4.0.0
-github "Moya/Moya" "master"
+github "Moya/Moya" ~> 10.0.0
 github "Thoughtbot/Argo" "master"
 github "Thoughtbot/Curry" "master"
 github "realm/realm-cocoa" ~> 3.0
-github "RxSwiftCommunity/RxRealm" == 0.7.3
+github "RxSwiftCommunity/RxRealm" ~> 0.7.4
 github "hyperoslo/Hue" ~> 3.0
-github "robb/Cartography" ~> 2.1
+github "robb/Cartography" ~> 3.0
 github "sendyhalim/OrderedSet" "master"
 github "icanzilb/EasyAnimation" ~> 2.0
 github "devxoul/Toaster" "master"

@@ -53,7 +53,7 @@ class MangaRealm: Object {
   ///  - returns: `Manga`
   static func mangaFrom(mangaRealm: MangaRealm) -> Manga {
     let categories = mangaRealm
-      .commaSeparatedCategories.characters
+      .commaSeparatedCategories
       .split {
         $0 == ","
       }
