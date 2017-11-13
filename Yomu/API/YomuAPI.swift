@@ -39,7 +39,7 @@ extension YomuAPI: TargetType {
     return "[]".UTF8EncodedData
   }
 
-  var headers: [String : String]? {
+  var headers: [String: String]? {
     return nil
   }
 }
