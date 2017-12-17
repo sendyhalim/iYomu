@@ -87,8 +87,8 @@ struct MangaCollectionViewModel {
 
   func fetch(id: String) -> Disposable {
     let api = MangaEdenAPI.mangaDetail(id)
-
     let request = MangaEden.request(api).share()
+
     let newMangaObservable = request
       .filterSuccessfulStatusCodes()
       .map(Manga.self)
