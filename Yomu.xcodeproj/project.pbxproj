@@ -73,7 +73,7 @@
 		79D525661EF3087500431DDE /* MangaCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D525651EF3087500431DDE /* MangaCollectionViewModel.swift */; };
 		79DC54E71F2DC11400077FA1 /* EmptyDataSetContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC54E61F2DC11400077FA1 /* EmptyDataSetContainerView.swift */; };
 		79DC54E91F2DC20B00077FA1 /* EmptyMangaSetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79DC54E81F2DC20B00077FA1 /* EmptyMangaSetView.xib */; };
-		79DC54EB1F2DCCD600077FA1 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79DC54EA1F2DCCD600077FA1 /* LoadingView.xib */; };
+		79DC54EB1F2DCCD600077FA1 /* FetchMangaLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79DC54EA1F2DCCD600077FA1 /* FetchMangaLoadingView.xib */; };
 		79FE24351F5B1C8B00C3452D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FE24341F5B1C8B00C3452D /* SearchBar.swift */; };
 		79FF225F1F93D442000F5E83 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF225E1F93D442000F5E83 /* R.generated.swift */; };
 		9572D9D199520E8F20E91BCA /* Pods_Yomu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F7993593B222CDE3A2A9D44 /* Pods_Yomu.framework */; };
@@ -163,7 +163,7 @@
 		79D525651EF3087500431DDE /* MangaCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MangaCollectionViewModel.swift; sourceTree = "<group>"; };
 		79DC54E61F2DC11400077FA1 /* EmptyDataSetContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDataSetContainerView.swift; sourceTree = "<group>"; };
 		79DC54E81F2DC20B00077FA1 /* EmptyMangaSetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyMangaSetView.xib; sourceTree = "<group>"; };
-		79DC54EA1F2DCCD600077FA1 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		79DC54EA1F2DCCD600077FA1 /* FetchMangaLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FetchMangaLoadingView.xib; sourceTree = "<group>"; };
 		79FE24341F5B1C8B00C3452D /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		79FF225E1F93D442000F5E83 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		CE92F20852E62735FC1E77F4 /* Pods-Yomu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yomu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yomu/Pods-Yomu.release.xcconfig"; sourceTree = "<group>"; };
@@ -293,7 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				79DC54E81F2DC20B00077FA1 /* EmptyMangaSetView.xib */,
-				79DC54EA1F2DCCD600077FA1 /* LoadingView.xib */,
+				79DC54EA1F2DCCD600077FA1 /* FetchMangaLoadingView.xib */,
 				79B3FC6C1EDC95AF008323C0 /* Manga.swift */,
 				79258B921EF1652200202035 /* MangaCell.swift */,
 				7918EA9C1EF1AEC5004F3366 /* MangaCell.xib */,
@@ -528,7 +528,7 @@
 				794E47B81F00BEC70062FA6D /* ChapterPageCollectionViewController.xib in Resources */,
 				799685BE1EE59F75000776FD /* SearchMangaViewController.xib in Resources */,
 				791BEBF01F63B04200C38DA4 /* ChapterCollectionHeader.xib in Resources */,
-				79DC54EB1F2DCCD600077FA1 /* LoadingView.xib in Resources */,
+				79DC54EB1F2DCCD600077FA1 /* FetchMangaLoadingView.xib in Resources */,
 				794603371F9536D100F43984 /* SearchMangaHeader.xib in Resources */,
 				794E47BE1F00C08D0062FA6D /* ChapterPageView.xib in Resources */,
 				79A917C11EFEC0C300820E57 /* ChapterCell.xib in Resources */,

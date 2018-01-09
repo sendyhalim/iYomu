@@ -31,7 +31,7 @@ class MangaCollectionViewController: UIViewController {
 
   func setupEmptyDataSet() {
     emptyDataSetContainerView.emptyView = R.nib.emptyMangaSetView.firstView(owner: nil)!
-    emptyDataSetContainerView.loadingView = R.nib.loadingView.firstView(owner: nil)!
+    emptyDataSetContainerView.loadingView = R.nib.fetchMangaLoadingView.firstView(owner: nil)!
     emptyDataSetContainerView.collectionView = collectionView
   }
 

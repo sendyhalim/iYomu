@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,18 +22,23 @@
                         <constraint firstAttribute="width" constant="125" id="Jq1-9W-guz"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching your first manga ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRG-t8-rEV">
-                    <rect key="frame" x="82" y="404" width="211" height="21"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching your first manga..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRG-t8-rEV">
+                    <rect key="frame" x="72.5" y="404" width="231" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Lr9-nq-VcA">
+                    <rect key="frame" x="306.5" y="406.5" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="SRG-t8-rEV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GiD-lX-7Kp"/>
+                <constraint firstItem="Lr9-nq-VcA" firstAttribute="centerY" secondItem="SRG-t8-rEV" secondAttribute="centerY" id="KkN-fp-dNe"/>
                 <constraint firstItem="Xx2-cN-D1b" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jWW-s6-XUJ"/>
                 <constraint firstItem="Xx2-cN-D1b" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="s8c-2T-gvA"/>
+                <constraint firstItem="Lr9-nq-VcA" firstAttribute="leading" secondItem="SRG-t8-rEV" secondAttribute="trailing" constant="3" id="wiD-oN-b3O"/>
                 <constraint firstItem="SRG-t8-rEV" firstAttribute="top" secondItem="Xx2-cN-D1b" secondAttribute="bottom" constant="8" symbolic="YES" id="zhp-d1-EsH"/>
             </constraints>
         </view>
