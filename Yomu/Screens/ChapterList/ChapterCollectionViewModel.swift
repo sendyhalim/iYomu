@@ -71,16 +71,16 @@ struct ChapterCollectionViewModel {
     // MARK: Filtering chapters
     filterPattern
       .flatMap { pattern -> Observable<List<ChapterViewModel>> in
+        let chaptersObservable = chapters.asObservable()
+
         if pattern.isEmpty {
-          return chapters.asObservable()
+          return chaptersObservable
         }
 
-        return chapters
-          .asObservable()
-          .map { chaptersList in
-            chaptersList.filter { chapterVM in
-              chapterVM.chapterNumberMatches(pattern: pattern)
-            }
+        return chaptersObservable.map { chaptersList in
+          chaptersList.filter {
+            $0.chapterNumberMatches(pattern: pattern)
+          }
         }
       }
       .bind(to: _filteredChapters)
