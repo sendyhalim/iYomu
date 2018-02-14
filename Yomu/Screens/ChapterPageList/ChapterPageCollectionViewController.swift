@@ -32,6 +32,7 @@ class ChapterPageCollectionViewController: UIViewController {
   override func viewDidDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
 
+    // Cleanup to prevent memory leak
     imageContainerView.removeFromSuperview()
     imageContainerView = nil
   }

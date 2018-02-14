@@ -57,7 +57,7 @@ class SearchMangaCollectionViewController: UIViewController {
     viewModel
       .reload
       .drive(onNext: collectionView.reloadData)
-      .disposed(by:disposeBag)
+      .disposed(by: disposeBag)
   }
 }
 
