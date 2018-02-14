@@ -33,7 +33,7 @@ class SearchMangaCollectionViewController: UIViewController {
     collectionView.register(R.nib.searchedMangaCell)
     collectionView.delegate = self
     collectionView.dataSource = self
-    collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+    collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
 
     setupBindings()
   }
