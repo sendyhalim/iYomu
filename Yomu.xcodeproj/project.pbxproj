@@ -53,7 +53,7 @@
 		799521651EE4737E0059CC34 /* SearchedMangaCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799521641EE4737E0059CC34 /* SearchedMangaCollectionViewModel.swift */; };
 		799521671EE4751D0059CC34 /* RxMoyaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799521661EE4751D0059CC34 /* RxMoyaResponse.swift */; };
 		799685BD1EE59F75000776FD /* SearchMangaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799685BB1EE59F75000776FD /* SearchMangaViewController.swift */; };
-		799685BE1EE59F75000776FD /* SearchMangaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 799685BC1EE59F75000776FD /* SearchMangaViewController.xib */; };
+		799685BE1EE59F75000776FD /* SearchMangaCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 799685BC1EE59F75000776FD /* SearchMangaCollectionViewController.xib */; };
 		799ACACD1EF451F3006208B5 /* OrderedSet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799ACACC1EF451F3006208B5 /* OrderedSet.framework */; };
 		79A19F0C1F4F43BF00F1DEA7 /* ReadChapterRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A19F0B1F4F43BF00F1DEA7 /* ReadChapterRealm.swift */; };
 		79A917C11EFEC0C300820E57 /* ChapterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79A917C01EFEC0C300820E57 /* ChapterCell.xib */; };
@@ -139,7 +139,7 @@
 		799521641EE4737E0059CC34 /* SearchedMangaCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchedMangaCollectionViewModel.swift; sourceTree = "<group>"; };
 		799521661EE4751D0059CC34 /* RxMoyaResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxMoyaResponse.swift; sourceTree = "<group>"; };
 		799685BB1EE59F75000776FD /* SearchMangaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMangaViewController.swift; sourceTree = "<group>"; };
-		799685BC1EE59F75000776FD /* SearchMangaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchMangaViewController.xib; sourceTree = "<group>"; };
+		799685BC1EE59F75000776FD /* SearchMangaCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchMangaCollectionViewController.xib; sourceTree = "<group>"; };
 		799ACACC1EF451F3006208B5 /* OrderedSet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OrderedSet.framework; path = Carthage/Build/iOS/OrderedSet.framework; sourceTree = "<group>"; };
 		79A19F0B1F4F43BF00F1DEA7 /* ReadChapterRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadChapterRealm.swift; sourceTree = "<group>"; };
 		79A917C01EFEC0C300820E57 /* ChapterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterCell.xib; sourceTree = "<group>"; };
@@ -327,7 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				799685BB1EE59F75000776FD /* SearchMangaViewController.swift */,
-				799685BC1EE59F75000776FD /* SearchMangaViewController.xib */,
+				799685BC1EE59F75000776FD /* SearchMangaCollectionViewController.xib */,
 				79B3FC681EDC93C1008323C0 /* SearchedManga.swift */,
 				7919319E1EE87E2600607A11 /* SearchedMangaCell.swift */,
 				794603361F9536D100F43984 /* SearchMangaHeader.xib */,
@@ -526,7 +526,7 @@
 				796F98F31EE2FD9B00FAF40C /* YomuNavigationController.xib in Resources */,
 				79BD51AE1EFE52D70063F3AC /* ChapterCollectionViewController.xib in Resources */,
 				794E47B81F00BEC70062FA6D /* ChapterPageCollectionViewController.xib in Resources */,
-				799685BE1EE59F75000776FD /* SearchMangaViewController.xib in Resources */,
+				799685BE1EE59F75000776FD /* SearchMangaCollectionViewController.xib in Resources */,
 				791BEBF01F63B04200C38DA4 /* ChapterCollectionHeader.xib in Resources */,
 				79DC54EB1F2DCCD600077FA1 /* FetchMangaLoadingView.xib in Resources */,
 				794603371F9536D100F43984 /* SearchMangaHeader.xib in Resources */,
