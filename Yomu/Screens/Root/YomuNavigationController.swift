@@ -36,7 +36,7 @@ class YomuNavigationController: UINavigationController {
   func navigate(to: NavigationTarget) -> Observable<NavigationData?> {
     switch to {
     case .searchManga:
-      let searchMangaVC = SearchMangaViewController(nibName: nil, bundle: nil)
+      let searchMangaVC = SearchMangaCollectionViewController(nibName: nil, bundle: nil)
       pushViewController(searchMangaVC, animated: true)
 
       return searchMangaVC

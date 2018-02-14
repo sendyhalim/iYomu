@@ -12,7 +12,7 @@ import RxCocoa
 import Toaster
 import Swiftz
 
-class SearchMangaViewController: UIViewController {
+class SearchMangaCollectionViewController: UIViewController {
   @IBOutlet weak var collectionView: UICollectionView!
   @IBOutlet weak var searchInput: SearchBar!
 
@@ -23,11 +23,15 @@ class SearchMangaViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-//    tableView.register(R.nib.searchedMangaCell)
-//
-//    searchMangaHeader = R.nib.searchMangaHeader.firstView(owner: nil)
-//    tableView.tableHeaderView = searchMangaHeader
+    collectionView.register(R.nib.searchedMangaCell)
+    collectionView.delegate = self
+    collectionView.dataSource = self
+    collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
 
+    setupBindings()
+  }
+
+  func setupBindings() {
     searchInput
       .rx.text.orEmpty
       .filter { $0.count > 2 } // At least 3 characters
@@ -53,21 +57,25 @@ class SearchMangaViewController: UIViewController {
     viewModel
       .reload
       .drive(onNext: collectionView.reloadData)
-      .disposed(by: disposeBag)
+      .disposed(by:disposeBag)
   }
+}
 
-  // MARK: - Table view data source
-  override func numberOfSections(in tableView: UITableView) -> Int {
+extension SearchMangaCollectionViewController: UICollectionViewDataSource {
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
     return 1
   }
 
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return viewModel.count
   }
 
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(
-      withIdentifier: R.nib.searchedMangaCell.identifier,
+  func collectionView(
+    _ collectionView: UICollectionView,
+    cellForItemAt indexPath: IndexPath
+  ) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(
+      withReuseIdentifier: R.nib.searchedMangaCell.identifier,
       for: indexPath
     ) as! SearchedMangaCell
 
@@ -75,15 +83,21 @@ class SearchMangaViewController: UIViewController {
 
     return cell
   }
+}
 
-  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 80
+extension SearchMangaCollectionViewController: UICollectionViewDelegateFlowLayout {
+  func collectionView(
+    _ collectionView: UICollectionView,
+    layout collectionViewLayout: UICollectionViewLayout,
+    sizeForItemAt indexPath: IndexPath
+  ) -> CGSize {
+    return CGSize(width: collectionView.bounds.width, height: 80)
   }
 
-  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let searchedManga = viewModel[indexPath.row]
 
-    searchMangaHeader.searchInput.resignFirstResponder()
+    searchInput.resignFirstResponder()
 
     guard !searchedManga.existsInDb() else {
       let _disposeBag = DisposeBag()
@@ -100,15 +114,5 @@ class SearchMangaViewController: UIViewController {
     }
 
     newManga.on(.next(searchedManga))
-  }
-}
-
-extension SearchMangaViewController: UICollectionViewDataSource {
-  func numberOfSections(in collectionView: UICollectionView) -> Int {
-    return 1
-  }
-
-  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return viewModel.count
   }
 }
