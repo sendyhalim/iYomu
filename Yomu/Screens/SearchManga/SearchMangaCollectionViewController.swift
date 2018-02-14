@@ -23,6 +23,13 @@ class SearchMangaCollectionViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    // Somehow our SearchMangaCollectionViewController view is extended
+    // to the top of navigation controller. This makes some part of the view
+    // hidden because of navigation bar. By setting isTranslucent = false
+    // we're forcing SearchMangaCollectionViewController view frame to fit
+    // within the navigation controller.
+    navigationController?.navigationBar.isTranslucent = false
+
     collectionView.register(R.nib.searchedMangaCell)
     collectionView.delegate = self
     collectionView.dataSource = self
