@@ -11,7 +11,7 @@ import Hue
 import Kingfisher
 import RxSwift
 
-class SearchedMangaCell: UITableViewCell {
+class SearchedMangaCell: UICollectionViewCell {
   @IBOutlet weak var previewImage: UIImageView!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var categoriesLabel: UILabel!

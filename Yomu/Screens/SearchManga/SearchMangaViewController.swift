@@ -12,8 +12,10 @@ import RxCocoa
 import Toaster
 import Swiftz
 
-class SearchMangaViewController: UITableViewController {
-  var searchMangaHeader: SearchMangaHeader!
+class SearchMangaViewController: UIViewController {
+  @IBOutlet weak var collectionView: UICollectionView!
+  @IBOutlet weak var searchInput: SearchBar!
+
   var viewModel = SearchedMangaCollectionViewModel()
   let newManga = PublishSubject<SearchedMangaViewModel>()
   let disposeBag = DisposeBag()
@@ -21,13 +23,12 @@ class SearchMangaViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    tableView.register(R.nib.searchedMangaCell)
+//    tableView.register(R.nib.searchedMangaCell)
+//
+//    searchMangaHeader = R.nib.searchMangaHeader.firstView(owner: nil)
+//    tableView.tableHeaderView = searchMangaHeader
 
-    searchMangaHeader = R.nib.searchMangaHeader.firstView(owner: nil)
-    tableView.tableHeaderView = searchMangaHeader
-
-    searchMangaHeader
-      .searchInput
+    searchInput
       .rx.text.orEmpty
       .filter { $0.count > 2 } // At least 3 characters
       .throttle(1.0, latest: true, scheduler: MainScheduler.instance)
@@ -42,7 +43,7 @@ class SearchMangaViewController: UITableViewController {
           .search(term: $0)
           .disposed(by: self.viewModel.disposeBag)
       })
-      .disposed(by: searchMangaHeader.disposeBag)
+      .disposed(by: disposeBag)
 
     viewModel
       .fetching
@@ -51,7 +52,7 @@ class SearchMangaViewController: UITableViewController {
 
     viewModel
       .reload
-      .drive(onNext: tableView.reloadData)
+      .drive(onNext: collectionView.reloadData)
       .disposed(by: disposeBag)
   }
 
@@ -99,5 +100,15 @@ class SearchMangaViewController: UITableViewController {
     }
 
     newManga.on(.next(searchedManga))
+  }
+}
+
+extension SearchMangaViewController: UICollectionViewDataSource {
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
+    return 1
+  }
+
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return viewModel.count
   }
 }
