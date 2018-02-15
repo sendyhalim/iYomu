@@ -14,8 +14,8 @@ import Swiftz
 
 class SearchMangaCollectionViewController: UIViewController {
   @IBOutlet weak var collectionView: UICollectionView!
-  @IBOutlet weak var searchInput: SearchBar!
 
+  var header: SearchMangaHeader!
   var viewModel = SearchedMangaCollectionViewModel()
   let newManga = PublishSubject<SearchedMangaViewModel>()
   let disposeBag = DisposeBag()
@@ -23,39 +23,24 @@ class SearchMangaCollectionViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    // Somehow our SearchMangaCollectionViewController view is extended
-    // to the top of navigation controller. This makes some part of the view
-    // hidden because of navigation bar. By setting isTranslucent = false
-    // we're forcing SearchMangaCollectionViewController view frame to fit
-    // within the navigation controller.
-    navigationController?.navigationBar.isTranslucent = false
+    collectionView.register(
+      R.nib.searchMangaHeader(),
+      forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+      withReuseIdentifier: R.nib.searchMangaHeader.identifier
+    )
 
     collectionView.register(R.nib.searchedMangaCell)
     collectionView.delegate = self
     collectionView.dataSource = self
     collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
 
-    setupBindings()
+    let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+    layout.headerReferenceSize = CGSize(width: collectionView.bounds.width, height: 50)
+
+     setupBindings()
   }
 
   func setupBindings() {
-    searchInput
-      .rx.text.orEmpty
-      .filter { $0.count > 2 } // At least 3 characters
-      .throttle(1.0, latest: true, scheduler: MainScheduler.instance)
-      .subscribe(onNext: { [weak self] in
-        guard let `self` = self else {
-          return
-        }
-
-        // Is there a better way to cancel previous requests?
-        self.viewModel.disposeBag = DisposeBag()
-        self.viewModel
-          .search(term: $0)
-          .disposed(by: self.viewModel.disposeBag)
-      })
-      .disposed(by: disposeBag)
-
     viewModel
       .fetching
       .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
@@ -104,7 +89,7 @@ extension SearchMangaCollectionViewController: UICollectionViewDelegateFlowLayou
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let searchedManga = viewModel[indexPath.row]
 
-    searchInput.resignFirstResponder()
+    header.searchInput.resignFirstResponder()
 
     guard !searchedManga.existsInDb() else {
       let _disposeBag = DisposeBag()
@@ -121,5 +106,46 @@ extension SearchMangaCollectionViewController: UICollectionViewDelegateFlowLayou
     }
 
     newManga.on(.next(searchedManga))
+  }
+
+  func collectionView(
+    _ collectionView: UICollectionView,
+    layout collectionViewLayout: UICollectionViewLayout,
+    referenceSizeForHeaderInSection section: Int
+  ) -> CGSize {
+    return CGSize(width: collectionView.bounds.width, height: 50)
+  }
+
+  func collectionView(
+    _ collectionView: UICollectionView,
+    viewForSupplementaryElementOfKind kind: String,
+    at indexPath: IndexPath
+  ) -> UICollectionReusableView {
+    header = collectionView.dequeueReusableSupplementaryView(
+      ofKind: UICollectionElementKindSectionHeader,
+      withReuseIdentifier: R.nib.searchMangaHeader.identifier,
+      for: indexPath
+    ) as! SearchMangaHeader
+
+    header?.setup()
+
+    header.searchInput
+      .rx.text.orEmpty
+      .filter { $0.count > 2 } // At least 3 characters
+      .throttle(1.0, latest: true, scheduler: MainScheduler.instance)
+      .subscribe(onNext: { [weak self] in
+        guard let `self` = self else {
+          return
+        }
+
+        // Is there a better way to cancel previous requests?
+        self.viewModel.disposeBag = DisposeBag()
+        self.viewModel
+          .search(term: $0)
+          .disposed(by: self.viewModel.disposeBag)
+      })
+      .disposed(by: header.disposeBag)
+
+    return header
   }
 }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchMangaHeader" customModule="Yomu" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchMangaHeader" id="J12-Sx-Wf5" customClass="SearchMangaHeader" customModule="Yomu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="Search Manga" translatesAutoresizingMaskIntoConstraints="NO" id="JMV-mT-pid" customClass="SearchBar" customModule="Yomu" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+            </subviews>
+            <constraints>
+                <constraint firstItem="JMV-mT-pid" firstAttribute="bottom" secondItem="J12-Sx-Wf5" secondAttribute="bottom" id="6OD-di-lPj"/>
+                <constraint firstAttribute="trailing" secondItem="JMV-mT-pid" secondAttribute="trailing" id="8lS-pJ-dmx"/>
+                <constraint firstItem="JMV-mT-pid" firstAttribute="leading" secondItem="J12-Sx-Wf5" secondAttribute="leading" id="KdU-kp-7TO"/>
+                <constraint firstAttribute="top" secondItem="JMV-mT-pid" secondAttribute="top" id="Plc-Dr-Bvi"/>
+            </constraints>
+            <connections>
+                <outlet property="searchInput" destination="JMV-mT-pid" id="BXG-c9-MYi"/>
+            </connections>
+            <point key="canvasLocation" x="-234" y="-389"/>
+        </collectionReusableView>
+    </objects>
+</document>

@@ -12,7 +12,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchMangaCollectionViewController" customModule="Yomu" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="g7m-gf-tG7" id="ltb-w0-AHe"/>
-                <outlet property="searchInput" destination="pvH-PT-H3R" id="S1W-N6-KF7"/>
                 <outlet property="view" destination="PwB-Vx-B12" id="E1V-84-VrO"/>
             </connections>
         </placeholder>
@@ -21,19 +20,15 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" placeholder="Search Manga" translatesAutoresizingMaskIntoConstraints="NO" id="pvH-PT-H3R" customClass="SearchBar" customModule="Yomu" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
-                    <textInputTraits key="textInputTraits"/>
-                </searchBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Vk-pe-BNx">
-                    <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="g7m-gf-tG7">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="611"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h4C-hM-PvW">
                                 <size key="itemSize" width="50" height="50"/>
-                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="headerReferenceSize" width="50" height="50"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </collectionViewFlowLayout>
@@ -50,11 +45,8 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="pvH-PT-H3R" firstAttribute="trailing" secondItem="PwB-Vx-B12" secondAttribute="trailing" id="0Qx-Qq-0va"/>
+                <constraint firstItem="6Vk-pe-BNx" firstAttribute="top" secondItem="PwB-Vx-B12" secondAttribute="top" id="9il-OT-S0N"/>
                 <constraint firstItem="6Vk-pe-BNx" firstAttribute="bottom" secondItem="PwB-Vx-B12" secondAttribute="bottom" id="Cwn-H4-V3L"/>
-                <constraint firstItem="pvH-PT-H3R" firstAttribute="top" secondItem="PwB-Vx-B12" secondAttribute="top" id="Dzr-yp-IU7"/>
-                <constraint firstItem="6Vk-pe-BNx" firstAttribute="top" secondItem="pvH-PT-H3R" secondAttribute="bottom" id="FYm-UE-ekd"/>
-                <constraint firstItem="pvH-PT-H3R" firstAttribute="leading" secondItem="PwB-Vx-B12" secondAttribute="leading" id="MhS-6P-754"/>
                 <constraint firstItem="6Vk-pe-BNx" firstAttribute="leading" secondItem="PwB-Vx-B12" secondAttribute="leading" id="cC6-ok-N0H"/>
                 <constraint firstItem="6Vk-pe-BNx" firstAttribute="trailing" secondItem="PwB-Vx-B12" secondAttribute="trailing" id="rQD-Hn-BIf"/>
             </constraints>
