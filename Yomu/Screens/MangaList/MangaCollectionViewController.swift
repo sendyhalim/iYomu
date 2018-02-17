@@ -152,6 +152,16 @@ class MangaCollectionViewController: UIViewController {
 
     cell.onSwipe(gesture: swipeGesture)
   }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+
+    // There's a bug in iOS 11.2 that makes UIBarButtonItem grayed out when a view controller
+    // in navigation controller popped out
+    // https://stackoverflow.com/questions/47754472/ios-uinavigationbar-button-remains-faded-after-segue-back/47839657#4783965
+    self.navigationController?.navigationBar.tintAdjustmentMode = .normal
+    self.navigationController?.navigationBar.tintAdjustmentMode = .automatic
+  }
 }
 
 extension MangaCollectionViewController: UICollectionViewDataSource {
