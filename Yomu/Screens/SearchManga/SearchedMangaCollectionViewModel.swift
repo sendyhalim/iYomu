@@ -31,6 +31,7 @@ struct SearchedMangaCollectionViewModel {
   init() {
     reload = _mangas
       .asDriver()
+      .skip(1)
       .map { _ in Void() }
 
     fetching = _fetching.asDriver()
