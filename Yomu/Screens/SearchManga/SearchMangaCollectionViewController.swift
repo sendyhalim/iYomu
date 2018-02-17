@@ -37,7 +37,7 @@ class SearchMangaCollectionViewController: UIViewController {
     let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
     layout.headerReferenceSize = CGSize(width: collectionView.bounds.width, height: 50)
 
-     setupBindings()
+    setupBindings()
   }
 
   func setupBindings() {
@@ -46,19 +46,30 @@ class SearchMangaCollectionViewController: UIViewController {
       .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
       .disposed(by: disposeBag)
 
-    viewModel
+   viewModel
       .reload
-      .drive(onNext: collectionView.reloadData)
+      .drive(onNext: { [weak self] in
+        self?.collectionView.reloadSections(IndexSet(integer: 1))
+        self?.header.searchInput.resignFirstResponder()
+      })
       .disposed(by: disposeBag)
   }
 }
 
 extension SearchMangaCollectionViewController: UICollectionViewDataSource {
   func numberOfSections(in collectionView: UICollectionView) -> Int {
-    return 1
+    return 2
   }
 
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    // The first section only contains header.
+    // We're separating header on a separate section because
+    // UISearchBar's text input loses focus when collection view reloads data (the header gets reloaded),
+    // the easiest way to do it is by reloading specific section that contains the data.
+    if section == 0 {
+      return 0
+    }
+
     return viewModel.count
   }
 
@@ -113,6 +124,11 @@ extension SearchMangaCollectionViewController: UICollectionViewDelegateFlowLayou
     layout collectionViewLayout: UICollectionViewLayout,
     referenceSizeForHeaderInSection section: Int
   ) -> CGSize {
+    // We only need header on the first section
+    guard section == 0 else {
+      return CGSize.zero
+    }
+
     return CGSize(width: collectionView.bounds.width, height: 50)
   }
 
