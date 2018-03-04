@@ -143,7 +143,7 @@ extension SearchMangaCollectionViewController: UICollectionViewDelegateFlowLayou
       for: indexPath
     ) as! SearchMangaHeader
 
-    header?.setup()
+    header.setup()
 
     header.searchInput
       .rx.text.orEmpty
