@@ -1,6 +1,6 @@
 line_length:
-  warning: 120
-  error: 150
+  warning: 150
+  error: 180
 disabled_rules:
   - identifier_name
   - force_cast
