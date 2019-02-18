@@ -19,7 +19,7 @@ class SearchBar: UISearchBar {
     let searchIcon = UIImageView(image: #imageLiteral(resourceName: "search"))
     let searchImageSize = searchIcon.image!.size
     searchIcon.frame = CGRect(x: 0, y: 0, width: searchImageSize.width + 10, height: searchImageSize.height)
-    searchIcon.contentMode = UIViewContentMode.center
+    searchIcon.contentMode = UIView.ContentMode.center
 
     // Configure text field
     let textField = value(forKey: "_searchField") as! UITextField

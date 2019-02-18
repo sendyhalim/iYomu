@@ -88,7 +88,7 @@ class MangaCollectionViewController: UIViewController {
           self.viewModel
             .fetch(id: id)
             .disposed(by: self.disposeBag)
-       }
+        }
 
         YomuNavigationController.instance()?.popViewController(animated: true)
       })
@@ -101,7 +101,7 @@ class MangaCollectionViewController: UIViewController {
       target: self,
       action: #selector(MangaCollectionViewController.deleteCell)
     )
-    leftSwipeGesture.direction = UISwipeGestureRecognizerDirection.left
+    leftSwipeGesture.direction = UISwipeGestureRecognizer.Direction.left
     collectionView.addGestureRecognizer(leftSwipeGesture)
 
     // Setup right swipe gesture
@@ -109,7 +109,7 @@ class MangaCollectionViewController: UIViewController {
       target: self,
       action: #selector(MangaCollectionViewController.deleteCell)
     )
-    rightSwipeGesture.direction = UISwipeGestureRecognizerDirection.right
+    rightSwipeGesture.direction = UISwipeGestureRecognizer.Direction.right
     collectionView.addGestureRecognizer(rightSwipeGesture)
 
     // Setup long press gesture to reorder cells

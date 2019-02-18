@@ -49,13 +49,13 @@ extension Manga: Argo.Decodable {
     ///  JSON mapping of Manga Eden API.
     ///  Example: http://www.mangaeden.com/api/manga/4e70ea6ac092255ef7006a52/
     return curry(Manga.init)(MangaPosition.undefined.rawValue)
-      <^> json <|? "id"
-      <*> json <| "alias"
-      <*> json <| "title"
-      <*> json <| "author"
-      <*> json <| "image"
-      <*> json <|? "released'"
-      <*> json <| "description"
-      <*> json <|| "categories"
+      <^> json[optional: "id"]
+      <*> json["alias"]
+      <*> json["title"]
+      <*> json["author"]
+      <*> json["image"]
+      <*> json[optional: "released"]
+      <*> json["description"]
+      <*> json["categories"]
   }
 }

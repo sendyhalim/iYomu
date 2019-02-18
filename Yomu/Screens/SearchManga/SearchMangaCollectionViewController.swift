@@ -24,8 +24,8 @@ class SearchMangaCollectionViewController: UIViewController {
     super.viewDidLoad()
 
     collectionView.register(
-      R.nib.searchMangaHeader(),
-      forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+      UINib(resource: R.nib.searchMangaHeader),
+      forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
       withReuseIdentifier: R.nib.searchMangaHeader.identifier
     )
 
@@ -138,10 +138,10 @@ extension SearchMangaCollectionViewController: UICollectionViewDelegateFlowLayou
     at indexPath: IndexPath
   ) -> UICollectionReusableView {
     header = collectionView.dequeueReusableSupplementaryView(
-      ofKind: UICollectionElementKindSectionHeader,
+      ofKind: UICollectionView.elementKindSectionHeader,
       withReuseIdentifier: R.nib.searchMangaHeader.identifier,
       for: indexPath
-    ) as! SearchMangaHeader
+      ) as? SearchMangaHeader
 
     header.setup()
 

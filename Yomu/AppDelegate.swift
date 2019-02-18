@@ -17,10 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(
     _ application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
     // Set max memory cache to be 50 MB
-    ImageCache.default.maxMemoryCost = 50 * 1024 * 1024
+    ImageCache.default.memoryStorage.config.totalCostLimit = 50 * 1024 * 1024
 
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.backgroundColor = UIColor.white

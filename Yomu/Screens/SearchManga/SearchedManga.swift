@@ -27,11 +27,11 @@ struct SearchedManga {
 extension SearchedManga: Argo.Decodable {
   static func decode(_ json: JSON) -> Decoded<SearchedManga> {
     return curry(SearchedManga.init)
-      <^> json <| "_id"
-      <*> json <| "apiId"
-      <*> json <| "name"
-      <*> json <| "slug"
-      <*> json <| "imageEndPoint"
-      <*> json <|| "categories"
+      <^> json["_id"]
+      <*> json["apiId"]
+      <*> json["name"]
+      <*> json["slug"]
+      <*> json["imageEndPoint"]
+      <*> json["categories"]
   }
 }
