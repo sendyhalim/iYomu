@@ -2,14 +2,14 @@
 //  ChapterPageCell.swift
 //  Yomu
 //
-//  Created by Sendy Halim on 6/26/17.
-//  Copyright © 2017 Sendy Halim. All rights reserved.
+//  Created by Sendy Halim on 24/02/19.
+//  Copyright © 2019 Sendy Halim. All rights reserved.
 //
 
 import UIKit
 import RxSwift
 
-class ChapterPageView: UIView {
+class ChapterPageCell: UICollectionViewCell {
   @IBOutlet weak var chapterPageImageView: UIImageView!
 
   var disposeBag = DisposeBag()
@@ -27,5 +27,5 @@ class ChapterPageView: UIView {
         self?.chapterPageImageView.kf.setImage(with: $0)
       })
       .disposed(by: disposeBag)
- }
+  }
 }
