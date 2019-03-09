@@ -7,10 +7,11 @@ class ChapterPageCollectionViewController: UIViewController {
   let viewModel: ChapterPageCollectionViewModel
   let disposeBag = DisposeBag()
   let layout = ZoomableCollectionViewLayout()
-  var initialSize: CGSize = CGSize.zero
 
   var chapterPageScale: CGFloat = 1.0
   var previousContentOffset: CGPoint = CGPoint.zero
+  var maxZoomScale: CGFloat = 2.0
+  var minZoomScale: CGFloat = 1.0
 
   init(viewModel: ChapterPageCollectionViewModel) {
     self.viewModel = viewModel
@@ -36,8 +37,6 @@ class ChapterPageCollectionViewController: UIViewController {
     collectionView.dataSource = self
     collectionView.collectionViewLayout = layout
     layout.delegate = self
-
-    initialSize = collectionView.contentSize
 
     navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(
       title: "Back",
@@ -67,7 +66,14 @@ class ChapterPageCollectionViewController: UIViewController {
       action: #selector(ChapterPageCollectionViewController.zoom(gesture:))
     )
 
+    let doubleTapGesture = UITapGestureRecognizer(
+      target: self,
+      action: #selector(ChapterPageCollectionViewController.toggleZoom(gesture:))
+    )
+    doubleTapGesture.numberOfTapsRequired = 2
+
     collectionView.addGestureRecognizer(pinchGesture)
+    collectionView.addGestureRecognizer(doubleTapGesture)
   }
 
   override func viewDidLayoutSubviews() {
@@ -75,28 +81,66 @@ class ChapterPageCollectionViewController: UIViewController {
   }
 
   @objc
+  func toggleZoom(gesture: UITapGestureRecognizer) {
+    previousContentOffset = collectionView.contentOffset
+
+    let previousScale = chapterPageScale
+    chapterPageScale = chapterPageScale > minZoomScale ? minZoomScale : maxZoomScale
+
+    collectionView.collectionViewLayout.invalidateLayout()
+
+    let tapLocation = gesture.location(in: gesture.view!)
+    let scaledTapLocation = CGPoint(
+      x: tapLocation.x * chapterPageScale,
+      y: tapLocation.y * chapterPageScale
+    )
+
+    let midHeight = collectionView.bounds.size.height / 2
+    let scaledYBasedOnTap = chapterPageScale == minZoomScale ? (tapLocation.y / previousScale) : (tapLocation.y * maxZoomScale)
+
+    collectionView.contentOffset = CGPoint(
+      x: max(scaledTapLocation.x - tapLocation.x, 0),
+      y: scaledYBasedOnTap - midHeight
+    )
+  }
+
+  @objc
   func zoom(gesture: UIPinchGestureRecognizer) {
-    if gesture.state == .began {
+    switch gesture.state {
+    case .changed:
+      guard chapterPageScale <= maxZoomScale && chapterPageScale >= minZoomScale else {
+        return
+      }
+
+      let previousChapterPageScale = chapterPageScale
+      chapterPageScale = min(max(chapterPageScale * gesture.scale, minZoomScale), maxZoomScale)
+
+      guard chapterPageScale != previousChapterPageScale else {
+        return
+      }
+
       previousContentOffset = collectionView.contentOffset
-    } else if gesture.state == .changed {
-      chapterPageScale = max(min(chapterPageScale * gesture.scale, 2.0), 1.0)
+      collectionView.collectionViewLayout.invalidateLayout()
+      adjustOffset(gesture: gesture, scale: gesture.scale)
+
       gesture.scale = 1.0
 
-      let newSize = CGSize(
-        width: initialSize.width * chapterPageScale,
-        height: initialSize.height * chapterPageScale
-      )
-
-      collectionView.contentSize = newSize
-      layout.contentSize = newSize
-
-      collectionView.contentOffset = CGPoint(
-        x: 0,
-        y: previousContentOffset.y * chapterPageScale
-      )
-
-      collectionView.collectionViewLayout.invalidateLayout()
+    default:
+      return
     }
+  }
+
+  func adjustOffset(gesture: UIGestureRecognizer, scale: CGFloat) {
+    let pinchLocation = gesture.location(in: gesture.view!)
+    let scaledPinchLocation = CGPoint(
+      x: pinchLocation.x * scale,
+      y: pinchLocation.y * scale
+    )
+
+    collectionView.contentOffset = CGPoint(
+      x: previousContentOffset.x + (scaledPinchLocation.x - pinchLocation.x),
+      y: previousContentOffset.y + (scaledPinchLocation.y - pinchLocation.y)
+    )
   }
 }
 
