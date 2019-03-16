@@ -8,11 +8,6 @@ class ChapterPageCollectionViewController: UIViewController {
   let disposeBag = DisposeBag()
   let layout = ZoomableCollectionViewLayout()
 
-  var chapterPageScale: CGFloat = 1.0
-  var previousContentOffset: CGPoint = CGPoint.zero
-  var maxZoomScale: CGFloat = 2.0
-  var minZoomScale: CGFloat = 1.0
-
   init(viewModel: ChapterPageCollectionViewModel) {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
@@ -61,86 +56,75 @@ class ChapterPageCollectionViewController: UIViewController {
       .drive(onNext: collectionView.reloadData)
       .disposed(by: disposeBag)
 
+    viewModel
+      .contentOffset
+      .drive(onNext: { [weak self] in
+        self?.collectionView.contentOffset = CGPoint(x: $0.x, y: $0.y)
+      })
+      .disposed(by: disposeBag)
+
+    viewModel
+      .invalidateLayout
+      .drive(onNext: collectionView.collectionViewLayout.invalidateLayout)
+      .disposed(by: disposeBag)
+
     let pinchGesture = UIPinchGestureRecognizer(
       target: self,
       action: #selector(ChapterPageCollectionViewController.zoom(gesture:))
     )
 
-    let doubleTapGesture = UITapGestureRecognizer(
-      target: self,
-      action: #selector(ChapterPageCollectionViewController.toggleZoom(gesture:))
-    )
-    doubleTapGesture.numberOfTapsRequired = 2
+    // let doubleTapGesture = UITapGestureRecognizer(
+    //   target: self,
+    //   action: #selector(ChapterPageCollectionViewController.toggleZoom(gesture:))
+    // )
+    // doubleTapGesture.numberOfTapsRequired = 2
 
     collectionView.addGestureRecognizer(pinchGesture)
-    collectionView.addGestureRecognizer(doubleTapGesture)
+    // collectionView.addGestureRecognizer(doubleTapGesture)
   }
 
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
   }
 
-  @objc
-  func toggleZoom(gesture: UITapGestureRecognizer) {
-    previousContentOffset = collectionView.contentOffset
+  // @objc
+  // func toggleZoom(gesture: UITapGestureRecognizer) {
+  //   let previousScale = chapterPageScale
 
-    let previousScale = chapterPageScale
-    chapterPageScale = chapterPageScale > minZoomScale ? minZoomScale : maxZoomScale
+  //   chapterPageScale = chapterPageScale > minZoomScale ? minZoomScale : maxZoomScale
 
-    collectionView.collectionViewLayout.invalidateLayout()
+  //   collectionView.collectionViewLayout.invalidateLayout()
 
-    let tapLocation = gesture.location(in: gesture.view!)
-    let scaledTapLocation = CGPoint(
-      x: tapLocation.x * chapterPageScale,
-      y: tapLocation.y * chapterPageScale
-    )
+  //   let tapLocation = gesture.location(in: gesture.view!)
+  //   let scaledTapLocation = CGPoint(
+  //     x: tapLocation.x * chapterPageScale,
+  //     y: tapLocation.y * chapterPageScale
+  //   )
 
-    let midHeight = collectionView.bounds.size.height / 2
-    let scaledYBasedOnTap = chapterPageScale == minZoomScale ? (tapLocation.y / previousScale) : (tapLocation.y * maxZoomScale)
+  //   let midHeight = collectionView.bounds.size.height / 2
+  //   let scaledYBasedOnTap = chapterPageScale == minZoomScale ? (tapLocation.y / previousScale) : (tapLocation.y * maxZoomScale)
 
-    collectionView.contentOffset = CGPoint(
-      x: max(scaledTapLocation.x - tapLocation.x, 0),
-      y: scaledYBasedOnTap - midHeight
-    )
-  }
+  //   collectionView.contentOffset = CGPoint(
+  //     x: max(scaledTapLocation.x - tapLocation.x, 0),
+  //     y: scaledYBasedOnTap - midHeight
+  //   )
+  // }
 
   @objc
   func zoom(gesture: UIPinchGestureRecognizer) {
     switch gesture.state {
     case .changed:
-      guard chapterPageScale <= maxZoomScale && chapterPageScale >= minZoomScale else {
-        return
-      }
-
-      let previousChapterPageScale = chapterPageScale
-      chapterPageScale = min(max(chapterPageScale * gesture.scale, minZoomScale), maxZoomScale)
-
-      guard chapterPageScale != previousChapterPageScale else {
-        return
-      }
-
-      previousContentOffset = collectionView.contentOffset
-      collectionView.collectionViewLayout.invalidateLayout()
-      adjustOffset(gesture: gesture, scale: gesture.scale)
+      viewModel.zoom(
+        pinchLocation: gesture.pinchLocation(),
+        currentContentOffset: CGPoint.toPoint(cgPoint: collectionView!.contentOffset),
+        scaleBy: Double(gesture.scale)
+      )
 
       gesture.scale = 1.0
 
     default:
       return
     }
-  }
-
-  func adjustOffset(gesture: UIGestureRecognizer, scale: CGFloat) {
-    let pinchLocation = gesture.location(in: gesture.view!)
-    let scaledPinchLocation = CGPoint(
-      x: pinchLocation.x * scale,
-      y: pinchLocation.y * scale
-    )
-
-    collectionView.contentOffset = CGPoint(
-      x: previousContentOffset.x + (scaledPinchLocation.x - pinchLocation.x),
-      y: previousContentOffset.y + (scaledPinchLocation.y - pinchLocation.y)
-    )
   }
 }
 
@@ -171,11 +155,29 @@ extension ChapterPageCollectionViewController: ZoomableCollectionViewLayoutDeleg
     layout collectionViewLayout: UICollectionViewLayout,
     sizeForItemAt indexPath: IndexPath
   ) -> CGSize {
-    let vm = viewModel[indexPath.row]
-    let originalWidth = collectionView.bounds.width
-    let width = originalWidth * chapterPageScale
-    let height = CGFloat(vm.heightToWidthRatio) * originalWidth * chapterPageScale
+    let size = viewModel.maxSizeForPage(
+      atIndex: indexPath.row,
+      maxWidth: Double(collectionView.bounds.width)
+    )
 
-    return CGSize(width: Int(width), height: Int(height))
+    return CGSize(width: size.width, height: size.height)
+  }
+}
+
+fileprivate extension UIPinchGestureRecognizer {
+  func pinchLocation() -> Point {
+    let loc = self.location(in: self.view!)
+
+    return CGPoint.toPoint(cgPoint: loc)
+  }
+}
+
+fileprivate extension CGPoint {
+  static func fromPoint(point: Point) -> CGPoint {
+    return CGPoint(x: CGFloat(point.x), y: CGFloat(point.y))
+  }
+
+  static func toPoint(cgPoint: CGPoint) -> Point {
+    return Point(x: Double(cgPoint.x), y: Double(cgPoint.y))
   }
 }

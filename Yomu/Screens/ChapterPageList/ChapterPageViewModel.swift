@@ -25,4 +25,11 @@ struct ChapterPageViewModel {
       .asDriver()
       .map { $0.image.url }
   }
+
+  func maxSize(maxWidth: Double, zoomScale: Double) -> Size {
+    return Size(
+      width: maxWidth * zoomScale,
+      height: heightToWidthRatio * maxWidth * zoomScale
+    )
+  }
 }

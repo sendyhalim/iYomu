@@ -35,12 +35,17 @@ struct ChapterPageCollectionViewModel {
   let title: Driver<String>
   let readingProgress: Driver<String>
   let pageCount: Driver<String>
+  let zoomScale: Driver<ZoomScale>
+  let contentOffset: Driver<Point>
   let disposeBag = DisposeBag()
+  let maxZoomScale: Double = 2.0
+  let minZoomScale: Double = 1.0
 
   // MARK: Private
   fileprivate let _chapterPages = Variable(List<ChapterPage>())
   fileprivate let _currentPageIndex = Variable(0)
   fileprivate let _zoomScale = Variable(ZoomScale(scale: 1.0))
+  fileprivate let _contentOffset = Variable(Point(x: 0, y: 0))
   fileprivate let chapterVM: ChapterViewModel
 
   init(chapterViewModel: ChapterViewModel) {
@@ -63,9 +68,10 @@ struct ChapterPageCollectionViewModel {
       .asDriver()
       .map { "/ \($0.count) pages" }
 
-    invalidateLayout = _zoomScale
-      .asDriver()
-      .map { _ in () }
+    zoomScale = _zoomScale.asDriver()
+    contentOffset = _contentOffset.asDriver()
+
+    invalidateLayout = zoomScale.map { _ in () }
 
     title = chapterVM.title
   }
@@ -97,5 +103,34 @@ struct ChapterPageCollectionViewModel {
 
   func chapterIndexIsValid(index: Int) -> Bool {
     return 0 ... (count - 1) ~= index
+  }
+
+  func zoom(pinchLocation: Point, currentContentOffset: Point, scaleBy: Double) {
+    let currentZoomScale = _zoomScale.value.scale
+
+    guard currentZoomScale <= maxZoomScale && currentZoomScale >= minZoomScale else {
+      return
+    }
+
+    let nextZoomScale = min(max(currentZoomScale * scaleBy, minZoomScale), maxZoomScale)
+
+    guard currentZoomScale != nextZoomScale else {
+      return
+    }
+
+    _zoomScale.value = ZoomScale(scale: nextZoomScale)
+
+    let scaledPinchLocation = pinchLocation * Point(both: scaleBy)
+
+    _contentOffset.value = currentContentOffset + scaledPinchLocation - pinchLocation
+  }
+
+  func maxSizeForPage(atIndex index: Int, maxWidth: Double) -> Size {
+    let vm = self[index]
+
+    return vm.maxSize(
+      maxWidth: maxWidth,
+      zoomScale: _zoomScale.value.scale
+    )
   }
 }
