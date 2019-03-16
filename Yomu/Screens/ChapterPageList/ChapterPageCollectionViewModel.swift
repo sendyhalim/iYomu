@@ -120,9 +120,24 @@ struct ChapterPageCollectionViewModel {
 
     _zoomScale.value = ZoomScale(scale: nextZoomScale)
 
-    let scaledPinchLocation = pinchLocation * Point(both: scaleBy)
+    let scaledPinchLocation = pinchLocation * scaleBy
 
     _contentOffset.value = currentContentOffset + scaledPinchLocation - pinchLocation
+  }
+
+  func toggleZoom(tapLocation: Point, containerHeight: Double) {
+    let previousZoomScale = _zoomScale.value.scale
+    let nextZoomScale = previousZoomScale > minZoomScale ? minZoomScale : maxZoomScale
+
+    let scaledTapLocation = tapLocation * nextZoomScale
+    let midHeight = containerHeight / 2
+    let scaledYBasedOnTap = nextZoomScale == minZoomScale ? (tapLocation.y / previousZoomScale) : (tapLocation.y * maxZoomScale)
+
+    _zoomScale.value = ZoomScale(scale: nextZoomScale)
+    _contentOffset.value = Point(
+      x: max(scaledTapLocation.x - tapLocation.x, 0),
+      y: scaledYBasedOnTap - midHeight
+    )
   }
 
   func maxSizeForPage(atIndex index: Int, maxWidth: Double) -> Size {

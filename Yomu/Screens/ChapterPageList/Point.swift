@@ -33,10 +33,10 @@ struct Point {
     )
   }
 
-  static func * (left: Point, right: Point) -> Point {
+  static func * (left: Point, scale: Double) -> Point {
     return Point(
-      x: left.x * right.x,
-      y: left.y * right.y
+      x: left.x * scale,
+      y: left.y * scale
     )
   }
 }

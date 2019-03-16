@@ -73,42 +73,27 @@ class ChapterPageCollectionViewController: UIViewController {
       action: #selector(ChapterPageCollectionViewController.zoom(gesture:))
     )
 
-    // let doubleTapGesture = UITapGestureRecognizer(
-    //   target: self,
-    //   action: #selector(ChapterPageCollectionViewController.toggleZoom(gesture:))
-    // )
-    // doubleTapGesture.numberOfTapsRequired = 2
+    let doubleTapGesture = UITapGestureRecognizer(
+      target: self,
+      action: #selector(ChapterPageCollectionViewController.toggleZoom(gesture:))
+    )
+    doubleTapGesture.numberOfTapsRequired = 2
 
     collectionView.addGestureRecognizer(pinchGesture)
-    // collectionView.addGestureRecognizer(doubleTapGesture)
+    collectionView.addGestureRecognizer(doubleTapGesture)
   }
 
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
   }
 
-  // @objc
-  // func toggleZoom(gesture: UITapGestureRecognizer) {
-  //   let previousScale = chapterPageScale
-
-  //   chapterPageScale = chapterPageScale > minZoomScale ? minZoomScale : maxZoomScale
-
-  //   collectionView.collectionViewLayout.invalidateLayout()
-
-  //   let tapLocation = gesture.location(in: gesture.view!)
-  //   let scaledTapLocation = CGPoint(
-  //     x: tapLocation.x * chapterPageScale,
-  //     y: tapLocation.y * chapterPageScale
-  //   )
-
-  //   let midHeight = collectionView.bounds.size.height / 2
-  //   let scaledYBasedOnTap = chapterPageScale == minZoomScale ? (tapLocation.y / previousScale) : (tapLocation.y * maxZoomScale)
-
-  //   collectionView.contentOffset = CGPoint(
-  //     x: max(scaledTapLocation.x - tapLocation.x, 0),
-  //     y: scaledYBasedOnTap - midHeight
-  //   )
-  // }
+  @objc
+  func toggleZoom(gesture: UITapGestureRecognizer) {
+    viewModel.toggleZoom(
+      tapLocation: gesture.tapLocation(),
+      containerHeight: Double(collectionView.bounds.size.height)
+    )
+  }
 
   @objc
   func zoom(gesture: UIPinchGestureRecognizer) {
@@ -161,6 +146,14 @@ extension ChapterPageCollectionViewController: ZoomableCollectionViewLayoutDeleg
     )
 
     return CGSize(width: size.width, height: size.height)
+  }
+}
+
+fileprivate extension UITapGestureRecognizer {
+  func tapLocation() -> Point {
+    let loc = self.location(in: self.view!)
+
+    return CGPoint.toPoint(cgPoint: loc)
   }
 }
 
