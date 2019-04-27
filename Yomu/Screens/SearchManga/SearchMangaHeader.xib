@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,20 +16,27 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <searchBar contentMode="redraw" placeholder="Search Manga" translatesAutoresizingMaskIntoConstraints="NO" id="JMV-mT-pid" customClass="SearchBar" customModule="Yomu" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <rect key="frame" x="0.0" y="0.0" width="340" height="50"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Oy1-Pa-2rW">
+                    <rect key="frame" x="345" y="15" width="20" height="20"/>
+                    <color key="color" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
             </subviews>
             <constraints>
                 <constraint firstItem="JMV-mT-pid" firstAttribute="bottom" secondItem="J12-Sx-Wf5" secondAttribute="bottom" id="6OD-di-lPj"/>
-                <constraint firstAttribute="trailing" secondItem="JMV-mT-pid" secondAttribute="trailing" id="8lS-pJ-dmx"/>
+                <constraint firstItem="Oy1-Pa-2rW" firstAttribute="centerY" secondItem="J12-Sx-Wf5" secondAttribute="centerY" id="Gr3-sq-bkp"/>
                 <constraint firstItem="JMV-mT-pid" firstAttribute="leading" secondItem="J12-Sx-Wf5" secondAttribute="leading" id="KdU-kp-7TO"/>
-                <constraint firstAttribute="top" secondItem="JMV-mT-pid" secondAttribute="top" id="Plc-Dr-Bvi"/>
+                <constraint firstItem="JMV-mT-pid" firstAttribute="top" secondItem="J12-Sx-Wf5" secondAttribute="top" id="Plc-Dr-Bvi"/>
+                <constraint firstItem="Oy1-Pa-2rW" firstAttribute="leading" secondItem="JMV-mT-pid" secondAttribute="trailing" constant="5" id="p6Z-xq-YvC"/>
+                <constraint firstItem="Oy1-Pa-2rW" firstAttribute="trailing" secondItem="J12-Sx-Wf5" secondAttribute="trailing" constant="-10" id="yQ7-vU-x1J"/>
             </constraints>
             <connections>
-                <outlet property="searchInput" destination="JMV-mT-pid" id="BXG-c9-MYi"/>
+                <outlet property="loadingProgress" destination="Oy1-Pa-2rW" id="6gv-ZY-cDj"/>
+                <outlet property="searchInput" destination="JMV-mT-pid" id="zEU-3M-Xuk"/>
             </connections>
-            <point key="canvasLocation" x="-234" y="-389"/>
+            <point key="canvasLocation" x="-234.40000000000001" y="-389.5052473763119"/>
         </collectionReusableView>
     </objects>
 </document>

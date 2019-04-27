@@ -11,6 +11,7 @@ import RxSwift
 
 class SearchMangaHeader: UICollectionReusableView {
   @IBOutlet weak var searchInput: UISearchBar!
+  @IBOutlet weak var loadingProgress: UIActivityIndicatorView!
 
   var disposeBag = DisposeBag()
 

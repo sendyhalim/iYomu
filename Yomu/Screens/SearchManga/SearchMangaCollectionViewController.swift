@@ -141,7 +141,7 @@ extension SearchMangaCollectionViewController: UICollectionViewDelegateFlowLayou
       ofKind: UICollectionView.elementKindSectionHeader,
       withReuseIdentifier: R.nib.searchMangaHeader.identifier,
       for: indexPath
-      ) as? SearchMangaHeader
+    ) as? SearchMangaHeader
 
     header.setup()
 
@@ -161,6 +161,12 @@ extension SearchMangaCollectionViewController: UICollectionViewDelegateFlowLayou
           .disposed(by: self.viewModel.disposeBag)
       })
       .disposed(by: header.disposeBag)
+
+    viewModel
+      .fetching
+      .map { !$0 }
+      .drive(header.loadingProgress.rx.isHidden)
+      .disposed(by: disposeBag)
 
     return header
   }
