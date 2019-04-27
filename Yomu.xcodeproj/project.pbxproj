@@ -78,6 +78,8 @@
 		79DC54E71F2DC11400077FA1 /* EmptyDataSetContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC54E61F2DC11400077FA1 /* EmptyDataSetContainerView.swift */; };
 		79DC54E91F2DC20B00077FA1 /* EmptyMangaSetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79DC54E81F2DC20B00077FA1 /* EmptyMangaSetView.xib */; };
 		79DC54EB1F2DCCD600077FA1 /* FetchMangaLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79DC54EA1F2DCCD600077FA1 /* FetchMangaLoadingView.xib */; };
+		79DFAB262274D69E00CD149E /* FetchableDataSetContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFAB252274D69E00CD149E /* FetchableDataSetContainerView.swift */; };
+		79DFAB282274DC0D00CD149E /* FetchChapterLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79DFAB272274DC0D00CD149E /* FetchChapterLoadingView.xib */; };
 		79F86A84203618D000C9F726 /* SearchMangaHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F86A83203618D000C9F726 /* SearchMangaHeader.xib */; };
 		79FE24351F5B1C8B00C3452D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FE24341F5B1C8B00C3452D /* SearchBar.swift */; };
 		9572D9D199520E8F20E91BCA /* Pods_Yomu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F7993593B222CDE3A2A9D44 /* Pods_Yomu.framework */; };
@@ -172,6 +174,8 @@
 		79DC54E61F2DC11400077FA1 /* EmptyDataSetContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDataSetContainerView.swift; sourceTree = "<group>"; };
 		79DC54E81F2DC20B00077FA1 /* EmptyMangaSetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyMangaSetView.xib; sourceTree = "<group>"; };
 		79DC54EA1F2DCCD600077FA1 /* FetchMangaLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FetchMangaLoadingView.xib; sourceTree = "<group>"; };
+		79DFAB252274D69E00CD149E /* FetchableDataSetContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchableDataSetContainerView.swift; sourceTree = "<group>"; };
+		79DFAB272274DC0D00CD149E /* FetchChapterLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FetchChapterLoadingView.xib; sourceTree = "<group>"; };
 		79F86A83203618D000C9F726 /* SearchMangaHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMangaHeader.xib; sourceTree = "<group>"; };
 		79FE24341F5B1C8B00C3452D /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CE92F20852E62735FC1E77F4 /* Pods-Yomu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yomu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yomu/Pods-Yomu.release.xcconfig"; sourceTree = "<group>"; };
@@ -327,6 +331,7 @@
 				7958C8E71EFEA92400CAD90E /* ChapterCollectionViewModel.swift */,
 				7958C8E91EFEB3B600CAD90E /* ChapterViewModel.swift */,
 				79A19F0B1F4F43BF00F1DEA7 /* ReadChapterRealm.swift */,
+				79DFAB272274DC0D00CD149E /* FetchChapterLoadingView.xib */,
 			);
 			path = ChapterList;
 			sourceTree = "<group>";
@@ -433,6 +438,7 @@
 			children = (
 				79DC54E61F2DC11400077FA1 /* EmptyDataSetContainerView.swift */,
 				79FE24341F5B1C8B00C3452D /* SearchBar.swift */,
+				79DFAB252274D69E00CD149E /* FetchableDataSetContainerView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -488,7 +494,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Sendy Halim";
 				TargetAttributes = {
 					79C6F5461ED9FCFA00B95629 = {
@@ -507,7 +513,7 @@
 			};
 			buildConfigurationList = 79C6F5421ED9FCFA00B95629 /* Build configuration list for PBXProject "Yomu" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -535,6 +541,7 @@
 				7919319B1EE87DBA00607A11 /* SearchedMangaCell.xib in Resources */,
 				7918EA9D1EF1AEC5004F3366 /* MangaCell.xib in Resources */,
 				79258B911EF1644C00202035 /* MangaCollectionViewController.xib in Resources */,
+				79DFAB282274DC0D00CD149E /* FetchChapterLoadingView.xib in Resources */,
 				796F98F31EE2FD9B00FAF40C /* YomuNavigationController.xib in Resources */,
 				79BD51AE1EFE52D70063F3AC /* ChapterCollectionViewController.xib in Resources */,
 				7948D5A722227054008214D6 /* ChapterPageCell.xib in Resources */,
@@ -704,6 +711,7 @@
 				79234C061EE32A10000D6734 /* MangaEdenAPI.swift in Sources */,
 				79B3FC691EDC93C1008323C0 /* SearchedManga.swift in Sources */,
 				79B3FC711EDC9638008323C0 /* ChapterPage.swift in Sources */,
+				79DFAB262274D69E00CD149E /* FetchableDataSetContainerView.swift in Sources */,
 				799521651EE4737E0059CC34 /* SearchedMangaCollectionViewModel.swift in Sources */,
 				79A917C31EFEC29500820E57 /* ChapterCell.swift in Sources */,
 				79288B042229C763008C895A /* ZoomableCollectionViewLayout.swift in Sources */,
@@ -754,6 +762,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -814,6 +823,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -880,7 +890,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.Yomu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -901,7 +911,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.Yomu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

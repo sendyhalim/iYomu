@@ -82,8 +82,8 @@ struct MangaViewModel {
 }
 
 extension MangaViewModel: Hashable {
-  var hashValue: Int {
-    return _manga.value.id!.hashValue
+  func hash(into hasher: inout Hasher) {
+    hasher.combine(_manga.value.id!)
   }
 }
 

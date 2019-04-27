@@ -9,7 +9,10 @@
 import UIKit
 import RxSwift
 
-class ChapterCollectionViewController: UITableViewController {
+class ChapterCollectionViewController: UIViewController {
+  @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var fetchableDataSetContainerView: FetchableDataSetContainerView!
+
   let viewModel: ChapterCollectionViewModel
   let disposeBag = DisposeBag()
   var chapterCollectionHeader: ChapterCollectionHeader!
@@ -23,12 +26,21 @@ class ChapterCollectionViewController: UITableViewController {
     fatalError("init(coder:) has not been implemented")
   }
 
+  func setupDataSetContainerView() {
+    fetchableDataSetContainerView.collectionView = tableView
+    fetchableDataSetContainerView.loadingView = R.nib.fetchChapterLoadingView.firstView(owner: nil)!
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    setupDataSetContainerView()
+
+    tableView.delegate = self
+    tableView.dataSource = self
     tableView.register(R.nib.chapterCell)
 
-    chapterCollectionHeader = R.nib.chapterCollectionHeader.firstView(owner: nil)
+    chapterCollectionHeader = R.nib.chapterCollectionHeader.firstView(owner: nil)!
     tableView.tableHeaderView = chapterCollectionHeader
 
     chapterCollectionHeader.setup()
@@ -67,6 +79,17 @@ class ChapterCollectionViewController: UITableViewController {
       .disposed(by: disposeBag)
 
     viewModel
+      .fetching
+      .drive(onNext: { [weak self] in
+        if $0 {
+          self?.fetchableDataSetContainerView.showLoadingView()
+        } else {
+          self?.fetchableDataSetContainerView.showCollectionView()
+        }
+      })
+      .disposed(by: disposeBag)
+
+    viewModel
       .fetch()
       .disposed(by: disposeBag)
 
@@ -78,20 +101,20 @@ class ChapterCollectionViewController: UITableViewController {
 }
 
 // MARK: - Data source
-extension ChapterCollectionViewController {
-  override func numberOfSections(in tableView: UITableView) -> Int {
+extension ChapterCollectionViewController: UITableViewDataSource {
+  func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
 
-  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 80
   }
 
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return viewModel.count
   }
 
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(
       withIdentifier: R.nib.chapterCell.identifier,
       for: indexPath
@@ -104,8 +127,8 @@ extension ChapterCollectionViewController {
 }
 
 // MARK: - Delegate
-extension ChapterCollectionViewController {
-  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+extension ChapterCollectionViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let chapterViewModel = viewModel[indexPath.row]
 
     chapterViewModel
