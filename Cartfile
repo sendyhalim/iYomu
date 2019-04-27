@@ -1,10 +1,10 @@
-github "onevcat/Kingfisher" ~> 5.1.1
+github "onevcat/Kingfisher" ~> 5.4.0
 github "typelift/Swiftz" "master"
-github "ReactiveX/RxSwift" ~> 4.4.1
-github "Moya/Moya" ~> 12.0.1
+github "ReactiveX/RxSwift" ~> 4.5.0
+github "Moya/Moya" ~> 13.0.0
 github "Thoughtbot/Argo" "master"
 github "Thoughtbot/Curry" "master"
-github "realm/realm-cocoa" ~> 3.13.1
+github "realm/realm-cocoa" ~> 3.14.1
 github "RxSwiftCommunity/RxRealm" ~> 0.7.7
 github "hyperoslo/Hue" ~> 4.0.0
 github "robb/Cartography" ~> 3.1.0
